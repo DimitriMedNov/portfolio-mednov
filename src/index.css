@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -105,8 +106,8 @@
 
   /* Terminal styling */
   .terminal-container {
-    width: 90%;
-    max-width: 340px;
+    width: 100%;
+    max-width: 500px;
     background-color: #1e1e2e;
     border-radius: 8px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -114,6 +115,13 @@
     font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
     transform-style: preserve-3d;
     perspective: 500px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .hover-effect:hover {
+    transform: scale(1.02) translateY(-5px);
+    box-shadow: 0 15px 35px rgba(59, 130, 246, 0.2);
+    border: 1px solid rgba(59, 130, 246, 0.3);
   }
 
   .terminal-header {
@@ -281,3 +289,4 @@
     }
   }
 }
+
