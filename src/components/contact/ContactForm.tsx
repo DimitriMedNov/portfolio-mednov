@@ -15,10 +15,9 @@ type FormData = {
   message: string;
 };
 
-// Constantes de EmailJS
+// Credenciales reales de EmailJS
 const SERVICE_ID = 'service_c6h332c';
-const TEMPLATE_ID = 'template_pz4wogp';
-const PUBLIC_KEY = 'iCK-98GYhWbQcuI0q';
+const PUBLIC_KEY = 'CU2Nrne_YrSp8R0c0'; // Actualizado con la clave pública correcta
 
 const ContactForm = () => {
   const [formData, setFormData] = useState<FormData>({
@@ -43,11 +42,20 @@ const ContactForm = () => {
 
     if (!formRef.current) return;
 
-    // Enviando el formulario usando EmailJS con las credenciales reales
-    emailjs.sendForm(
+    // Configurar los parámetros del email directamente
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+      to_name: "Destinatario", // Puedes personalizar según necesites
+    };
+
+    // Enviar el email usando EmailJS sin plantilla predefinida
+    emailjs.send(
       SERVICE_ID,
-      TEMPLATE_ID,
-      formRef.current,
+      'email_direct', // Valor genérico ya que no usamos plantilla específica
+      templateParams,
       PUBLIC_KEY
     )
     .then((result) => {
