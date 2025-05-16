@@ -41,7 +41,16 @@ const HeroSection = () => {
             <div className="absolute inset-4 bg-gradient-to-br from-primary/50 to-blue-600/50 rounded-full animate-pulse" style={{ animationDuration: "5s" }}></div>
             <div className="absolute inset-8 bg-white dark:bg-gray-800 rounded-full overflow-hidden flex items-center justify-center">
               <div className="animate-spin-slow">
-                <RotateCw size={80} className="text-primary" />
+                <div className="code-container text-primary">
+                  <pre className="code-text text-xs sm:text-sm md:text-base">
+                    <code className="text-primary">
+                      &lt;div&gt;<br/>
+                      &nbsp;&nbsp;Hello<br/>
+                      &nbsp;&nbsp;World<br/>
+                      &lt;/div&gt;
+                    </code>
+                  </pre>
+                </div>
               </div>
             </div>
           </div>

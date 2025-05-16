@@ -104,6 +104,36 @@
     animation: spin 6s linear infinite;
   }
 
+  .code-container {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    background-color: rgba(30, 41, 59, 0.8);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .code-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #3B82F6, #06B6D4);
+  }
+
+  .code-text {
+    color: #e2e8f0;
+    line-height: 1.5;
+  }
+
+  code {
+    display: block;
+    position: relative;
+  }
+
   @keyframes fadeIn {
     from {
       opacity: 0;
