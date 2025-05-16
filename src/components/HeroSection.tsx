@@ -20,10 +20,6 @@ const HeroSection = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
                 <span className="text-primary">Desarrollador</span> Frontend
               </h1>
-              <p className="mt-4 text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-xl animate-fade-in-up" style={{ animationDelay: "0.6s" }}>
-                Especializado en crear experiencias web excepcionales con interfaces
-                modernas y atractivas que destacan.
-              </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: "0.8s" }}>
