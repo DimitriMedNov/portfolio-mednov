@@ -1,11 +1,12 @@
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
+import emailjs from '@emailjs/browser';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -15,6 +16,7 @@ const ContactSection = () => {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -27,9 +29,17 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulación de envío del formulario
-    setTimeout(() => {
-      setIsSubmitting(false);
+    if (!formRef.current) return;
+
+    // Enviando el formulario usando EmailJS
+    emailjs.sendForm(
+      'YOUR_SERVICE_ID', // Reemplaza con tu Service ID
+      'YOUR_TEMPLATE_ID', // Reemplaza con tu Template ID
+      formRef.current,
+      'YOUR_PUBLIC_KEY' // Reemplaza con tu Public Key
+    )
+    .then((result) => {
+      console.log('Email enviado con éxito:', result.text);
       toast.success("Mensaje enviado correctamente. Te contactaré pronto.");
       setFormData({
         name: "",
@@ -37,7 +47,14 @@ const ContactSection = () => {
         subject: "",
         message: "",
       });
-    }, 1500);
+    })
+    .catch((error) => {
+      console.error('Error al enviar email:', error.text);
+      toast.error("Error al enviar el mensaje. Inténtalo de nuevo más tarde.");
+    })
+    .finally(() => {
+      setIsSubmitting(false);
+    });
   };
 
   const contactInfo = [
@@ -102,7 +119,7 @@ const ContactSection = () => {
           <div className="lg:col-span-2">
             <Card className="p-6 shadow-md border border-gray-100">
               <h3 className="font-semibold text-xl mb-6">Envíame un mensaje</h3>
-              <form onSubmit={handleSubmit}>
+              <form ref={formRef} onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                   <div>
                     <label
