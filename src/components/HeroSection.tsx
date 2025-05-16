@@ -15,22 +15,22 @@ const HeroSection = () => {
           <div className="flex-1 space-y-8 animate-fade-in-right">
             <div>
               <p className="text-primary font-medium mb-2 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-                Hola, soy Jesus D'mitri Medina Novelo
+                Hello, I'm Jesus D'mitri Medina Novelo
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 dark:text-white animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-                <span className="text-primary">Desarrollador</span> Frontend
+                <span className="text-primary">Frontend</span> Developer
               </h1>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: "0.8s" }}>
               <Link to="projects" smooth={true} duration={800}>
                 <Button size="lg" className="text-md px-8">
-                  Ver proyectos
+                  View Projects
                 </Button>
               </Link>
               <Link to="contact" smooth={true} duration={1000}>
                 <Button variant="outline" size="lg" className="text-md px-8">
-                  Contacto
+                  Contact
                 </Button>
               </Link>
             </div>

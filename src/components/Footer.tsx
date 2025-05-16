@@ -5,18 +5,30 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
+
   const socialLinks = [
-    { icon: <Github className="w-5 h-5" />, href: "https://github.com", label: "GitHub" },
-    { icon: <Linkedin className="w-5 h-5" />, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: <Mail className="w-5 h-5" />, href: "mailto:contacto@ejemplo.com", label: "Email" },
+    {
+      icon: <Github className="w-5 h-5" />,
+      href: "https://github.com/DimitriMedNov",
+      label: "GitHub",
+    },
+    {
+      icon: <Linkedin className="w-5 h-5" />,
+      href: "https://www.linkedin.com/in/jdmtmednov82/",
+      label: "LinkedIn",
+    },
+    {
+      icon: <Mail className="w-5 h-5" />,
+      href: "mailto:mednov@outlook.es",
+      label: "Email",
+    },
   ];
 
   const navItems = [
-    { name: "Inicio", to: "hero" },
-    { name: "Proyectos", to: "projects" },
-    { name: "Acerca", to: "about" },
-    { name: "Contacto", to: "contact" },
+    { name: "Home", to: "hero" },
+    { name: "Projects", to: "projects" },
+    { name: "About", to: "about" },
+    { name: "Contact", to: "contact" },
   ];
 
   return (
@@ -30,11 +42,10 @@ const Footer = () => {
               duration={500}
               className="text-2xl font-bold cursor-pointer inline-block mb-4"
             >
-              <span className="text-primary">Dev</span>Portfolio
+              <span className="text-primary">Dev</span>MedNov
             </Link>
             <p className="text-gray-400 mb-6 max-w-md">
-              Desarrollador frontend especializado en crear experiencias web 
-              excepcionales con interfaces modernas y atractivas.
+              Frontend developer specialized in creating exceptional web experiences with modern and visually appealing interfaces.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((link, index) => (
@@ -53,7 +64,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold text-lg mb-4">Enlaces</h3>
+            <h3 className="font-semibold text-lg mb-4">Links</h3>
             <ul className="space-y-2">
               {navItems.map((item) => (
                 <li key={item.name}>
@@ -71,22 +82,13 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold text-lg mb-4">Contacto</h3>
+            <h3 className="font-semibold text-lg mb-4">Contact</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>Ciudad de México, México</li>
-              <li>contacto@ejemplo.com</li>
-              <li>+1 (234) 567-8901</li>
+              <li>Merida Yucatán, México</li>
+              <li>mednov@outlook.es</li>
+              <li>+52 (999) 359-0366</li>
             </ul>
           </div>
-        </div>
-
-        <div className="border-t border-gray-800 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-500 text-sm">
-            © {currentYear} DevPortfolio. Todos los derechos reservados.
-          </p>
-          <p className="text-gray-500 text-sm mt-2 md:mt-0">
-            Diseñado y desarrollado con pasión
-          </p>
         </div>
       </div>
     </footer>

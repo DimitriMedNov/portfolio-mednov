@@ -26,16 +26,28 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { name: "Inicio", to: "hero" },
-    { name: "Proyectos", to: "projects" },
-    { name: "Acerca", to: "about" },
-    { name: "Contacto", to: "contact" },
+    { name: "Home", to: "hero" },
+    { name: "Projects", to: "projects" },
+    { name: "About", to: "about" },
+    { name: "Contact", to: "contact" },
   ];
 
   const socialLinks = [
-    { icon: <Github className="w-5 h-5" />, href: "https://github.com", label: "GitHub" },
-    { icon: <Linkedin className="w-5 h-5" />, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: <Mail className="w-5 h-5" />, href: "mailto:contacto@ejemplo.com", label: "Email" },
+    {
+      icon: <Github className="w-5 h-5" />,
+      href: "https://github.com/DimitriMedNov",
+      label: "GitHub",
+    },
+    {
+      icon: <Linkedin className="w-5 h-5" />,
+      href: "https://www.linkedin.com/in/jdmtmednov82/",
+      label: "LinkedIn",
+    },
+    {
+      icon: <Mail className="w-5 h-5" />,
+      href: "mailto:mednov@outlook.es",
+      label: "Email",
+    },
   ];
 
   return (
@@ -55,7 +67,7 @@ const Navbar = () => {
               duration={500}
               className="cursor-pointer flex items-center"
             >
-              <span className="text-primary">Dev</span>Portfolio
+              <span className="text-primary">Dev</span>MedNov
             </Link>
           </div>
 

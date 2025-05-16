@@ -13,20 +13,20 @@ const contactInfoItems: ContactInfoItem[] = [
   {
     icon: <Mail className="h-5 w-5 text-primary" />,
     title: "Email",
-    content: "contacto@ejemplo.com",
-    link: "mailto:contacto@ejemplo.com",
+    content: "mednov@outlook.es",
+    link: "mailto:mednov@outlook.es",
   },
   {
     icon: <Phone className="h-5 w-5 text-primary" />,
-    title: "Teléfono",
-    content: "+1 (234) 567-8901",
-    link: "tel:+12345678901",
+    title: "Phone",
+    content: "+52 (999) 359-0366",
+    link: "tel:+529993590366",
   },
   {
     icon: <MapPin className="h-5 w-5 text-primary" />,
-    title: "Ubicación",
-    content: "Ciudad de México, México",
-    link: "https://maps.google.com",
+    title: "Location",
+    content: "Merida Yucatán, México",
+    link: "https://maps.app.goo.gl/tVbjwdTbuoz3GACE6",
   },
 ];
 
