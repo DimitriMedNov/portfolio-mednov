@@ -15,6 +15,11 @@ type FormData = {
   message: string;
 };
 
+// Constantes de EmailJS
+const SERVICE_ID = 'service_c6h332c';
+const TEMPLATE_ID = 'template_pz4wogp';
+const PUBLIC_KEY = 'iCK-98GYhWbQcuI0q';
+
 const ContactForm = () => {
   const [formData, setFormData] = useState<FormData>({
     name: "",
@@ -38,12 +43,12 @@ const ContactForm = () => {
 
     if (!formRef.current) return;
 
-    // Enviando el formulario usando EmailJS
+    // Enviando el formulario usando EmailJS con las credenciales reales
     emailjs.sendForm(
-      'YOUR_SERVICE_ID', // Reemplaza con tu Service ID
-      'YOUR_TEMPLATE_ID', // Reemplaza con tu Template ID
+      SERVICE_ID,
+      TEMPLATE_ID,
       formRef.current,
-      'YOUR_PUBLIC_KEY' // Reemplaza con tu Public Key
+      PUBLIC_KEY
     )
     .then((result) => {
       console.log('Email enviado con éxito:', result.text);
