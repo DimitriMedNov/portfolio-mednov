@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Code } from "lucide-react";
 import { Link } from "react-scroll";
 
 const HeroSection = () => {
@@ -40,7 +40,9 @@ const HeroSection = () => {
             <div className="absolute inset-0 bg-blue-500/10 rounded-full"></div>
             <div className="absolute inset-4 bg-gradient-to-br from-primary/50 to-blue-600/50 rounded-full animate-pulse" style={{ animationDuration: "5s" }}></div>
             <div className="absolute inset-8 bg-white dark:bg-gray-800 rounded-full overflow-hidden flex items-center justify-center">
-              <div className="text-8xl font-bold text-primary/20">&lt;/&gt;</div>
+              <div className="animate-spin-slow">
+                <Code size={80} className="text-primary" />
+              </div>
             </div>
           </div>
         </div>
