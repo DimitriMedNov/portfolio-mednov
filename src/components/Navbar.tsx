@@ -17,6 +17,8 @@ const Navbar = () => {
       }
     };
 
+    // Inicializar el estado de scroll
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
