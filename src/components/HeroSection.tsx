@@ -15,7 +15,7 @@ const HeroSection = () => {
           <div className="flex-1 space-y-8 animate-fade-in-right">
             <div>
               <p className="text-primary font-medium mb-2 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-                Hola, soy
+                Hola, soy Jesus D'mitri Medina Novelo
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
                 <span className="text-primary">Desarrollador</span> Frontend
