@@ -2,20 +2,20 @@
 import React from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { FileText, Github, Linkedin, Html, Css, LayoutDashboard } from "lucide-react";
+import { FileText, Github, Linkedin, Code, FileCode, LayoutDashboard } from "lucide-react";
 
 const technologies = [
-  { name: "HTML", icon: Html },
-  { name: "CSS", icon: Css },
-  { name: "JavaScript", icon: LayoutDashboard },
+  { name: "HTML", icon: FileCode },
+  { name: "CSS", icon: FileCode },
+  { name: "JavaScript", icon: Code },
   { name: "React", icon: LayoutDashboard },
-  { name: "TypeScript", icon: LayoutDashboard },
+  { name: "TypeScript", icon: Code },
   { name: "Next", icon: LayoutDashboard },
   { name: "Nuxt", icon: LayoutDashboard },
-  { name: "Tailwind", icon: LayoutDashboard },
-  { name: "Python", icon: LayoutDashboard },
+  { name: "Tailwind", icon: FileCode },
+  { name: "Python", icon: Code },
   { name: "Django", icon: LayoutDashboard },
-  { name: "SQL", icon: LayoutDashboard },
+  { name: "SQL", icon: FileCode },
   { name: "AWS", icon: LayoutDashboard },
   { name: "Flutter Flow", icon: LayoutDashboard },
   { name: "Vuetify", icon: LayoutDashboard },
