@@ -21,6 +21,10 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
         opts={{
           align: "start",
           loop: true,
+          skipSnaps: false,
+          dragFree: false,
+          inViewThreshold: 0.5,
+          duration: 25, // Optimize animation duration
         }} 
         className="w-full"
       >
@@ -34,9 +38,9 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <div className="flex justify-center gap-2 mt-8">
-          <CarouselPrevious className="relative inset-auto left-0 right-0 translate-x-0 translate-y-0" />
-          <CarouselNext className="relative inset-auto left-0 right-0 translate-x-0 translate-y-0" />
+        <div className="flex justify-center gap-4 mt-8">
+          <CarouselPrevious className="relative inset-auto left-0 right-0 translate-x-0 translate-y-0 bg-primary hover:bg-primary/80 text-primary-foreground" />
+          <CarouselNext className="relative inset-auto left-0 right-0 translate-x-0 translate-y-0 bg-primary hover:bg-primary/80 text-primary-foreground" />
         </div>
       </Carousel>
     </div>
