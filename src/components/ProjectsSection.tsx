@@ -1,16 +1,13 @@
-
-import React, { useState, useCallback } from "react";
+import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
-import { 
-  Pagination,
-  PaginationContent,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious
-} from "@/components/ui/pagination";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 type Project = {
   id: number;
@@ -87,7 +84,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
           src={project.image}
           alt={project.title}
           className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-110"
-          loading="lazy" // Add lazy loading for better performance
+          loading="lazy"
         />
       </div>
       <CardContent className="flex flex-col flex-grow p-6">
@@ -128,25 +125,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
   );
 };
 
-const PROJECTS_PER_PAGE = 3;
-
 const ProjectsSection = () => {
-  const [currentPage, setCurrentPage] = useState(1);
-  
-  const totalPages = Math.ceil(projects.length / PROJECTS_PER_PAGE);
-  
-  // Calculate which projects to show based on current page
-  const indexOfLastProject = currentPage * PROJECTS_PER_PAGE;
-  const indexOfFirstProject = indexOfLastProject - PROJECTS_PER_PAGE;
-  const currentProjects = projects.slice(indexOfFirstProject, indexOfLastProject);
-
-  // Memoized page change handler
-  const handlePageChange = useCallback((pageNumber: number) => {
-    setCurrentPage(pageNumber);
-    // Scroll to top of projects section smoothly
-    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }, []);
-
   return (
     <section
       id="projects"
@@ -162,49 +141,30 @@ const ProjectsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {currentProjects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
+        <div className="relative">
+          <Carousel 
+            opts={{
+              align: "start",
+              loop: true,
+            }} 
+            className="w-full"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {projects.map((project) => (
+                <CarouselItem 
+                  key={project.id} 
+                  className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3"
+                >
+                  <ProjectCard project={project} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="flex justify-center gap-2 mt-8">
+              <CarouselPrevious className="relative inset-auto left-0 right-0 translate-x-0 translate-y-0" />
+              <CarouselNext className="relative inset-auto left-0 right-0 translate-x-0 translate-y-0" />
+            </div>
+          </Carousel>
         </div>
-
-        {totalPages > 1 && (
-          <div className="mt-12">
-            <Pagination>
-              <PaginationContent>
-                {currentPage > 1 && (
-                  <PaginationItem>
-                    <PaginationPrevious 
-                      onClick={() => handlePageChange(currentPage - 1)} 
-                      className="cursor-pointer"
-                    />
-                  </PaginationItem>
-                )}
-                
-                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                  <PaginationItem key={page}>
-                    <PaginationLink
-                      onClick={() => handlePageChange(page)}
-                      isActive={currentPage === page}
-                      className="cursor-pointer"
-                    >
-                      {page}
-                    </PaginationLink>
-                  </PaginationItem>
-                ))}
-                
-                {currentPage < totalPages && (
-                  <PaginationItem>
-                    <PaginationNext 
-                      onClick={() => handlePageChange(currentPage + 1)}
-                      className="cursor-pointer" 
-                    />
-                  </PaginationItem>
-                )}
-              </PaginationContent>
-            </Pagination>
-          </div>
-        )}
       </div>
     </section>
   );
