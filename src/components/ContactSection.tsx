@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -64,21 +64,21 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="py-24 px-4 bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-900"
+      className="py-24 px-4 bg-white dark:bg-gray-900"
     >
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="text-primary">Contacta</span> Conmigo
+            <span className="text-primary">Contáctame</span>
           </h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             ¿Tienes un proyecto interesante? Estoy disponible para trabajar en
-            nuevos desafíos. Contáctame y hablemos.
+            nuevos desafíos.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
-          <div className="lg:col-span-2">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div className="lg:col-span-1">
             <div className="space-y-8">
               {contactInfo.map((item, index) => (
                 <div key={index} className="flex items-start">
@@ -97,20 +97,10 @@ const ContactSection = () => {
                 </div>
               ))}
             </div>
-
-            <div className="mt-12">
-              <h3 className="font-semibold text-lg mb-4">Horario Laboral</h3>
-              <p className="text-gray-700 dark:text-gray-300 mb-2">
-                Lunes - Viernes: 9:00 AM - 6:00 PM
-              </p>
-              <p className="text-gray-700 dark:text-gray-300">
-                Fines de semana: Sólo con cita previa
-              </p>
-            </div>
           </div>
 
-          <div className="lg:col-span-3">
-            <Card className="p-6">
+          <div className="lg:col-span-2">
+            <Card className="p-6 shadow-md border border-gray-100">
               <h3 className="font-semibold text-xl mb-6">Envíame un mensaje</h3>
               <form onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
@@ -127,6 +117,7 @@ const ContactSection = () => {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="Tu nombre"
+                      className="border-gray-200"
                       required
                     />
                   </div>
@@ -144,6 +135,7 @@ const ContactSection = () => {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="tu@email.com"
+                      className="border-gray-200"
                       required
                     />
                   </div>
@@ -162,6 +154,7 @@ const ContactSection = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     placeholder="Asunto de tu mensaje"
+                    className="border-gray-200"
                     required
                   />
                 </div>
@@ -180,16 +173,22 @@ const ContactSection = () => {
                     onChange={handleChange}
                     placeholder="Escribe tu mensaje aquí..."
                     rows={5}
+                    className="border-gray-200"
                     required
                   />
                 </div>
 
                 <Button
                   type="submit"
-                  className="w-full"
+                  className="w-full bg-blue-600 hover:bg-blue-700"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Enviando..." : "Enviar Mensaje"}
+                  {isSubmitting ? "Enviando..." : (
+                    <>
+                      Enviar Mensaje
+                      <Send className="ml-2 h-4 w-4" />
+                    </>
+                  )}
                 </Button>
               </form>
             </Card>
