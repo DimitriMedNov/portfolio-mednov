@@ -51,7 +51,7 @@ const HeroSection = () => {
                 </div>
                 <div className="terminal-body animate-pulse-code">
                   <pre className="terminal-code">
-                    <span className="terminal-purple">const</span> <span className="terminal-blue">Developer</span> <span className="terminal-white">=</span> <span className="terminal-yellow">()</span> <span className="terminal-white">=></span> <span className="terminal-yellow">{'{'}</span>
+                    <span className="terminal-purple">const</span> <span className="terminal-blue">Developer</span> <span className="terminal-white">=</span> <span className="terminal-yellow">()</span> <span className="terminal-white">=&gt;</span> <span className="terminal-yellow">{'{'}</span>
                     <br/><span className="terminal-indent"></span><span className="terminal-purple">return</span> <span className="terminal-yellow">(</span>
                     <br/><span className="terminal-indent terminal-indent-2"></span><span className="terminal-pink">&lt;div</span> <span className="terminal-green">className</span><span className="terminal-white">=</span><span className="terminal-orange">"portfolio"</span><span className="terminal-pink">&gt;</span>
                     <br/><span className="terminal-indent terminal-indent-3"></span><span className="terminal-cyan">// Creative code here</span>
