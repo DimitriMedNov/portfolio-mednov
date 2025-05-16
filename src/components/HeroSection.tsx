@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowDown, RotateCw } from "lucide-react";
+import { ArrowDown, FileCode2 } from "lucide-react";
 import { Link } from "react-scroll";
 
 const HeroSection = () => {
@@ -39,16 +39,25 @@ const HeroSection = () => {
           <div className="flex-1 relative aspect-square max-w-md w-full animate-fade-in">
             <div className="absolute inset-0 bg-blue-500/10 rounded-full"></div>
             <div className="absolute inset-4 bg-gradient-to-br from-primary/50 to-blue-600/50 rounded-full animate-pulse" style={{ animationDuration: "5s" }}></div>
-            <div className="absolute inset-8 bg-white dark:bg-gray-800 rounded-full overflow-hidden flex items-center justify-center">
-              <div className="animate-spin-slow">
-                <div className="code-container text-primary">
-                  <pre className="code-text text-xs sm:text-sm md:text-base">
-                    <code className="text-primary">
-                      &lt;div&gt;<br/>
-                      &nbsp;&nbsp;Hello<br/>
-                      &nbsp;&nbsp;World<br/>
-                      &lt;/div&gt;
-                    </code>
+            <div className="absolute inset-8 bg-gray-900 dark:bg-gray-800 rounded-full overflow-hidden flex items-center justify-center shadow-lg">
+              <div className="terminal-container">
+                <div className="terminal-header">
+                  <div className="terminal-buttons">
+                    <span className="terminal-btn red"></span>
+                    <span className="terminal-btn yellow"></span>
+                    <span className="terminal-btn green"></span>
+                  </div>
+                  <div className="terminal-title">frontend.jsx</div>
+                </div>
+                <div className="terminal-body animate-pulse-code">
+                  <pre className="terminal-code">
+                    <span className="terminal-purple">const</span> <span className="terminal-blue">Developer</span> <span className="terminal-white">=</span> <span className="terminal-yellow">()</span> <span className="terminal-white">=></span> <span className="terminal-yellow">{'{'}</span>
+                    <br/><span className="terminal-indent"></span><span className="terminal-purple">return</span> <span className="terminal-yellow">(</span>
+                    <br/><span className="terminal-indent terminal-indent-2"></span><span className="terminal-pink">&lt;div</span> <span className="terminal-green">className</span><span className="terminal-white">=</span><span className="terminal-orange">"portfolio"</span><span className="terminal-pink">&gt;</span>
+                    <br/><span className="terminal-indent terminal-indent-3"></span><span className="terminal-cyan">// Creative code here</span>
+                    <br/><span className="terminal-indent terminal-indent-2"></span><span className="terminal-pink">&lt;/div&gt;</span>
+                    <br/><span className="terminal-indent"></span><span className="terminal-yellow">)</span><span className="terminal-white">;</span>
+                    <br/><span className="terminal-yellow">{'}'}</span><span className="terminal-white">;</span>
                   </pre>
                 </div>
               </div>
