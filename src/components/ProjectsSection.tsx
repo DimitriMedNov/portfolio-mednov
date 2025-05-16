@@ -1,8 +1,16 @@
 
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
+import { 
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious
+} from "@/components/ui/pagination";
 
 type Project = {
   id: number;
@@ -79,6 +87,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
           src={project.image}
           alt={project.title}
           className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-110"
+          loading="lazy" // Add lazy loading for better performance
         />
       </div>
       <CardContent className="flex flex-col flex-grow p-6">
@@ -119,11 +128,24 @@ const ProjectCard = ({ project }: { project: Project }) => {
   );
 };
 
+const PROJECTS_PER_PAGE = 3;
+
 const ProjectsSection = () => {
-  const [visibleProjects, setVisibleProjects] = useState(3);
-  const showMoreProjects = () => {
-    setVisibleProjects((prev) => Math.min(prev + 3, projects.length));
-  };
+  const [currentPage, setCurrentPage] = useState(1);
+  
+  const totalPages = Math.ceil(projects.length / PROJECTS_PER_PAGE);
+  
+  // Calculate which projects to show based on current page
+  const indexOfLastProject = currentPage * PROJECTS_PER_PAGE;
+  const indexOfFirstProject = indexOfLastProject - PROJECTS_PER_PAGE;
+  const currentProjects = projects.slice(indexOfFirstProject, indexOfLastProject);
+
+  // Memoized page change handler
+  const handlePageChange = useCallback((pageNumber: number) => {
+    setCurrentPage(pageNumber);
+    // Scroll to top of projects section smoothly
+    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, []);
 
   return (
     <section
@@ -141,16 +163,46 @@ const ProjectsSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.slice(0, visibleProjects).map((project) => (
+          {currentProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
 
-        {visibleProjects < projects.length && (
-          <div className="flex justify-center mt-12">
-            <Button onClick={showMoreProjects} variant="outline" className="text-md px-8">
-              Cargar más proyectos
-            </Button>
+        {totalPages > 1 && (
+          <div className="mt-12">
+            <Pagination>
+              <PaginationContent>
+                {currentPage > 1 && (
+                  <PaginationItem>
+                    <PaginationPrevious 
+                      onClick={() => handlePageChange(currentPage - 1)} 
+                      className="cursor-pointer"
+                    />
+                  </PaginationItem>
+                )}
+                
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                  <PaginationItem key={page}>
+                    <PaginationLink
+                      onClick={() => handlePageChange(page)}
+                      isActive={currentPage === page}
+                      className="cursor-pointer"
+                    >
+                      {page}
+                    </PaginationLink>
+                  </PaginationItem>
+                ))}
+                
+                {currentPage < totalPages && (
+                  <PaginationItem>
+                    <PaginationNext 
+                      onClick={() => handlePageChange(currentPage + 1)}
+                      className="cursor-pointer" 
+                    />
+                  </PaginationItem>
+                )}
+              </PaginationContent>
+            </Pagination>
           </div>
         )}
       </div>
