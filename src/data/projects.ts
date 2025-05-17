@@ -56,4 +56,12 @@ export const projects: Project[] = [
     demo: "https://ejemplo.com/demo6",
     github: "https://github.com/ejemplo/proyecto6",
   },
+    {
+        id: 7,
+        title: "Sistema de Reservas",
+        description: "A web application developed for \"El Taquito Gordo Feliz Taquería™\" that allows customers to book appointments or place orders, receive automated notifications, and manage personalized reminders. Designed to streamline scheduling and enhance the customer experience.\n",
+        image: "/images/taquito.png",
+        tags: ["HTML", "CSS", "JavaScript"],
+        demo: "https://taquito.vercel.app/",
+        github: "https://github.com/DimitriMedNov/ProyectoPrWeb.git",}
 ];
