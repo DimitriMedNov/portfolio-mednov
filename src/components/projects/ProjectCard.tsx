@@ -50,7 +50,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             rel="noopener noreferrer"
             className="inline-flex items-center text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary"
           >
-            <Github className="h-4 w-4 mr-1" /> Code
+            {/* Icono de GitHub y texto "Code"
+            <Github className="h-4 w-4 mr-1" /> Código */}
           </a>
         </div>
       </CardContent>

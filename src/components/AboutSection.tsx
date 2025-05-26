@@ -5,11 +5,10 @@ import { Button } from "@/components/ui/button";
 import { FileText, Github, Linkedin, Code, FileCode, LayoutDashboard } from "lucide-react";
 
 const technologies = [
-  { name: "HTML", icon: FileCode },
-  { name: "CSS", icon: FileCode },
+  { name: "TypeScript", icon: Code },
+  { name: "WordPress", icon: LayoutDashboard },
   { name: "JavaScript", icon: Code },
   { name: "React", icon: LayoutDashboard },
-  { name: "TypeScript", icon: Code },
   { name: "Next", icon: LayoutDashboard },
   { name: "Nuxt", icon: LayoutDashboard },
   { name: "Tailwind", icon: FileCode },
@@ -17,9 +16,23 @@ const technologies = [
   { name: "Django", icon: LayoutDashboard },
   { name: "SQL", icon: FileCode },
   { name: "AWS", icon: LayoutDashboard },
+  { name: "Vue.js", icon: LayoutDashboard },
+  { name: "Bootstrap", icon: LayoutDashboard },
   { name: "Flutter Flow", icon: LayoutDashboard },
   { name: "Vuetify", icon: LayoutDashboard },
-
+  { name: "shadcn-ui", icon: LayoutDashboard },
+  { name: "Vite", icon: LayoutDashboard },
+  { name: "OpenAI API", icon: LayoutDashboard },
+  { name: "Node.js", icon: LayoutDashboard },
+  { name: "MongoDB", icon: LayoutDashboard },
+  { name: "PostgreSQL", icon: LayoutDashboard },
+  { name: "MySQL", icon: LayoutDashboard },
+  { name: "Firebase", icon: LayoutDashboard },
+  { name: "Git", icon: FileCode },
+  { name: "Docker", icon: LayoutDashboard },
+  { name: "Linux", icon: LayoutDashboard },
+  { name: "GraphQL", icon: LayoutDashboard },
+  { name: "REST API", icon: LayoutDashboard },
 ];
 
 const AboutSection = () => {
@@ -44,10 +57,10 @@ const AboutSection = () => {
               Jesus D'mitri Medina Novelo
             </h3>
             <p className="text-gray-700 dark:text-gray-300">
-              I am an engineer in Information Technologies and Digital Business with a great passion for technology, software, and web development.
+              I am an engineer in Information Technologies and Digital Business with a strong passion for technology, software development, and web solutions.
             </p>
             <p className="text-gray-700 dark:text-gray-300">
-              I have experience in programming languages and skills in technologies using frameworks. I have developed both personal and professional projects in the web field. I am committed to my professional growth, always looking for new challenges to apply and expand my knowledge.
+              I have experience with various programming languages and frameworks, having worked on both personal and professional web projects. I’m driven by continuous learning and professional growth, always seeking new challenges that allow me to apply my skills and expand my knowledge.
             </p>
 
             <div className="flex items-center gap-4 pt-4">
