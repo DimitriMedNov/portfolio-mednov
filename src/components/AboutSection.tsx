@@ -96,66 +96,74 @@ const AboutSection = () => {
           <div className="space-y-8">
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/3">
-                <div className="text-primary font-semibold">Feb 2023 - Oct 2023</div>
-                <div className="font-bold text-lg mt-1">Web Developer</div>
+                <div className="text-primary font-semibold">Feb 2023 — Oct 2023</div>
+                <div className="font-bold text-lg mt-1">Software Engineering Intern</div>
                 <div className="text-gray-600 dark:text-gray-400">Universidad Anáhuac Mayab</div>
               </div>
               <div className="md:w-2/3 mt-2 md:mt-0">
-                <p className="text-gray-700 dark:text-gray-300">
-                  Supported the frontend development of the "Mi Plan A" platform using React and TypeScript. Contributed to the creation of a web page to display classroom information, including availability and capacity.
-                </p>
+                <div className="space-y-3 text-gray-700 dark:text-gray-300">
+                  <p>
+                    Developed a Discord bot with Python and OpenAI API to manage the E-Sports channel, including moderation (inappropriate language detection and sanctions) and regulation guidance.
+                  </p>
+                  <p>
+                    Supported the frontend development of the "Mi Plan A" platform for Universidad Anáhuac Mayab using React and TypeScript. Additionally, contributed to the creation of a web page to display information about classrooms, including their availability and capacity.
+                  </p>
+                </div>
               </div>
             </div>
 
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/3">
-                <div className="text-primary font-semibold">Feb 2023 - Oct 2023</div>
-                <div className="font-bold text-lg mt-1">Software Developer</div>
-                <div className="text-gray-600 dark:text-gray-400">Universidad Anáhuac Mayab</div>
-              </div>
-              <div className="md:w-2/3 mt-2 md:mt-0">
-                <p className="text-gray-700 dark:text-gray-300">
-                  Developed a Discord bot using Python and the OpenAI API for the gaming room, designed to manage the e-sports channel during university events and improve overall administration.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex flex-col md:flex-row">
-              <div className="md:w-1/3">
-                <div className="text-primary font-semibold">Oct 2023 - Jan 2024</div>
+                <div className="text-primary font-semibold">Oct 2023 — Jan 2024</div>
                 <div className="font-bold text-lg mt-1">IT Support Intern</div>
                 <div className="text-gray-600 dark:text-gray-400">Universidad Anáhuac Mayab</div>
               </div>
               <div className="md:w-2/3 mt-2 md:mt-0">
                 <p className="text-gray-700 dark:text-gray-300">
-                  Provided technical support through the DTI chat and in-person assistance with equipment. Resolved email issues, managed support tickets, and solved technical problems.
+                  Provided IT support through the DTI chat and in-person assistance with equipment. Helped resolve email issues, manage support tickets, and troubleshoot technical problems.
                 </p>
               </div>
             </div>
 
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/3">
-                <div className="text-primary font-semibold">Jan 2024 - Dec 2024</div>
-                <div className="font-bold text-lg mt-1">Web Developer</div>
+                <div className="text-primary font-semibold">Jan 2024 — Dec 2024</div>
+                <div className="font-bold text-lg mt-1">Web Developer, Maintenance and Support</div>
                 <div className="text-gray-600 dark:text-gray-400">Diario de Yucatán</div>
               </div>
               <div className="md:w-2/3 mt-2 md:mt-0">
-                <p className="text-gray-700 dark:text-gray-300">
-                  Assisted in creating a website for the HemerotecaDY portal, working on both frontend and backend using technologies like Nuxt and Vuetify.
-                </p>
+                <div className="space-y-3 text-gray-700 dark:text-gray-300">
+                  <p>
+                    I helped create the website for the Diario de Yucatán Consultation Center portal, working on both the frontend and backend using web technologies such as Nuxt, Vuetify, MongoDB, and JS.
+                  </p>
+                  <p>
+                    I managed the maintenance and optimization of the Consultation Center's web portal, improving performance, correcting errors, and updating content to ensure an optimal user experience.
+                  </p>
+                  <p>
+                    Implemented performance improvements, bug fixes, and content updates to ensure proper functionality and a better user experience.
+                  </p>
+                </div>
               </div>
             </div>
 
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/3">
-                <div className="text-primary font-semibold">Jan 2025 - April 2025</div>
-                <div className="font-bold text-lg mt-1">Software / Web Developer</div>
+                <div className="text-primary font-semibold">April 2025 — July 2025</div>
+                <div className="font-bold text-lg mt-1">API & Software Developer</div>
                 <div className="text-gray-600 dark:text-gray-400">Diario de Yucatán</div>
               </div>
               <div className="md:w-2/3 mt-2 md:mt-0">
-                <p className="text-gray-700 dark:text-gray-300">
-                  Developed intelligent chatbots to automate customer service interactions by integrating various AI technologies. The chatbots were designed to handle frequent user queries efficiently, improving response time and reducing the need for human intervention.
-                </p>
+                <div className="space-y-3 text-gray-700 dark:text-gray-300">
+                  <p>
+                    I developed an automated accounting system (Python + Algebraix API) integrating ChatGPT API to generate intelligent monthly summaries, optimizing financial control and decision-making at Unimedia.
+                  </p>
+                  <p>
+                    I implemented e-commerce integrations with the WooCommerce API and ElevenLabs, automating order creation and purchase summaries on the Club del Diario de Yucatán portal, improving efficiency and user experience.
+                  </p>
+                  <p>
+                    I built an intelligent subscription chatbot with the ChatGPT API, integrated with Zoho CRM and Zoho SalesIQ, which enabled subscription acquisition, purchase management, and automated support for Diario de Yucatán.
+                  </p>
+                </div>
               </div>
             </div>
 
