@@ -92,16 +92,18 @@ const AboutSection = () => {
         </div>
 
         <div className="mt-20">
-          <h3 className="text-2xl font-bold mb-6 text-center">My Experience</h3>
-          <div className="space-y-8">
-            <div className="flex flex-col md:flex-row">
-              <div className="md:w-1/3">
-                <div className="text-primary font-semibold">Feb 2023 — Oct 2023</div>
-                <div className="font-bold text-lg mt-1">Software Engineering Intern</div>
-                <div className="text-gray-600 dark:text-gray-400">Universidad Anáhuac Mayab</div>
+          <h3 className="text-3xl font-bold mb-12 text-left">WORK EXPERIENCE</h3>
+          <div className="space-y-12">
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-gray-700 dark:text-gray-300">
+                Feb 2023 — Oct 2023
               </div>
-              <div className="md:w-2/3 mt-2 md:mt-0">
-                <div className="space-y-3 text-gray-700 dark:text-gray-300">
+              <div className="md:col-span-2">
+                <h4 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-1">
+                  Software Engineering Intern | Universidad Anáhuac Mayab
+                </h4>
+                <div className="space-y-4 text-gray-700 dark:text-gray-300 text-justify">
                   <p>
                     Developed a Discord bot with Python and OpenAI API to manage the E-Sports channel, including moderation (inappropriate language detection and sanctions) and regulation guidance.
                   </p>
@@ -112,27 +114,29 @@ const AboutSection = () => {
               </div>
             </div>
 
-            <div className="flex flex-col md:flex-row">
-              <div className="md:w-1/3">
-                <div className="text-primary font-semibold">Oct 2023 — Jan 2024</div>
-                <div className="font-bold text-lg mt-1">IT Support Intern</div>
-                <div className="text-gray-600 dark:text-gray-400">Universidad Anáhuac Mayab</div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-gray-700 dark:text-gray-300">
+                Oct 2023 — Jan 2024
               </div>
-              <div className="md:w-2/3 mt-2 md:mt-0">
-                <p className="text-gray-700 dark:text-gray-300">
+              <div className="md:col-span-2">
+                <h4 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-1">
+                  IT Support Intern | Universidad Anáhuac Mayab
+                </h4>
+                <p className="text-gray-700 dark:text-gray-300 text-justify">
                   Provided IT support through the DTI chat and in-person assistance with equipment. Helped resolve email issues, manage support tickets, and troubleshoot technical problems.
                 </p>
               </div>
             </div>
 
-            <div className="flex flex-col md:flex-row">
-              <div className="md:w-1/3">
-                <div className="text-primary font-semibold">Jan 2024 — Dec 2024</div>
-                <div className="font-bold text-lg mt-1">Web Developer, Maintenance and Support</div>
-                <div className="text-gray-600 dark:text-gray-400">Diario de Yucatán</div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-gray-700 dark:text-gray-300">
+                Jan 2024 — Dec 2024
               </div>
-              <div className="md:w-2/3 mt-2 md:mt-0">
-                <div className="space-y-3 text-gray-700 dark:text-gray-300">
+              <div className="md:col-span-2">
+                <h4 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-1">
+                  Web Developer, Maintenance and Support | Diario de Yucatán
+                </h4>
+                <div className="space-y-4 text-gray-700 dark:text-gray-300 text-justify">
                   <p>
                     I helped create the website for the Diario de Yucatán Consultation Center portal, working on both the frontend and backend using web technologies such as Nuxt, Vuetify, MongoDB, and JS.
                   </p>
@@ -146,14 +150,15 @@ const AboutSection = () => {
               </div>
             </div>
 
-            <div className="flex flex-col md:flex-row">
-              <div className="md:w-1/3">
-                <div className="text-primary font-semibold">April 2025 — July 2025</div>
-                <div className="font-bold text-lg mt-1">API & Software Developer</div>
-                <div className="text-gray-600 dark:text-gray-400">Diario de Yucatán</div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-gray-700 dark:text-gray-300">
+                April 2025 — July 2025
               </div>
-              <div className="md:w-2/3 mt-2 md:mt-0">
-                <div className="space-y-3 text-gray-700 dark:text-gray-300">
+              <div className="md:col-span-2">
+                <h4 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-1">
+                  API & Software Developer | Diario de Yucatán
+                </h4>
+                <div className="space-y-4 text-gray-700 dark:text-gray-300 text-justify">
                   <p>
                     I developed an automated accounting system (Python + Algebraix API) integrating ChatGPT API to generate intelligent monthly summaries, optimizing financial control and decision-making at Unimedia.
                   </p>
