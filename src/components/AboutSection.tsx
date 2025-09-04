@@ -152,6 +152,25 @@ const AboutSection = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-gray-700 dark:text-gray-300">
+                Jan 2025 — March 2025
+              </div>
+              <div className="md:col-span-2">
+                <h4 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-1">
+                  Web Developer, Maintenance and Support | Diario de Yucatán
+                </h4>
+                <div className="space-y-4 text-gray-700 dark:text-gray-300 text-justify">
+                  <p>
+                    I managed the maintenance and optimization of the Consultation Center's web portal, improving performance, correcting errors, and updating content to ensure an optimal user experience.
+                  </p>
+                  <p>
+                    Implemented performance improvements, bug fixes, and content updates to ensure proper functionality and a better user experience.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-gray-700 dark:text-gray-300">
                 April 2025 — July 2025
               </div>
               <div className="md:col-span-2">
