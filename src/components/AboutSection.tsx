@@ -64,15 +64,10 @@ const AboutSection = () => {
             </p>
 
             <div className="flex items-center gap-4 pt-4">
-              <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
-                <Button className="inline-flex items-center">
-                  <FileText className="mr-2 h-4 w-4" /> Download CV
-                </Button>
-              </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-primary dark:text-gray-300">
+              <a href="https://github.com/DimitriMedNov" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-primary dark:text-gray-300">
                 <Github className="h-5 w-5" />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-primary dark:text-gray-300">
+              <a href="https://www.linkedin.com/in/jdmtmednov82" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-primary dark:text-gray-300">
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>
