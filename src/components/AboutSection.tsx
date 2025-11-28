@@ -97,26 +97,7 @@ const AboutSection = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-gray-700 dark:text-gray-300">
-                Feb 2023 — Oct 2023
-              </div>
-              <div className="md:col-span-2">
-                <h4 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-1">
-                  Software Engineering Intern | Universidad Anáhuac Mayab
-                </h4>
-                <div className="space-y-4 text-gray-700 dark:text-gray-300 text-justify">
-                  <p>
-                    Developed a Discord bot with Python and OpenAI API to manage the E-Sports channel, including moderation (inappropriate language detection and sanctions) and regulation guidance.
-                  </p>
-                  <p>
-                    Supported the frontend development of the "Mi Plan A" platform for Universidad Anáhuac Mayab using React and TypeScript. Additionally, contributed to the creation of a web page to display information about classrooms, including their availability and capacity.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-gray-700 dark:text-gray-300">
-                Oct 2023 — Jan 2024
+                Feb 2023 — Jan 2024
               </div>
               <div className="md:col-span-2">
                 <h4 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-1">
