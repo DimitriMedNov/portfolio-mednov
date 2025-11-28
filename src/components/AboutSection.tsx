@@ -33,6 +33,11 @@ const technologies = [
   { name: "Linux", icon: LayoutDashboard },
   { name: "GraphQL", icon: LayoutDashboard },
   { name: "REST API", icon: LayoutDashboard },
+  { name: "Zoho CRM", icon: LayoutDashboard },
+  { name: "Zoho Marketing", icon: LayoutDashboard },
+  { name: "Zoho Campaigns", icon: LayoutDashboard },
+  { name: "Zoho SalesIQ", icon: LayoutDashboard },
+  { name: "Zoho Sites", icon: LayoutDashboard },
 ];
 
 const AboutSection = () => {
