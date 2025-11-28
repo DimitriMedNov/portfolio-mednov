@@ -38,11 +38,13 @@ const HeroSection = () => {
           </div>
 
           <div className="flex-1 relative w-full max-w-lg lg:max-w-xl animate-fade-in">
-            <img 
-              src={codingCat} 
-              alt="Coding Cat Developer" 
-              className="w-full h-auto rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300"
-            />
+            <div className="bg-gray-900 rounded-2xl shadow-2xl overflow-hidden hover:scale-105 transition-transform duration-300">
+              <img 
+                src={codingCat} 
+                alt="Coding Cat Developer" 
+                className="w-full h-auto"
+              />
+            </div>
           </div>
         </div>
 
