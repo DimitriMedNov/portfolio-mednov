@@ -1,9 +1,8 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Code2 } from "lucide-react";
 import { Link } from "react-scroll";
-import codingCat from "@/assets/coding-cat.png";
 
 const HeroSection = () => {
   return (
@@ -37,13 +36,10 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="flex-1 relative w-full max-w-lg lg:max-w-xl animate-fade-in">
-            <div className="bg-gray-900 rounded-2xl shadow-2xl overflow-hidden hover:scale-105 transition-transform duration-300">
-              <img 
-                src={codingCat} 
-                alt="Coding Cat Developer" 
-                className="w-full h-auto"
-              />
+          <div className="flex-1 flex justify-center items-center animate-fade-in">
+            <div className="relative">
+              <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full"></div>
+              <Code2 className="relative h-64 w-64 lg:h-80 lg:w-80 text-primary animate-pulse-slow" strokeWidth={1.5} />
             </div>
           </div>
         </div>
