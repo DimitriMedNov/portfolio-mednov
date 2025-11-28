@@ -1,8 +1,9 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowDown, FileCode2 } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { Link } from "react-scroll";
+import codingCat from "@/assets/coding-cat.png";
 
 const HeroSection = () => {
   return (
@@ -37,27 +38,11 @@ const HeroSection = () => {
           </div>
 
           <div className="flex-1 relative w-full max-w-lg lg:max-w-xl animate-fade-in">
-            <div className="terminal-container hover-effect">
-              <div className="terminal-header">
-                <div className="terminal-buttons">
-                  <span className="terminal-btn red"></span>
-                  <span className="terminal-btn yellow"></span>
-                  <span className="terminal-btn green"></span>
-                </div>
-                <div className="terminal-title">Portfolio.jsx</div>
-              </div>
-              <div className="terminal-body animate-pulse-code">
-                <pre className="terminal-code">
-                  <span className="terminal-purple">const</span> <span className="terminal-blue">Developer</span> <span className="terminal-white">=</span> <span className="terminal-yellow">()</span> <span className="terminal-white">=&gt;</span> <span className="terminal-yellow">{"{"}</span>
-                  <br/><span className="terminal-indent"></span><span className="terminal-purple">return</span> <span className="terminal-yellow">(</span>
-                  <br/><span className="terminal-indent terminal-indent-2"></span><span className="terminal-pink">&lt;div</span> <span className="terminal-green">className</span><span className="terminal-white">=</span><span className="terminal-orange">"portfolio"</span><span className="terminal-pink">&gt;</span>
-                  <br/><span className="terminal-indent terminal-indent-3"></span><span className="terminal-cyan">// J. Dimitri MedNov 82</span>
-                  <br/><span className="terminal-indent terminal-indent-2"></span><span className="terminal-pink">&lt;/div&gt;</span>
-                  <br/><span className="terminal-indent"></span><span className="terminal-yellow">)</span><span className="terminal-white">;</span>
-                  <br/><span className="terminal-yellow">{"}"}</span><span className="terminal-white">;</span>
-                </pre>
-              </div>
-            </div>
+            <img 
+              src={codingCat} 
+              alt="Coding Cat Developer" 
+              className="w-full h-auto rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300"
+            />
           </div>
         </div>
 
