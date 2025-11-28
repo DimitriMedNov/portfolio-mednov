@@ -160,13 +160,29 @@ const AboutSection = () => {
                   <p>
                     I built an intelligent subscription chatbot with the ChatGPT API, integrated with Zoho CRM and Zoho SalesIQ, which enabled subscription acquisition, purchase management, and automated support for Diario de Yucatán.
                   </p>
-                  <p>
-                    <strong>August 2025 — September 2025:</strong> I developed an integration between WordPress/WooCommerce and the Zoho Marketing Automation API to automatically connect new subscribers to the corresponding marketing lists in Zoho, implementing real-time synchronization of purchase and profile data while applying tags based on WooCommerce purchase behavior and product type. This automation improved segmentation accuracy, streamlined campaign orchestration, and eliminated manual data entry for the marketing team.
-                  </p>
-                  <p>
-                    <strong>October 2025 — November 2025:</strong> I developed an intelligent chatbot using Chatbase for the Empléate.app platform. The bot helps users create accounts, apply for jobs, and find employment opportunities through natural conversation powered by Anthropic Claude 4.5 Haiku. It also detects job offers promoted through ads, automatically recognizing the position and applying on behalf of the user without requiring them to visit the website, significantly enhancing user experience and conversion rates.
-                  </p>
                 </div>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-gray-700 dark:text-gray-300">
+                August 2025 — September 2025
+              </div>
+              <div className="md:col-span-2">
+                <p className="text-gray-700 dark:text-gray-300 text-justify">
+                  I developed an integration between WordPress/WooCommerce and the Zoho Marketing Automation API to automatically connect new subscribers to the corresponding marketing lists in Zoho, implementing real-time synchronization of purchase and profile data while applying tags based on WooCommerce purchase behavior and product type. This automation improved segmentation accuracy, streamlined campaign orchestration, and eliminated manual data entry for the marketing team.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-gray-700 dark:text-gray-300">
+                October 2025 — November 2025
+              </div>
+              <div className="md:col-span-2">
+                <p className="text-gray-700 dark:text-gray-300 text-justify">
+                  I developed an intelligent chatbot using Chatbase for the Empléate.app platform. The bot helps users create accounts, apply for jobs, and find employment opportunities through natural conversation powered by Anthropic Claude 4.5 Haiku. It also detects job offers promoted through ads, automatically recognizing the position and applying on behalf of the user without requiring them to visit the website, significantly enhancing user experience and conversion rates.
+                </p>
               </div>
             </div>
 
