@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Link } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
 import { Github, Linkedin, Mail } from "lucide-react";
 
 const Footer = () => {
@@ -68,14 +69,23 @@ const Footer = () => {
             <ul className="space-y-2">
               {navItems.map((item) => (
                 <li key={item.name}>
-                  <Link
-                    to={item.to}
-                    smooth={true}
-                    duration={500}
-                    className="text-gray-400 hover:text-primary transition cursor-pointer"
-                  >
-                    {item.name}
-                  </Link>
+                  {item.name === "About" ? (
+                    <RouterLink
+                      to="/about"
+                      className="text-gray-400 hover:text-primary transition cursor-pointer"
+                    >
+                      {item.name}
+                    </RouterLink>
+                  ) : (
+                    <Link
+                      to={item.to}
+                      smooth={true}
+                      duration={500}
+                      className="text-gray-400 hover:text-primary transition cursor-pointer"
+                    >
+                      {item.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
