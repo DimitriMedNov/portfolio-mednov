@@ -30,15 +30,6 @@ export const projects: Project[] = [
     github: "https://github.com/ejemplo/proyecto3",
   },
   {
-    id: 4,
-    title: "Blog Personalizado",
-    description: "Plataforma de blog con CMS integrado y opciones avanzadas de SEO.",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-    tags: ["Next.js", "GraphQL", "Tailwind CSS", "Prisma"],
-    demo: "https://ejemplo.com/demo4",
-    github: "https://github.com/ejemplo/proyecto4",
-  },
-  {
     id: 5,
     title: "Aplicación de Clima",
     description: "App de clima con pronósticos detallados y visualizaciones interactivas.",
