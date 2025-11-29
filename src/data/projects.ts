@@ -5,7 +5,7 @@ export const projects: Project[] = [
   {
     id: 1,
     title: "E-commerce Moderno",
-    description: "Tienda online con carrito de compras, pagos y panel de administración.",
+    description: "Tienda online completa con carrito de compras, sistema de pagos, comparador de productos, reviews, wishlist y panel administrativo. Incluye autenticación de usuarios, gestión de órdenes, roles y permisos.",
     image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
     tags: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
     demo: "https://ejemplo.com/demo1",
