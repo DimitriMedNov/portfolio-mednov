@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
 import { Menu, X, Github, Linkedin, Mail } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 
@@ -74,15 +75,25 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.to}
-                smooth={true}
-                duration={500}
-                className="text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary-foreground transition cursor-pointer font-medium text-sm"
-              >
-                {item.name}
-              </Link>
+              item.name === "About" ? (
+                <RouterLink
+                  key={item.name}
+                  to="/about"
+                  className="text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary-foreground transition cursor-pointer font-medium text-sm"
+                >
+                  {item.name}
+                </RouterLink>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.to}
+                  smooth={true}
+                  duration={500}
+                  className="text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary-foreground transition cursor-pointer font-medium text-sm"
+                >
+                  {item.name}
+                </Link>
+              )
             ))}
           </nav>
 
@@ -125,16 +136,27 @@ const Navbar = () => {
         >
           <div className="flex flex-col space-y-4 pb-4">
             {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.to}
-                smooth={true}
-                duration={500}
-                onClick={() => setIsOpen(false)}
-                className="text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary-foreground transition cursor-pointer font-medium"
-              >
-                {item.name}
-              </Link>
+              item.name === "About" ? (
+                <RouterLink
+                  key={item.name}
+                  to="/about"
+                  onClick={() => setIsOpen(false)}
+                  className="text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary-foreground transition cursor-pointer font-medium"
+                >
+                  {item.name}
+                </RouterLink>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.to}
+                  smooth={true}
+                  duration={500}
+                  onClick={() => setIsOpen(false)}
+                  className="text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary-foreground transition cursor-pointer font-medium"
+                >
+                  {item.name}
+                </Link>
+              )
             ))}
             <div className="flex space-x-4 pt-2">
               {socialLinks.map((link, index) => (
