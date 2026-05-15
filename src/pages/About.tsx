@@ -64,9 +64,6 @@ const About = () => {
               <p className="text-gray-700 dark:text-gray-300">
                 I’m a Full Stack Software Engineer focused on building AI-powered platforms, workflow automation systems, and scalable backend solutions for real-world business operations.
               </p>
-              <p className="text-gray-700 dark:text-gray-300">
-                My experience includes developing intelligent systems using Python, React, APIs, OCR, and LLM integrations to automate processes, optimize workflows, and improve user experience across enterprise environments.
-              </p>
 
               <div className="flex items-center gap-4 pt-4">
                 <a href="https://github.com/DimitriMedNov" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-primary dark:text-gray-300">
