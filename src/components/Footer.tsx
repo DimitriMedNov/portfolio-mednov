@@ -59,8 +59,9 @@ const Footer = () => {
                         )}
 
                         <p className="text-gray-400 mb-6 max-w-md">
-                            Frontend developer specialized in creating exceptional web
-                            experiences with modern and visually appealing interfaces.
+                            Full stack engineer building AI-powered platforms, automation
+                            systems, and scalable backend solutions for real-world business
+                            operations.
                         </p>
 
                         <div className="flex space-x-4">
