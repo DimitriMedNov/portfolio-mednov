@@ -18,7 +18,7 @@ const HeroSection = () => {
                 Hello, I'm Jesus D'mitri Medina Novelo
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 dark:text-white animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-                <span className="text-primary">AI Software, Project Manager & Frontend</span> Developer
+                <span className="text-primary">AI Software Engineer & Full Stack</span> Developer
               </h1>
             </div>
 
