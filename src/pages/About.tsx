@@ -1,44 +1,44 @@
 
 import React from "react";
 import { Card } from "@/components/ui/card";
-import { Github, Linkedin, Code, FileCode, LayoutDashboard } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const technologies = [
-  { name: "TypeScript", icon: Code },
-  { name: "WordPress", icon: LayoutDashboard },
-  { name: "JavaScript", icon: Code },
-  { name: "React", icon: LayoutDashboard },
-  { name: "Next", icon: LayoutDashboard },
-  { name: "Nuxt", icon: LayoutDashboard },
-  { name: "Tailwind", icon: FileCode },
-  { name: "Python", icon: Code },
-  { name: "Django", icon: LayoutDashboard },
-  { name: "SQL", icon: FileCode },
-  { name: "AWS", icon: LayoutDashboard },
-  { name: "Vue.js", icon: LayoutDashboard },
-  { name: "Bootstrap", icon: LayoutDashboard },
-  { name: "Flutter Flow", icon: LayoutDashboard },
-  { name: "Vuetify", icon: LayoutDashboard },
-  { name: "shadcn-ui", icon: LayoutDashboard },
-  { name: "Vite", icon: LayoutDashboard },
-  { name: "OpenAI API", icon: LayoutDashboard },
-  { name: "Node.js", icon: LayoutDashboard },
-  { name: "MongoDB", icon: LayoutDashboard },
-  { name: "PostgreSQL", icon: LayoutDashboard },
-  { name: "MySQL", icon: LayoutDashboard },
-  { name: "Firebase", icon: LayoutDashboard },
-  { name: "Git", icon: FileCode },
-  { name: "Docker", icon: LayoutDashboard },
-  { name: "Linux", icon: LayoutDashboard },
-  { name: "GraphQL", icon: LayoutDashboard },
-  { name: "REST API", icon: LayoutDashboard },
-  { name: "Zoho CRM", icon: LayoutDashboard },
-  { name: "Zoho Marketing", icon: LayoutDashboard },
-  { name: "Zoho Campaigns", icon: LayoutDashboard },
-  { name: "Zoho SalesIQ", icon: LayoutDashboard },
-  { name: "Zoho Sites", icon: LayoutDashboard },
+const techCategories = [
+  {
+    title: "Languages",
+    items: ["Python", "TypeScript", "JavaScript", "SQL"],
+  },
+  {
+    title: "Frontend",
+    items: ["React", "Next.js", "Vue.js", "Nuxt", "Tailwind CSS", "Vite", "shadcn/ui"],
+  },
+  {
+    title: "Backend & APIs",
+    items: ["FastAPI", "Flask", "Django", "REST APIs", "GraphQL"],
+  },
+  {
+    title: "AI & Automation",
+    items: ["OpenAI API", "LangChain", "OCR", "AI Agents", "Workflow Automation", "LLM Integrations"],
+  },
+  {
+    title: "Databases",
+    items: ["PostgreSQL", "MongoDB", "MySQL", "Redis"],
+  },
+  {
+    title: "Cloud & Infrastructure",
+    items: ["AWS", "Docker", "Linux"],
+  },
+  {
+    title: "Tools & Engineering",
+    items: ["Git", "GitHub"],
+  },
+  {
+    title: "Enterprise & Integrations",
+    items: ["Zoho Ecosystem", "CRM Integrations", "API Integrations"],
+  },
 ];
 
 const About = () => {
@@ -83,11 +83,19 @@ const About = () => {
 
             <Card className="p-8 shadow-lg">
               <h3 className="text-lg font-bold mb-6">My Technologies</h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                {technologies.map((tech) => (
-                  <div key={tech.name} className="flex items-center gap-2 p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
-                    <tech.icon className="h-5 w-5 text-primary" />
-                    <span>{tech.name}</span>
+              <div className="space-y-5">
+                {techCategories.map((category) => (
+                  <div key={category.title}>
+                    <h4 className="text-sm font-semibold text-primary mb-2 uppercase tracking-wide">
+                      {category.title}
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {category.items.map((item) => (
+                        <Badge key={item} variant="secondary" className="text-sm font-normal">
+                          {item}
+                        </Badge>
+                      ))}
+                    </div>
                   </div>
                 ))}
               </div>
