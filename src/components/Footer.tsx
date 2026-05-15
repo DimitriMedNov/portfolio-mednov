@@ -118,7 +118,6 @@ const Footer = () => {
                     <div>
                         <h3 className="font-semibold text-lg mb-4">Contact</h3>
                         <ul className="space-y-2 text-gray-400">
-                            <li>Merida Yucatán, México</li>
                             <li>mednov@outlook.es</li>
                             <li>+52 (999) 359-0366</li>
                         </ul>

@@ -22,12 +22,6 @@ const contactInfoItems: ContactInfoItem[] = [
     content: "+52 (999) 359-0366",
     link: "tel:+529993590366",
   },
-  {
-    icon: <MapPin className="h-5 w-5 text-primary" />,
-    title: "Location",
-    content: "Merida Yucatán, México",
-    link: "https://maps.app.goo.gl/tVbjwdTbuoz3GACE6",
-  },
 ];
 
 const ContactInfo = () => {
