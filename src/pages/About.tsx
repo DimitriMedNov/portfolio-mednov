@@ -62,10 +62,10 @@ const About = () => {
                 Jesus D'mitri Medina Novelo
               </h2>
               <p className="text-gray-700 dark:text-gray-300">
-                I am an engineer in Information Technologies and Digital Business with a strong passion for technology, software development, and web solutions.
+                I’m a Full Stack Software Engineer focused on building AI-powered platforms, workflow automation systems, and scalable backend solutions for real-world business operations.
               </p>
               <p className="text-gray-700 dark:text-gray-300">
-                I have experience with various programming languages and frameworks, having worked on both personal and professional web projects. I'm driven by continuous learning and professional growth, always seeking new challenges that allow me to apply my skills and expand my knowledge.
+                My experience includes developing intelligent systems using Python, React, APIs, OCR, and LLM integrations to automate processes, optimize workflows, and improve user experience across enterprise environments.
               </p>
 
               <div className="flex items-center gap-4 pt-4">
