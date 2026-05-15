@@ -83,11 +83,19 @@ const About = () => {
 
             <Card className="p-8 shadow-lg">
               <h3 className="text-lg font-bold mb-6">My Technologies</h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                {technologies.map((tech) => (
-                  <div key={tech.name} className="flex items-center gap-2 p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
-                    <tech.icon className="h-5 w-5 text-primary" />
-                    <span>{tech.name}</span>
+              <div className="space-y-5">
+                {techCategories.map((category) => (
+                  <div key={category.title}>
+                    <h4 className="text-sm font-semibold text-primary mb-2 uppercase tracking-wide">
+                      {category.title}
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {category.items.map((item) => (
+                        <Badge key={item} variant="secondary" className="text-sm font-normal">
+                          {item}
+                        </Badge>
+                      ))}
+                    </div>
                   </div>
                 ))}
               </div>
