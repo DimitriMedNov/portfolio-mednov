@@ -38,15 +38,15 @@ const HeroSection = () => {
 
           <div className="flex-1 flex justify-center items-center animate-fade-in">
             <div className="relative">
-              <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full"></div>
-              <Code2 className="relative h-64 w-64 lg:h-80 lg:w-80 text-primary animate-pulse-slow" strokeWidth={1.5} />
+              <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full" aria-hidden="true"></div>
+              <Code2 className="relative h-64 w-64 lg:h-80 lg:w-80 text-primary motion-safe:animate-pulse" strokeWidth={1.5} aria-hidden="true" />
             </div>
           </div>
         </div>
 
-        <div className="flex justify-center mt-24 animate-bounce">
-          <Link to="projects" smooth={true} duration={800} className="cursor-pointer">
-            <ArrowDown className="h-8 w-8 text-primary" />
+        <div className="flex justify-center mt-24 motion-safe:animate-bounce">
+          <Link to="projects" smooth={true} duration={800} className="cursor-pointer inline-flex rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40" aria-label="Ir a proyectos">
+            <ArrowDown className="h-8 w-8 text-primary" aria-hidden="true" />
           </Link>
         </div>
       </div>

@@ -26,9 +26,9 @@ const Navbar = () => {
     ];
 
     const socialLinks = [
-        { icon: <Github className="w-5 h-5" />, href: "https://github.com/DimitriMedNov", label: "GitHub" },
-        { icon: <Linkedin className="w-5 h-5" />, href: "https://www.linkedin.com/in/jdmtmednov82/", label: "LinkedIn" },
-        { icon: <Mail className="w-5 h-5" />, href: "mailto:mednov@outlook.es", label: "Email" },
+        { icon: <Github className="w-5 h-5" aria-hidden="true" />, href: "https://github.com/DimitriMedNov", label: "GitHub" },
+        { icon: <Linkedin className="w-5 h-5" aria-hidden="true" />, href: "https://www.linkedin.com/in/jdmtmednov82/", label: "LinkedIn" },
+        { icon: <Mail className="w-5 h-5" aria-hidden="true" />, href: "mailto:mednov@outlook.es", label: "Email" },
     ];
 
     // Clases reutilizables para el hover visible (light + dark)
@@ -106,16 +106,20 @@ const Navbar = () => {
                          dark:text-gray-300 dark:hover:text-primary dark:hover:bg-white/10
                          transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
                             aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
+                            aria-expanded={isOpen}
+                            aria-controls="mobile-menu"
                         >
-                            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                            {isOpen ? <X className="h-6 w-6" aria-hidden="true" /> : <Menu className="h-6 w-6" aria-hidden="true" />}
                         </button>
                     </div>
                 </div>
 
                 {/* Mobile Menu */}
                 <div
+                    id="mobile-menu"
+                    aria-hidden={!isOpen}
                     className={`md:hidden transition-all duration-300 ease-in-out ${
-                        isOpen ? "max-h-96 opacity-100 py-4" : "max-h-0 opacity-0 overflow-hidden"
+                        isOpen ? "max-h-96 opacity-100 py-4 visible" : "max-h-0 opacity-0 overflow-hidden invisible"
                     }`}
                 >
                     <div className="flex flex-col space-y-2 pb-4">

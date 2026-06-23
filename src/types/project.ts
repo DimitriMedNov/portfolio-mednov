@@ -6,5 +6,6 @@ export type Project = {
   image: string;
   tags: string[];
   demo: string;
-  github: string;
+  /** Optional: only set when a public repository actually exists. */
+  github?: string;
 };

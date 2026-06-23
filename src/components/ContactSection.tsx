@@ -1,5 +1,4 @@
 
-import React from "react";
 import ContactInfo from "./contact/ContactInfo";
 
 const ContactSection = () => {

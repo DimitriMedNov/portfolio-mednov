@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -100,146 +98,6 @@
     animation: fadeInRight 0.8s ease-out forwards;
   }
 
-  .animate-spin-slow {
-    animation: spin 6s linear infinite;
-  }
-
-  /* Terminal styling */
-  .terminal-container {
-    width: 100%;
-    max-width: 500px;
-    background-color: #1e1e2e;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
-    transform-style: preserve-3d;
-    perspective: 500px;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .hover-effect:hover {
-    transform: scale(1.02) translateY(-5px);
-    box-shadow: 0 15px 35px rgba(59, 130, 246, 0.2);
-    border: 1px solid rgba(59, 130, 246, 0.3);
-  }
-
-  .terminal-header {
-    padding: 10px 15px;
-    background-color: #191927;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #313244;
-  }
-
-  .terminal-buttons {
-    display: flex;
-    gap: 6px;
-    margin-right: 10px;
-  }
-
-  .terminal-btn {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-  }
-
-  .red {
-    background-color: #f38ba8;
-  }
-
-  .yellow {
-    background-color: #f9e2af;
-  }
-
-  .green {
-    background-color: #a6e3a1;
-  }
-
-  .terminal-title {
-    flex-grow: 1;
-    font-size: 12px;
-    text-align: center;
-    color: #cdd6f4;
-  }
-
-  .terminal-body {
-    padding: 15px;
-    background-color: #1e1e2e;
-    overflow-x: auto;
-    transform: translateZ(0);
-  }
-
-  .terminal-code {
-    margin: 0;
-    white-space: pre;
-    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
-    font-size: 13px;
-    line-height: 1.6;
-  }
-
-  .terminal-white {
-    color: #cdd6f4;
-  }
-
-  .terminal-purple {
-    color: #cba6f7;
-  }
-
-  .terminal-blue {
-    color: #89b4fa;
-  }
-
-  .terminal-pink {
-    color: #f5c2e7;
-  }
-
-  .terminal-yellow {
-    color: #f9e2af;
-  }
-
-  .terminal-green {
-    color: #a6e3a1;
-  }
-
-  .terminal-cyan {
-    color: #89dceb;
-  }
-
-  .terminal-orange {
-    color: #fab387;
-  }
-
-  .terminal-indent {
-    padding-left: 20px;
-    display: inline-block;
-  }
-
-  .terminal-indent-2 {
-    padding-left: 40px;
-    display: inline-block;
-  }
-
-  .terminal-indent-3 {
-    padding-left: 60px;
-    display: inline-block;
-  }
-
-  .animate-pulse-code {
-    position: relative;
-  }
-
-  .animate-pulse-code::after {
-    content: '';
-    position: absolute;
-    right: 15px;
-    bottom: 15px;
-    width: 8px;
-    height: 16px;
-    background-color: #cdd6f4;
-    animation: blink 1s step-end infinite;
-  }
-
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -270,23 +128,21 @@
       transform: translateX(0);
     }
   }
-
-  @keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-  @keyframes blink {
-    0%, 100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-  }
 }
 
+/* Respeta la preferencia del sistema de reducir movimiento (accesibilidad). */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}

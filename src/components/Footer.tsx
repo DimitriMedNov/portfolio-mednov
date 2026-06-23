@@ -11,17 +11,17 @@ const Footer = () => {
 
     const socialLinks = [
         {
-            icon: <Github className="w-5 h-5" />,
+            icon: <Github className="w-5 h-5" aria-hidden="true" />,
             href: "https://github.com/DimitriMedNov",
             label: "GitHub",
         },
         {
-            icon: <Linkedin className="w-5 h-5" />,
+            icon: <Linkedin className="w-5 h-5" aria-hidden="true" />,
             href: "https://www.linkedin.com/in/jdmtmednov82/",
             label: "LinkedIn",
         },
         {
-            icon: <Mail className="w-5 h-5" />,
+            icon: <Mail className="w-5 h-5" aria-hidden="true" />,
             href: "mailto:mednov@outlook.es",
             label: "Email",
         },

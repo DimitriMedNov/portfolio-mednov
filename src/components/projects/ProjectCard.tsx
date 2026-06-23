@@ -14,8 +14,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       <div className="h-48 overflow-hidden">
         <img
           src={project.image}
-          alt={project.title}
-          className="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105 will-change-transform"
+          alt={`Captura del proyecto ${project.title}`}
+          width={760}
+          height={507}
+          className="w-full h-full object-cover object-center transition-transform duration-300 motion-safe:hover:scale-105 will-change-transform"
           loading="lazy"
           decoding="async"
         />
@@ -35,24 +37,27 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             </span>
           ))}
         </div>
-        <div className="flex space-x-3 mt-auto">
+        <div className="flex space-x-4 mt-auto">
           <a
             href={project.demo}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center text-sm font-medium text-primary hover:text-primary/90"
+            className="inline-flex items-center text-sm font-medium text-primary hover:text-primary/90 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
           >
-            <ExternalLink className="h-4 w-4 mr-1" /> Demo
+            <ExternalLink className="h-4 w-4 mr-1" aria-hidden="true" /> Demo
+            <span className="sr-only"> de {project.title}</span>
           </a>
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary"
-          >
-            {/* Icono de GitHub y texto "Code"
-            <Github className="h-4 w-4 mr-1" /> Código */}
-          </a>
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+            >
+              <Github className="h-4 w-4 mr-1" aria-hidden="true" /> Código
+              <span className="sr-only"> de {project.title} en GitHub</span>
+            </a>
+          )}
         </div>
       </CardContent>
     </Card>
