@@ -1,8 +1,6 @@
 
-import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Code2 } from "lucide-react";
-import { Link } from "react-scroll";
 
 const HeroSection = () => {
   return (
@@ -23,16 +21,16 @@ const HeroSection = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: "0.8s" }}>
-              <Link to="projects" smooth={true} duration={800}>
-                <Button size="lg" className="text-md px-8">
+              <Button asChild size="lg" className="text-md px-8">
+                <a href="#projects">
                   View Projects
-                </Button>
-              </Link>
-              <Link to="contact" smooth={true} duration={1000}>
-                <Button variant="outline" size="lg" className="text-md px-8">
+                </a>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="text-md px-8">
+                <a href="#contact">
                   Contact
-                </Button>
-              </Link>
+                </a>
+              </Button>
             </div>
           </div>
 
@@ -45,9 +43,9 @@ const HeroSection = () => {
         </div>
 
         <div className="flex justify-center mt-24 motion-safe:animate-bounce">
-          <Link to="projects" smooth={true} duration={800} className="cursor-pointer inline-flex rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40" aria-label="Ir a proyectos">
+          <a href="#projects" className="cursor-pointer inline-flex rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40" aria-label="Ir a proyectos">
             <ArrowDown className="h-8 w-8 text-primary" aria-hidden="true" />
-          </Link>
+          </a>
         </div>
       </div>
     </section>

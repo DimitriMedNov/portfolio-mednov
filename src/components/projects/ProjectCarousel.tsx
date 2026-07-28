@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import {
     Carousel,
@@ -18,25 +18,29 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
     const [enableAutoplay, setEnableAutoplay] = useState(false);
 
     useEffect(() => {
-        // ✅ Activa autoplay solo si la pantalla es >= 768px
-        const checkScreenSize = () => {
-            setEnableAutoplay(window.innerWidth >= 768);
+        const desktop = window.matchMedia("(min-width: 768px)");
+        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+        const updateAutoplay = () => {
+            setEnableAutoplay(desktop.matches && !reducedMotion.matches);
         };
 
-        checkScreenSize(); // correr una vez
-        window.addEventListener("resize", checkScreenSize);
-
-        return () => window.removeEventListener("resize", checkScreenSize);
+        updateAutoplay();
+        desktop.addEventListener("change", updateAutoplay);
+        reducedMotion.addEventListener("change", updateAutoplay);
+        return () => {
+            desktop.removeEventListener("change", updateAutoplay);
+            reducedMotion.removeEventListener("change", updateAutoplay);
+        };
     }, []);
 
-    // Configuración del plugin (solo se crea si aplica)
-    const autoplay = useRef(
-        Autoplay({
+    const autoplay = useMemo(
+        () => enableAutoplay ? Autoplay({
             delay: 3000,
             stopOnInteraction: false,
             stopOnMouseEnter: true,
             stopOnFocusIn: true,
-        })
+        }) : null,
+        [enableAutoplay]
     );
 
     return (
@@ -49,9 +53,8 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
                     inViewThreshold: 0.5,
                     duration: 25,
                 }}
-                // 👇 solo aplica el plugin si la pantalla es grande
-                plugins={enableAutoplay ? [autoplay.current] : []}
-                onMouseLeave={() => enableAutoplay && autoplay.current.reset()}
+                plugins={autoplay ? [autoplay] : []}
+                onMouseLeave={() => autoplay?.reset()}
                 className="w-full"
             >
                 <CarouselContent className="-ml-2 md:-ml-4">

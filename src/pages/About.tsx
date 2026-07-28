@@ -5,6 +5,7 @@ import { Github, Linkedin } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
 
 const techCategories = [
   {
@@ -44,6 +45,11 @@ const techCategories = [
 const About = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+      <Seo
+        title="About Dimitri MedNov — Experience and Technologies"
+        description="Experience, education, and technology stack of AI software and full-stack developer Dimitri MedNov."
+        path="/about"
+      />
       <Navbar />
       <main className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
         <div className="container mx-auto max-w-6xl">

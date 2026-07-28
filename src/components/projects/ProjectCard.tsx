@@ -10,14 +10,14 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <Card className="overflow-hidden flex flex-col h-full transform transition-transform duration-300 hover:shadow-lg hover:-translate-y-1 will-change-transform">
+    <Card className="overflow-hidden flex flex-col h-full transform transition-transform duration-300 hover:shadow-lg hover:-translate-y-1">
       <div className="h-48 overflow-hidden">
         <img
           src={project.image}
           alt={`Captura del proyecto ${project.title}`}
           width={760}
           height={507}
-          className="w-full h-full object-cover object-center transition-transform duration-300 motion-safe:hover:scale-105 will-change-transform"
+          className="w-full h-full object-cover object-center transition-transform duration-300 motion-safe:hover:scale-105"
           loading="lazy"
           decoding="async"
         />

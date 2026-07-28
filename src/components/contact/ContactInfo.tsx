@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
 type ContactInfoItem = {
   icon: React.ReactNode;
@@ -34,8 +34,6 @@ const ContactInfo = () => {
             <h3 className="font-semibold text-lg">{item.title}</h3>
             <a
               href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
               className="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors"
             >
               {item.content}
