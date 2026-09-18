@@ -16,7 +16,7 @@ export const projects: Project[] = [
     name: "ShopEdge",
     image: "/images/Ecommerce.webp",
     tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Supabase", "React Query"],
-    demo: "https://shop-edge-seven.vercel.app/",
+    // El despliegue anterior ya no existe (404). Se vuelve a enlazar cuando esté publicado.
   },
   {
     id: 2,
