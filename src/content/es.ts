@@ -11,35 +11,35 @@ export const es: Content = {
     {
       path: "/",
       tab: "Identidad",
-      seoTitle: "Dimitri MedNov — Ingeniero de Software con IA y Full Stack",
+      seoTitle: "Dimitri MedNov",
       seoDescription:
         "Identidad y resultados medidos de Jesus D'mitri Medina Novelo: CRM y automatizaciones en producción en Diprolam, y un ERP para más de 100 usuarios en desarrollo.",
     },
     {
       path: "/systems",
       tab: "Sistemas",
-      seoTitle: "Sistemas — Trabajo privado | Dimitri MedNov",
+      seoTitle: "Sistemas",
       seoDescription:
         "Trabajo empresarial privado: ERP corporativo, SaaS multi-tenant, CRM empresarial, integraciones de IA y búsqueda con OCR, con las sedes donde operan.",
     },
     {
       path: "/projects",
       tab: "Proyectos",
-      seoTitle: "Proyectos públicos — Demos en vivo | Dimitri MedNov",
+      seoTitle: "Proyectos públicos",
       seoDescription:
         "Seis proyectos públicos con demo en vivo: ShopEdge, Chainlytics, MindTask AI, Weather App, Beat Pulse y El Taquito Gordo Feliz.",
     },
     {
       path: "/about",
       tab: "CV",
-      seoTitle: "CV — Experiencia y habilidades | Dimitri MedNov",
+      seoTitle: "CV",
       seoDescription:
         "CV completo: 4.5+ años en Diprolam, Grupo Megamedia y Universidad Anáhuac Mayab, con responsabilidades, stack, formación, certificaciones y cursos.",
     },
     {
       path: "/contact",
       tab: "Contacto",
-      seoTitle: "Contacto | Dimitri MedNov",
+      seoTitle: "Contacto",
       seoDescription:
         "Contacta a Jesus D'mitri Medina Novelo — mednov@outlook.es, +52 999 359 0366, Mérida, Yucatán, México.",
     },

@@ -43,7 +43,7 @@ describe("console views", () => {
     expect(screen.getByRole("heading", { name: /Skills, certifications/i })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: /Head of IT & Software Engineering/i })).toBeInTheDocument();
     await waitFor(() => {
-      expect(document.title).toBe("Résumé — Experience & Skills | Dimitri MedNov");
+      expect(document.title).toBe("Résumé");
       expect(document.querySelector('link[rel="canonical"]')).toHaveAttribute(
         "href",
         "https://portfolio-mednov.vercel.app/about",

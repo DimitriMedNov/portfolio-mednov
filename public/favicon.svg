@@ -1,16 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="MedNov">
-  <rect width="64" height="64" fill="#04060a"/>
-  <rect x="0.5" y="0.5" width="63" height="63" fill="none" stroke="#5eeaff" stroke-opacity="0.35"/>
-  <g fill="none" stroke="#5eeaff" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter">
-    <path d="M12 48V18l20 18 20-18v30"/>
+  <!--
+    La misma nube de nodos de la portada, reducida a lo que se lee a 16px:
+    un centro y seis satélites unidos por radios. Colores del sistema.
+  -->
+  <rect width="64" height="64" rx="14" fill="#000000"/>
+  <g stroke="#409CFF" stroke-width="3" stroke-linecap="round">
+    <path d="M32 32 53 32M32 32 42.5 50.2M32 32 21.5 50.2M32 32 11 32M32 32 21.5 13.8M32 32 42.5 13.8"/>
   </g>
-  <g fill="#5eeaff">
-    <circle cx="12" cy="18" r="5"/>
-    <circle cx="32" cy="36" r="5"/>
-    <circle cx="52" cy="18" r="5"/>
-  </g>
-  <g fill="#ff4d9d">
-    <circle cx="12" cy="48" r="3.5"/>
-    <circle cx="52" cy="48" r="3.5"/>
-  </g>
+  <circle cx="53" cy="32" r="5.5" fill="#40C8E0"/>
+  <circle cx="42.5" cy="50.2" r="5.5" fill="#FF6482"/>
+  <circle cx="21.5" cy="50.2" r="5.5" fill="#409CFF"/>
+  <circle cx="11" cy="32" r="5.5" fill="#40C8E0"/>
+  <circle cx="21.5" cy="13.8" r="5.5" fill="#FF6482"/>
+  <circle cx="42.5" cy="13.8" r="5.5" fill="#409CFF"/>
+  <circle cx="32" cy="32" r="9" fill="#BF5AF2"/>
 </svg>
