@@ -1,8 +1,8 @@
-
 export type Project = {
   id: number;
-  title: string;
-  description: string;
+  /** Section number printed on the card, e.g. "4.1". */
+  code: string;
+  name: string;
   image: string;
   tags: string[];
   demo: string;

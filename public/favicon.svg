@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="MedNov">
+  <rect width="64" height="64" fill="#04060a"/>
+  <rect x="0.5" y="0.5" width="63" height="63" fill="none" stroke="#5eeaff" stroke-opacity="0.35"/>
+  <g fill="none" stroke="#5eeaff" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M12 48V18l20 18 20-18v30"/>
+  </g>
+  <g fill="#5eeaff">
+    <circle cx="12" cy="18" r="5"/>
+    <circle cx="32" cy="36" r="5"/>
+    <circle cx="52" cy="18" r="5"/>
+  </g>
+  <g fill="#ff4d9d">
+    <circle cx="12" cy="48" r="3.5"/>
+    <circle cx="52" cy="48" r="3.5"/>
+  </g>
+</svg>

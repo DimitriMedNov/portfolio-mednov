@@ -20,8 +20,41 @@ export default {
 			}
 		},
 		extend: {
+			/* Escala tipográfica en rem: escala con la preferencia del navegador
+			   y nunca baja de 12px (accessibility.md › Vision). */
+			fontSize: {
+				caption: ['0.8125rem', { lineHeight: '1.4' }],
+				label: ['0.875rem', { lineHeight: '1.45' }],
+				meta: ['0.9375rem', { lineHeight: '1.5' }],
+				body: ['1.0625rem', { lineHeight: '1.5' }],
+				lead: ['1.3125rem', { lineHeight: '1.42', letterSpacing: '0.01em' }],
+				title: ['1.5rem', { lineHeight: '1.25', letterSpacing: '-0.01em' }],
+				headline: ['2rem', { lineHeight: '1.15', letterSpacing: '-0.016em' }],
+				display: ['3rem', { lineHeight: '1.06', letterSpacing: '-0.02em' }],
+			},
 			fontFamily: {
-				poppins: ['Poppins', 'sans-serif'],
+				/* Pila del sistema: SF Pro en Apple, la nativa en el resto. */
+				/* SF Pro en dispositivos Apple; Inter como respaldo cercano fuera. */
+				sans: [
+					'-apple-system',
+					'BlinkMacSystemFont',
+					'"SF Pro Text"',
+					'"SF Pro Display"',
+					'Inter',
+					'"Helvetica Neue"',
+					'Arial',
+					'sans-serif',
+				],
+				display: [
+					'-apple-system',
+					'BlinkMacSystemFont',
+					'"SF Pro Display"',
+					'Inter',
+					'"Helvetica Neue"',
+					'Arial',
+					'sans-serif',
+				],
+				mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -58,7 +91,24 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				"blue-accent": "#3B82F6",
-				"turquoise": "#06B6D4"
+				"turquoise": "#06B6D4",
+				/* HUD console tokens (see src/index.css). */
+				void: 'rgb(var(--void) / <alpha-value>)',
+				deep: 'rgb(var(--deep) / <alpha-value>)',
+				panel: 'rgb(var(--panel) / <alpha-value>)',
+				panel2: 'rgb(var(--panel-2) / <alpha-value>)',
+				line: 'rgb(var(--line) / <alpha-value>)',
+				arc: 'rgb(var(--arc) / <alpha-value>)',
+				gold: 'rgb(var(--gold) / <alpha-value>)',
+				mag: 'rgb(var(--mag) / <alpha-value>)',
+				txt: 'rgb(var(--txt) / <alpha-value>)',
+				mut: 'rgb(var(--mut) / <alpha-value>)',
+				blue: 'rgb(var(--blue) / <alpha-value>)',
+				green: 'rgb(var(--green) / <alpha-value>)',
+				orange: 'rgb(var(--orange) / <alpha-value>)',
+				purple: 'rgb(var(--purple) / <alpha-value>)',
+				pink: 'rgb(var(--pink) / <alpha-value>)',
+				teal: 'rgb(var(--teal) / <alpha-value>)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

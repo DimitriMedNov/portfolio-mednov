@@ -73,7 +73,7 @@
   }
 
   body {
-    @apply bg-background text-foreground font-poppins;
+    -webkit-font-smoothing: antialiased;
   }
 
   html {
@@ -127,6 +127,378 @@
       opacity: 1;
       transform: translateX(0);
     }
+  }
+}
+
+/*
+ * Tokens al estilo de las páginas de Apple: superficie casi blanca, texto
+ * grafito, un azul de sistema para lo accionable, y nada más. Los nombres se
+ * conservan para no tocar cada componente; lo que cambia es el valor.
+ */
+@layer base {
+  :root {
+    color-scheme: light;
+    --void: 251 251 253;   /* fondo de página */
+    --deep: 245 245 247;   /* sección alterna */
+    --panel: 255 255 255;  /* tarjeta */
+    --panel-2: 242 242 245;/* relleno suave, píldoras */
+    --line: 210 210 215;   /* separador */
+    --arc: 0 102 204;      /* azul de sistema, lo accionable */
+    --gold: 163 82 0;      /* naranja del sistema: en construcción */
+    --mag: 107 52 201;     /* morado del sistema: interno */
+    --txt: 29 29 31;
+    --mut: 110 110 115;
+    /* Curvas de Apple: entrada suave, salida larga. */
+    --ease: cubic-bezier(0.28, 0.11, 0.32, 1);
+    --ease-spring: cubic-bezier(0.32, 0.72, 0, 1);
+    /* Colores del sistema, en su variante legible sobre blanco (≥5.4:1). */
+    --blue: 0 102 204;
+    --green: 19 122 60;
+    --orange: 163 82 0;
+    --purple: 107 52 201;
+    --pink: 191 15 82;
+    --teal: 0 112 127;
+  }
+
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --void: 0 0 0;
+    --deep: 22 22 24;
+    --panel: 29 29 31;
+    --panel-2: 44 44 46;
+    --line: 62 62 66;
+    --arc: 64 156 255;
+    --gold: 255 159 10;
+    --mag: 191 90 242;
+    --txt: 245 245 247;
+    --mut: 152 152 157;
+    /* En oscuro mandan los tonos vivos del sistema (≥4.7:1 sobre la tarjeta). */
+    --blue: 64 156 255;
+    --green: 48 209 88;
+    --orange: 255 159 10;
+    --purple: 191 90 242;
+    --pink: 255 100 130;
+    --teal: 64 200 224;
+  }
+
+  body {
+    @apply bg-void font-sans text-txt antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /*
+   * Manchas de color muy tenues, fijas al viewport: le dan al material algo
+   * que difuminar. Sin esto, el cristal sobre un fondo plano no se ve.
+   */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+      radial-gradient(48rem 32rem at 12% -8%, rgb(var(--blue) / 0.16), transparent 60%),
+      radial-gradient(42rem 30rem at 88% 6%, rgb(var(--purple) / 0.14), transparent 58%),
+      radial-gradient(40rem 28rem at 70% 92%, rgb(var(--teal) / 0.12), transparent 60%);
+  }
+
+  :root[data-theme="dark"] body::before {
+    background-image:
+      radial-gradient(48rem 32rem at 12% -8%, rgb(var(--blue) / 0.22), transparent 60%),
+      radial-gradient(42rem 30rem at 88% 6%, rgb(var(--purple) / 0.18), transparent 58%),
+      radial-gradient(40rem 28rem at 70% 92%, rgb(var(--teal) / 0.14), transparent 60%);
+  }
+
+  /*
+   * Los títulos van en la variante Display, como en apple.com. Se declara la
+   * familia a mano y no con @apply: así no depende de que Tailwind haya
+   * recargado su configuración.
+   */
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family:
+      -apple-system,
+      BlinkMacSystemFont,
+      "SF Pro Display",
+      Inter,
+      "Helvetica Neue",
+      Arial,
+      sans-serif;
+    letter-spacing: -0.015em;
+  }
+
+  ::selection {
+    background: rgb(var(--arc) / 0.22);
+  }
+
+  :focus-visible {
+    outline: 3px solid rgb(var(--arc));
+    outline-offset: 3px;
+    border-radius: 10px;
+  }
+}
+
+@layer components {
+  /* Área mínima de control: 44px (accessibility.md › Interaction). */
+  .hit {
+    @apply inline-flex min-h-[44px] items-center justify-center;
+  }
+
+  /* Tarjeta: esquina redonda, sin marco duro; la sombra hace el límite. */
+  /*
+   * Tarjeta: material estándar translúcido, el que la guía sí admite en la
+   * capa de contenido (materials.md › Standard materials). El relleno se
+   * mantiene alto para que el texto conserve su contraste.
+   */
+  .panel {
+    @apply relative rounded-[18px];
+    background-color: rgb(var(--panel) / 0.8);
+    backdrop-filter: saturate(160%) blur(20px);
+    -webkit-backdrop-filter: saturate(160%) blur(20px);
+    border: 1px solid rgb(255 255 255 / 0.55);
+    box-shadow:
+      0 1px 2px rgb(0 0 0 / 0.04),
+      0 10px 30px -16px rgb(0 0 0 / 0.18);
+  }
+
+  :root[data-theme="dark"] .panel {
+    background-color: rgb(var(--panel) / 0.62);
+    border-color: rgb(255 255 255 / 0.08);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 0.05),
+      0 12px 32px -20px rgb(0 0 0 / 0.8);
+  }
+
+  .panel-hot {
+    box-shadow:
+      0 2px 6px rgb(0 0 0 / 0.05),
+      0 24px 60px -36px rgb(0 0 0 / 0.3);
+  }
+
+  /*
+   * Barra de navegación: el único cristal del sitio. Capa funcional, nunca
+   * contenido (liquid-glass.md › Review checklist, punto 1).
+   */
+  .glass-bar {
+    background-color: rgb(var(--void) / 0.72);
+    backdrop-filter: saturate(180%) blur(28px);
+    -webkit-backdrop-filter: saturate(180%) blur(28px);
+    border-bottom: 1px solid rgb(var(--line) / 0.6);
+    /* Reflejo interior: el borde de luz que tiene el material de Apple. */
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.55);
+  }
+
+  :root[data-theme="dark"] .glass-bar {
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.08);
+  }
+
+  /* El contenido se difumina donde se encuentra con la barra. */
+  .glass-bar::after {
+    content: "";
+    position: absolute;
+    inset: 100% 0 auto 0;
+    height: 20px;
+    background: linear-gradient(rgb(var(--void) / 0.75), rgb(var(--void) / 0));
+    pointer-events: none;
+  }
+
+  /* Degradado de marca en una sola pieza: el nombre de la portada. */
+  .gradient-name {
+    background-image: linear-gradient(
+      100deg,
+      rgb(var(--blue)),
+      rgb(var(--purple)) 45%,
+      rgb(var(--pink))
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Sin degradados cuando se pide más contraste. */
+  @media (prefers-contrast: more) {
+    .gradient-name {
+      background-image: none;
+      color: rgb(var(--txt));
+    }
+  }
+
+  /* La fila de navegación se desliza sin mostrar barra en móvil. */
+  nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Antetítulo de sección: color, semibold, caja de oración. */
+  .eyebrow {
+    @apply text-meta font-semibold text-arc;
+  }
+
+  .hud-label {
+    @apply text-caption font-medium text-mut;
+  }
+
+  .hud-value {
+    @apply text-meta text-txt;
+  }
+
+  .hud-body {
+    @apply text-body text-mut;
+  }
+
+  /* Píldora de dato: relleno suave, sin borde, caja de oración. */
+  .hud-chip {
+    @apply inline-flex items-center gap-1.5 rounded-full bg-panel2 px-3 py-1 text-caption text-mut;
+  }
+
+  /* Botón principal en píldora, como los de apple.com. */
+  .btn-primary {
+    @apply hit rounded-full bg-arc px-6 text-body font-medium text-white no-underline transition-opacity hover:opacity-85;
+  }
+
+  .btn-secondary {
+    @apply hit rounded-full bg-panel2 px-6 text-body font-medium text-txt no-underline transition-opacity hover:opacity-80;
+  }
+
+  /* Enlace con chevron, el patrón de navegación de Apple. */
+  .link-chevron {
+    @apply text-body text-arc no-underline hover:underline;
+  }
+
+  /* Tarjetas que se levantan al pasar el cursor. */
+  .lift {
+    transition:
+      transform 0.45s var(--ease),
+      box-shadow 0.45s var(--ease);
+  }
+
+  .lift:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 2px 6px rgb(0 0 0 / 0.05),
+      0 24px 48px -28px rgb(0 0 0 / 0.28);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .lift:hover {
+      transform: none;
+    }
+  }
+
+  /*
+   * Revelado al entrar en pantalla. El estado visible es el de partida: si el
+   * JavaScript no corre, el contenido se ve igual. El atributo lo pone el
+   * observador, y hay un plazo de seguridad que revela todo pase lo que pase.
+   */
+  .reveal {
+    transition:
+      opacity 0.7s var(--ease),
+      transform 0.7s var(--ease);
+  }
+
+  .reveal[data-hidden="true"] {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  /* Empuje de los botones al presionarlos, como en iOS. */
+  .btn-primary,
+  .btn-secondary {
+    transition:
+      opacity 0.25s var(--ease),
+      transform 0.25s var(--ease);
+  }
+
+  .btn-primary:active,
+  .btn-secondary:active {
+    transform: scale(0.97);
+  }
+
+  /* La barra gana su línea y su sombra solo cuando la página se desplaza. */
+  .glass-bar {
+    transition:
+      background-color 0.4s var(--ease),
+      border-color 0.4s var(--ease),
+      box-shadow 0.4s var(--ease);
+    border-bottom-color: transparent;
+  }
+
+  /*
+   * Con contenido debajo, el material se vuelve más opaco para que las
+   * etiquetas sigan legibles sobre imágenes (color.md › Liquid Glass color).
+   */
+  .glass-bar[data-scrolled="true"] {
+    background-color: rgb(var(--void) / 0.94);
+    border-bottom-color: rgb(var(--line) / 0.6);
+    box-shadow: 0 1px 12px -6px rgb(0 0 0 / 0.25);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .reveal[data-hidden="true"] {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+
+    .btn-primary:active,
+    .btn-secondary:active {
+      transform: none;
+    }
+  }
+
+  .pulse-dot {
+    animation: pulse-dot 2.4s ease-in-out infinite;
+  }
+
+  @keyframes pulse-dot {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.45;
+    }
+  }
+}
+
+/*
+ * Reducir transparencia: el cristal desaparece y las superficies se vuelven
+ * sólidas (liquid-glass.md › Review checklist, punto 5).
+ */
+@media (prefers-reduced-transparency: reduce) {
+  .glass-bar,
+  .panel,
+  header,
+  .hud-chip {
+    backdrop-filter: none !important;
+    background-color: rgb(var(--panel)) !important;
+  }
+
+  body {
+    background-image: none;
+  }
+
+  body::before {
+    display: none;
+  }
+}
+
+/* Más contraste: bordes y texto secundario más firmes (color.md › Best practices). */
+@media (prefers-contrast: more) {
+  :root {
+    --line: 110 122 140;
+    --mut: 58 70 86;
+  }
+
+  :root[data-theme="dark"] {
+    --line: 120 136 156;
+    --mut: 176 192 210;
+  }
+
+  .panel {
+    border-width: 2px;
   }
 }
 

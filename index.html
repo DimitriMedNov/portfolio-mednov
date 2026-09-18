@@ -5,33 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dimitri MedNov — AI Software & Full Stack Developer</title>
 
-    <!-- SEO básico -->
+    <!-- Basic SEO -->
     <meta name="author" content="Jesus D'mitri Medina Novelo" />
     <meta name="description" content="Portfolio of Dimitri MedNov, an AI software and full-stack developer building automation platforms and scalable backend solutions." />
     <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#2563eb" />
+    <meta name="theme-color" content="#04060a" />
     <link rel="canonical" href="https://portfolio-mednov.vercel.app/" />
 
-    <!-- Fuentes (preconnect para acelerar la descarga; display=swap evita texto invisible) -->
+    <!-- Fonts (preconnect speeds up the download; display=swap avoids invisible text) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
     />
 
-    <!-- Open Graph (para Facebook, WhatsApp, Discord, etc.) -->
+    <!-- Open Graph (Facebook, WhatsApp, Discord, etc.) -->
     <meta property="og:title" content="Dimitri MedNov — AI Software & Full Stack Developer" />
     <meta property="og:description" content="Portfolio of Dimitri MedNov, an AI software and full-stack developer building automation platforms and scalable backend solutions." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://portfolio-mednov.vercel.app/" />
-    <meta property="og:site_name" content="Portafolio de Dimitri MedNov" />
+    <meta property="og:site_name" content="Dimitri MedNov Portfolio" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:image" content="https://portfolio-mednov.vercel.app/og-image.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="800" />
-    <meta property="og:image:alt" content="Portafolio de Dimitri MedNov" />
+    <meta property="og:image:alt" content="Dimitri MedNov Portfolio" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -40,7 +40,9 @@
     <meta name="twitter:image" content="https://portfolio-mednov.vercel.app/og-image.jpg" />
 
     <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="alternate icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
 
     <!-- Datos estructurados (JSON-LD) -->
     <script type="application/ld+json">
@@ -51,11 +53,11 @@
         "alternateName": "Dimitri MedNov",
         "url": "https://portfolio-mednov.vercel.app/",
         "image": "https://portfolio-mednov.vercel.app/og-image.jpg",
-        "jobTitle": "AI Software & Full Stack Developer",
+        "jobTitle": "AI Software Engineer & Full Stack Developer",
         "email": "mailto:mednov@outlook.es",
         "sameAs": [
           "https://github.com/DimitriMedNov",
-          "https://www.linkedin.com/in/jdmtmednov82/"
+          "https://www.linkedin.com/in/dimitrimednoov/"
         ],
         "knowsAbout": [
           "Artificial Intelligence",
@@ -66,6 +68,28 @@
           "API Integrations"
         ]
       }
+    </script>
+
+    <script>
+      // Antes del primer pintado: el tema y el idioma no parpadean al recargar.
+      // Sin elección guardada mandan las preferencias del sistema y del navegador.
+      (function () {
+        var root = document.documentElement;
+        try {
+          var t = localStorage.getItem("mednov.theme");
+          var prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+          root.dataset.theme = t === "light" || t === "dark" ? t : prefersLight ? "light" : "dark";
+          var l = localStorage.getItem("mednov.lang");
+          root.lang =
+            l === "es" || l === "en"
+              ? l
+              : (navigator.language || "en").toLowerCase().indexOf("es") === 0
+                ? "es"
+                : "en";
+        } catch (e) {
+          root.dataset.theme = "dark";
+        }
+      })();
     </script>
 </head>
 
