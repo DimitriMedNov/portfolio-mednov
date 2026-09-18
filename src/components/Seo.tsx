@@ -21,12 +21,15 @@ const setMetaContent = (selector: string, attribute: "name" | "property", key: s
 const Seo = ({ title, description, path }: SeoProps) => {
   useEffect(() => {
     const canonicalUrl = `${SITE_URL}${path}`;
+    // La pestaña lleva solo el nombre de la vista; al compartir hace falta
+    // saber de quién es el sitio, así que ahí se añade el nombre.
+    const shareTitle = title.includes("MedNov") ? title : `${title} · Dimitri MedNov`;
     document.title = title;
     setMetaContent('meta[name="description"]', "name", "description", description);
-    setMetaContent('meta[property="og:title"]', "property", "og:title", title);
+    setMetaContent('meta[property="og:title"]', "property", "og:title", shareTitle);
     setMetaContent('meta[property="og:description"]', "property", "og:description", description);
     setMetaContent('meta[property="og:url"]', "property", "og:url", canonicalUrl);
-    setMetaContent('meta[name="twitter:title"]', "name", "twitter:title", title);
+    setMetaContent('meta[name="twitter:title"]', "name", "twitter:title", shareTitle);
     setMetaContent('meta[name="twitter:description"]', "name", "twitter:description", description);
 
     let canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');

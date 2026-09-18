@@ -36,14 +36,14 @@ describe("console views", () => {
     );
   });
 
-  it("renders the résumé and updates route metadata", async () => {
+  it("renders the resume and updates route metadata", async () => {
     renderAt("/about");
 
-    expect(await screen.findByRole("heading", { name: /Résumé/i })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: /Resume/i })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: /Skills, certifications/i })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: /Head of IT & Software Engineering/i })).toBeInTheDocument();
     await waitFor(() => {
-      expect(document.title).toBe("Résumé");
+      expect(document.title).toBe("Resume");
       expect(document.querySelector('link[rel="canonical"]')).toHaveAttribute(
         "href",
         "https://portfolio-mednov.vercel.app/about",
