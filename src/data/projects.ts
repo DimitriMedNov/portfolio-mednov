@@ -7,6 +7,8 @@ export const projects: Project[] = [
     id: 4,
     code: "4.1",
     name: "InventaPro",
+    image: "/images/inventapro.jpg",
+    demo: "https://inventory-management-system-ten-puce.vercel.app/",
     tags: ["React", "TypeScript", "TanStack Router", "Tailwind CSS", "Supabase", "PostgreSQL"],
     github: "https://github.com/DimitriMedNov/Inventory-Management-System",
   },

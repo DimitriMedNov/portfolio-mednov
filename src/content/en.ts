@@ -333,7 +333,7 @@ export const en: Content = {
         category: "Internal system",
         summary: "Inventory and requisitions",
         description:
-          "Inventory and requisition system for a company with several sites: stock is the sum of every entry, exit and adjustment rather than a number that gets overwritten, so the history stays auditable. Requisitions move through states and are charged to the project they belong to, and permissions are enforced in the database, not by hiding buttons.",
+          "Inventory and requisition system for a company with several sites: stock is the sum of every entry, exit and adjustment rather than a number that gets overwritten, so the history stays auditable. Requisitions move through states and are charged to the project they belong to, and permissions are enforced in the database, not by hiding buttons. The demo runs on sample data — use the guest button, no sign-up.",
       },
       1: {
         category: "E-commerce",

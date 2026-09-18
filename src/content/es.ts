@@ -333,7 +333,7 @@ export const es: Content = {
         category: "Sistema interno",
         summary: "Inventario y requisiciones",
         description:
-          "Sistema de inventario y requisiciones para una empresa con varias sedes: el stock se calcula sumando cada entrada, salida y ajuste, nunca sobrescribiendo un número, así que todo movimiento queda auditable. Las requisiciones pasan por estados y se cargan al proyecto que corresponde, y los permisos se aplican en la base de datos, no escondiendo botones.",
+          "Sistema de inventario y requisiciones para una empresa con varias sedes: el stock se calcula sumando cada entrada, salida y ajuste, nunca sobrescribiendo un número, así que todo movimiento queda auditable. Las requisiciones pasan por estados y se cargan al proyecto que corresponde, y los permisos se aplican en la base de datos, no escondiendo botones. La demo abre con datos de ejemplo: entra con el botón de invitado, sin registro.",
       },
       1: {
         category: "E-commerce",
