@@ -30,9 +30,14 @@ describe("console views", () => {
     renderAt("/projects");
 
     expect(await screen.findByRole("heading", { name: /Public builds/i })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /ShopEdge/ })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: /Live demo.*Chainlytics/ })).toHaveAttribute(
       "href",
-      "https://shop-edge-seven.vercel.app/",
+      "https://chainlytics82-3v7y.vercel.app/",
+    );
+    // InventaPro es una tarjeta sin demo: solo enlaza su repositorio.
+    expect(screen.getByRole("link", { name: /Source.*InventaPro/ })).toHaveAttribute(
+      "href",
+      "https://github.com/DimitriMedNov/Inventory-Management-System",
     );
   });
 
