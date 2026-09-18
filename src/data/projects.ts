@@ -4,8 +4,15 @@ import { Project } from "@/types/project";
 
 export const projects: Project[] = [
   {
-    id: 1,
+    id: 4,
     code: "4.1",
+    name: "InventaPro",
+    tags: ["React", "TypeScript", "TanStack Router", "Tailwind CSS", "Supabase", "PostgreSQL"],
+    github: "https://github.com/DimitriMedNov/Inventory-Management-System",
+  },
+  {
+    id: 1,
+    code: "4.2",
     name: "ShopEdge",
     image: "/images/Ecommerce.webp",
     tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Supabase", "React Query"],
@@ -13,7 +20,7 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    code: "4.2",
+    code: "4.3",
     name: "Chainlytics",
     image: "/images/cripto.webp",
     tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "React Hook Form", "Zod"],
@@ -22,19 +29,11 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    code: "4.3",
+    code: "4.4",
     name: "MindTask AI",
     image: "/images/Todoask.webp",
     tags: ["React Native", "Redux", "Express", "MongoDB"],
     demo: "https://mindtask-ai.vercel.app/",
-  },
-  {
-    id: 5,
-    code: "4.4",
-    name: "Weather App",
-    image: "/images/clima.webp",
-    tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "OpenWeather API"],
-    demo: "https://weather-app-gamma-vert-42.vercel.app/",
   },
   {
     id: 6,

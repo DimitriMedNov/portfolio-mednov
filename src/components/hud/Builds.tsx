@@ -17,16 +17,18 @@ const Builds = () => {
             <Reveal key={project.id} delay={i * 0.05} className="h-full">
               <Panel className="lift group h-full">
                 <article className="flex h-full flex-col">
-                  <div className="overflow-hidden bg-deep">
-                    <img
-                      src={project.image}
-                      alt={`${project.name} — ${text.summary}`}
-                      loading="lazy"
-                      width={640}
-                      height={400}
-                      className="block aspect-[8/5] w-full object-cover transition-transform duration-500 motion-safe:group-hover:scale-[1.02]"
-                    />
-                  </div>
+                  {project.image && (
+                    <div className="overflow-hidden bg-deep">
+                      <img
+                        src={project.image}
+                        alt={`${project.name} — ${text.summary}`}
+                        loading="lazy"
+                        width={640}
+                        height={400}
+                        className="block aspect-[8/5] w-full object-cover transition-transform duration-500 motion-safe:group-hover:scale-[1.02]"
+                      />
+                    </div>
+                  )}
 
                   <div className="flex flex-1 flex-col gap-4 p-6 sm:p-7">
                     <div>
@@ -45,14 +47,16 @@ const Builds = () => {
                     </div>
 
                     <div className="mt-auto flex flex-wrap gap-6 pt-2">
-                      <a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="link-chevron"
-                      >
-                        {builds.demo} ›<span className="sr-only"> — {project.name}</span>
-                      </a>
+                      {project.demo && (
+                        <a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="link-chevron"
+                        >
+                          {builds.demo} ›<span className="sr-only"> — {project.name}</span>
+                        </a>
+                      )}
                       {project.github && (
                         <a
                           href={project.github}

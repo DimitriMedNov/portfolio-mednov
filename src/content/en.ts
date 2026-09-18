@@ -329,6 +329,12 @@ export const en: Content = {
     note: (count) => `${count} units deployed`,
     demo: "Live demo",
     text: {
+      4: {
+        category: "Internal system",
+        summary: "Inventory and requisitions",
+        description:
+          "Inventory and requisition system for a company with several sites: stock is the sum of every entry, exit and adjustment rather than a number that gets overwritten, so the history stays auditable. Requisitions move through states and are charged to the project they belong to, and permissions are enforced in the database, not by hiding buttons.",
+      },
       1: {
         category: "E-commerce",
         summary: "E-commerce storefront",
@@ -344,11 +350,6 @@ export const en: Content = {
         category: "Productivity",
         summary: "Task management app",
         description: "Task management app with collaboration features and notifications.",
-      },
-      5: {
-        category: "Utility · api",
-        summary: "Forecast dashboard",
-        description: "Weather app with detailed forecasts and interactive charts, powered by the OpenWeather API.",
       },
       6: {
         category: "Visualization",

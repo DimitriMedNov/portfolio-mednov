@@ -329,6 +329,12 @@ export const es: Content = {
     note: (count) => `${count} unidades desplegadas`,
     demo: "Demo en vivo",
     text: {
+      4: {
+        category: "Sistema interno",
+        summary: "Inventario y requisiciones",
+        description:
+          "Sistema de inventario y requisiciones para una empresa con varias sedes: el stock se calcula sumando cada entrada, salida y ajuste, nunca sobrescribiendo un número, así que todo movimiento queda auditable. Las requisiciones pasan por estados y se cargan al proyecto que corresponde, y los permisos se aplican en la base de datos, no escondiendo botones.",
+      },
       1: {
         category: "E-commerce",
         summary: "Tienda en línea",
@@ -344,12 +350,6 @@ export const es: Content = {
         category: "Productividad",
         summary: "App de gestión de tareas",
         description: "App de gestión de tareas con funciones de colaboración y notificaciones.",
-      },
-      5: {
-        category: "Utilidad · api",
-        summary: "Panel del clima",
-        description:
-          "App del clima con pronósticos detallados y gráficas interactivas, alimentada por la API de OpenWeather.",
       },
       6: {
         category: "Visualización",
