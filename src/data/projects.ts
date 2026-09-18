@@ -18,6 +18,7 @@ export const projects: Project[] = [
     image: "/images/cripto.webp",
     tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "React Hook Form", "Zod"],
     demo: "https://chainlytics82-3v7y.vercel.app/",
+    github: "https://github.com/DimitriMedNov/chainlytics82",
   },
   {
     id: 3,
