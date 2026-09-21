@@ -326,6 +326,7 @@ export const es: Content = {
     title: "Proyectos públicos",
     note: (count) => `${count} proyectos`,
     demo: "Demo en vivo",
+    openChat: "Escríbele por WhatsApp",
     text: {
       4: {
         category: "Sistema interno",
@@ -356,6 +357,12 @@ export const es: Content = {
         summary: "Simulador de ritmo cardíaco",
         description:
           "Simulador de electrocardiograma para quien está aprendiendo a distinguir ritmos, con siete de ellos y sus firmas reales, desde la fibrilación auricular que se queda sin ondas P hasta el bloqueo donde el intervalo PR se alarga latido a latido hasta que uno no conduce, dibujados sobre papel de electro con su cuadrícula de verdad. El complejo conserva sus tiempos clínicos a cualquier frecuencia, que es justo lo que separa un trazo fiel de una animación que estira la onda entera al acelerar, y el modo examen esconde el ritmo para que lo reconozcas tú, con la explicación apareciendo al responder.",
+      },
+      8: {
+        category: "Bot de WhatsApp",
+        summary: "Imágenes convertidas en stickers",
+        description:
+          "Bot de WhatsApp al que le mandas una imagen y te la regresa convertida en sticker, corriendo como función serverless sobre la Cloud API de Meta. Ninguna imagen se guarda en ningún lado: se descarga, se transforma y se envía, y lo único que queda registrado son el teléfono, los contadores y los datos técnicos del proceso. Los límites por usuario y la idempotencia viven en la base de datos con bloqueo por teléfono en vez de en la memoria del servidor, que es lo que lo mantiene en pie aunque cada mensaje caiga en una instancia distinta, y detrás hay un panel donde se ven el uso, los errores y las alertas. Está funcionando: escríbele al +52 986 102 6628 y mándale una foto.",
       },
       7: {
         category: "Reservas",

@@ -326,6 +326,7 @@ export const en: Content = {
     title: "Public builds",
     note: (count) => `${count} projects`,
     demo: "Live demo",
+    openChat: "Message it on WhatsApp",
     text: {
       4: {
         category: "Internal system",
@@ -356,6 +357,12 @@ export const en: Content = {
         summary: "Heart rate simulator",
         description:
           "ECG simulator for anyone learning to tell rhythms apart, with seven of them and their real signatures, from atrial fibrillation losing its P waves to the block where the PR interval stretches beat after beat until one fails to conduct, drawn on proper ECG paper with its real grid. The complex keeps its clinical timings at any rate, which is exactly what separates a faithful trace from an animation that stretches the whole wave as it speeds up, and the exam mode hides the rhythm so you recognise it yourself, with the explanation showing up once you answer.",
+      },
+      8: {
+        category: "WhatsApp bot",
+        summary: "Images turned into stickers",
+        description:
+          "WhatsApp bot you send an image to and it sends it back as a sticker, running as a serverless function on top of Meta's Cloud API. No image is ever stored anywhere: it is downloaded, transformed and sent, and all that is kept are the phone number, the counters and the technical details of the run. Per-user limits and idempotency live in the database behind a per-phone lock rather than in server memory, which is what keeps it standing even though every message lands on a different instance, and behind it there is a dashboard showing usage, errors and alerts. It is live: message +52 986 102 6628 and send it a photo.",
       },
       7: {
         category: "Booking",

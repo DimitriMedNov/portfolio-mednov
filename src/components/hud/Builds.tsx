@@ -54,7 +54,8 @@ const Builds = () => {
                           rel="noopener noreferrer"
                           className="link-chevron"
                         >
-                          {builds.demo} ›<span className="sr-only"> — {project.name}</span>
+                          {project.demoLabelKey ? builds[project.demoLabelKey] : builds.demo} ›
+                          <span className="sr-only"> — {project.name}</span>
                         </a>
                       )}
                       {project.github && (

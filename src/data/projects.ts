@@ -43,8 +43,18 @@ export const projects: Project[] = [
     github: "https://github.com/DimitriMedNov/beat-pulse-visualizer-plus",
   },
   {
-    id: 7,
+    id: 8,
     code: "4.6",
+    name: "Sticker Bot",
+    tags: ["Node.js", "Vercel Functions", "WhatsApp Cloud API", "Supabase", "PostgreSQL", "Sharp"],
+    // El "demo" de un bot de WhatsApp es abrir la conversación con él.
+    demo: "https://wa.me/529861026628",
+    demoLabelKey: "openChat",
+    github: "https://github.com/DimitriMedNov/whatsapp-sticker-bot-vercel",
+  },
+  {
+    id: 7,
+    code: "4.7",
     name: "El Taquito Gordo Feliz",
     tags: ["HTML", "CSS", "JavaScript"],
     demo: "https://taquito.vercel.app/",

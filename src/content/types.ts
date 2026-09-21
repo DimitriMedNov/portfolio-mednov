@@ -80,6 +80,8 @@ export type Content = {
     title: string;
     note: (count: number) => string;
     demo: string;
+    /** Replaces "live demo" when the link opens a chat instead of a page. */
+    openChat: string;
     /** Per project id: category, one-line summary and full description. */
     text: Record<number, { category: string; summary: string; description: string }>;
   };
