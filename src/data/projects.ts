@@ -16,6 +16,7 @@ export const projects: Project[] = [
     code: "4.2",
     name: "ShopEdge",
     tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Supabase", "React Query"],
+    codePrivate: true,
     // El despliegue anterior ya no existe (404). Se vuelve a enlazar cuando esté publicado.
   },
   {

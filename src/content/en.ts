@@ -345,6 +345,7 @@ export const en: Content = {
     note: (count) => `${count} projects`,
     demo: "Live demo",
     openChat: "Message it on WhatsApp",
+    codePrivate: "Private code",
     text: {
       4: {
         category: "Internal system",

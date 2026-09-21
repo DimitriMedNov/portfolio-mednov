@@ -84,6 +84,8 @@ export type Content = {
     demo: string;
     /** Replaces "live demo" when the link opens a chat instead of a page. */
     openChat: string;
+    /** Shown instead of a source link when the repository is private. */
+    codePrivate: string;
     /** Per project id: category, one-line summary and full description. */
     text: Record<number, { category: string; summary: string; description: string }>;
   };

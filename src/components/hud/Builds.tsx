@@ -58,6 +58,9 @@ const Builds = () => {
                           <span className="sr-only"> — {project.name}</span>
                         </a>
                       )}
+                      {project.codePrivate && (
+                        <span className="text-body text-mut/70">{builds.codePrivate}</span>
+                      )}
                       {project.github && (
                         <a
                           href={project.github}

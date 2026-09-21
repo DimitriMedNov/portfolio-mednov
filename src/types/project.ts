@@ -15,4 +15,9 @@ export type Project = {
   demoLabelKey?: "openChat";
   /** Optional: only set when a public repository actually exists. */
   github?: string;
+  /**
+   * Optional: say out loud that there is no link because the code is private.
+   * Sin esto la tarjeta se lee como si le faltara algo por descuido.
+   */
+  codePrivate?: boolean;
 };
