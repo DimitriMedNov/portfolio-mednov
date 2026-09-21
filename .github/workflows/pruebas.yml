@@ -1,0 +1,33 @@
+# El portafolio es la primera cosa que alguien abre, así que romperlo en
+# silencio es el peor de los errores baratos. Esto lo revisa en cada push.
+name: Pruebas
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - run: bun install --frozen-lockfile
+
+      - name: Tipos
+        run: bun run typecheck
+
+      - name: Linter
+        run: bun run lint
+
+      - name: Pruebas
+        run: bun run test
+
+      - name: Build
+        run: bun run build
