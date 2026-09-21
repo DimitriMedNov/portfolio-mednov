@@ -1,5 +1,8 @@
 # portfolio-mednov
 
+[![Pruebas](https://github.com/DimitriMedNov/portfolio-mednov/actions/workflows/pruebas.yml/badge.svg)](https://github.com/DimitriMedNov/portfolio-mednov/actions/workflows/pruebas.yml)
+[![Licencia: MIT](https://img.shields.io/badge/licencia-MIT-blue.svg)](https://github.com/DimitriMedNov/portfolio-mednov/blob/main/LICENSE)
+
 Mi portafolio: **https://portfolio-mednov.vercel.app**
 
 Sitio de una sola página que reúne los sistemas que he construido en el trabajo, los proyectos públicos con su código, y mi currículum completo. Está en español e inglés, y el idioma y el tema claro u oscuro se eligen desde el encabezado y se recuerdan entre visitas.
