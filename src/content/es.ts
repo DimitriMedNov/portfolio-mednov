@@ -351,7 +351,7 @@ export const es: Content = {
         category: "IA local",
         summary: "Tareas con IA que funciona sin internet",
         description:
-          "Gestor de tareas que corre entero en tu máquina, con su base de datos, su modelo y su dictado, y donde el proveedor de IA es intercambiable, así que lo mismo funciona con Ollama en local que con tu propia llave de OpenAI o Anthropic o con cualquier servidor compatible, y si no configuras ninguno la app sigue trabajando sin sus funciones de IA en lugar de tronar. Dictas una tarea y el texto se va escribiendo mientras hablas, porque la transcripción también vive en tu computadora.",
+          "Gestor de tareas que corre entero en tu máquina, con su base de datos, su modelo y su dictado, y donde el proveedor de IA es intercambiable, así que lo mismo funciona con Ollama en local que con tu propia llave de OpenAI o Anthropic o con cualquier servidor compatible, y si no configuras ninguno la app sigue trabajando sin sus funciones de IA en lugar de tronar. Dictas una tarea hablando normal y el texto se va escribiendo mientras hablas, con la transcripción viviendo también en tu computadora, mientras el mismo intérprete que lee lo dictado saca la fecha, la prioridad y la categoría de una frase suelta. La capa de IA está medida y acotada: tiempo límite por llamada, reintentos solo ante fallas pasajeras y un registro de cada consulta que el repo convierte en medianas y percentiles.",
       },
       6: {
         category: "Visualización",

@@ -351,7 +351,7 @@ export const en: Content = {
         category: "Local AI",
         summary: "An AI task manager that works offline",
         description:
-          "A task manager that runs entirely on your own machine, with its database, its model and its dictation, and where the AI provider is swappable, so it works the same with Ollama locally as with your own OpenAI or Anthropic key or any compatible server, and with none configured the app keeps working without its AI features instead of crashing. Dictate a task and the text appears as you speak, because the transcription lives on your computer too.",
+          "A task manager that runs entirely on your own machine, with its database, its model and its dictation, and where the AI provider is swappable, so it works the same with Ollama locally as with your own OpenAI or Anthropic key or any compatible server, and with none configured the app keeps working without its AI features instead of crashing. Dictate a task in plain speech and the text appears as you talk, with the transcription living on your computer too, while the same interpreter that reads dictation pulls the date, the priority and the category out of a loose sentence. The AI layer is measured and fenced in: a ceiling per call, retries only on transient failures, and a record of every request the repo turns into medians and percentiles.",
       },
       6: {
         category: "Visualization",
