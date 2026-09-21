@@ -34,6 +34,17 @@ const Record = () => {
                 linkedin.com/in/dimitrimednoov
               </a>
             </p>
+
+            {/* Muchos reclutadores quieren el archivo para adjuntarlo a su
+                sistema interno; sin esto tienen que pedirlo por correo. */}
+            <a
+              href="/CV_Jesus_Medina_Novelo.pdf"
+              download
+              className="hit mt-7 inline-flex items-center gap-2 rounded-full border border-line bg-panel px-5 py-3 text-meta text-txt no-underline transition-colors hover:border-arc hover:text-arc"
+            >
+              {resume.download}
+              <span aria-hidden="true">↓</span>
+            </a>
           </div>
         </Panel>
 

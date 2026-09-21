@@ -397,6 +397,7 @@ export const en: Content = {
     note: "4.5+ years · 7 roles",
     summary:
       "I am an AI Software Engineer and Full Stack Developer with 4.5+ years behind me building business software, AI integrations and process automation, and today I lead IT and software engineering at Diprolam, where the CRM, the inventory system and the purchasing flow run in production while the corporate ERP for more than 100 people and a multi-tenant SaaS platform are still in my hands, after two years at Grupo Megamedia and its newspaper Diario de Yucatán on LLM integrations, chatbots and OCR search over the archive, and a year on my own building sites and small automations for local businesses.",
+    download: "Download CV as PDF",
     experienceLabel: "Experience",
     educationLabel: "Education",
     courseworkLabel: "Relevant coursework",

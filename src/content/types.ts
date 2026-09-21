@@ -94,6 +94,8 @@ export type Content = {
     title: string;
     note: string;
     summary: string;
+    /** Texto del botón que descarga el CV en PDF. */
+    download: string;
     experienceLabel: string;
     educationLabel: string;
     courseworkLabel: string;

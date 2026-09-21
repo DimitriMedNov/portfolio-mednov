@@ -397,6 +397,7 @@ export const es: Content = {
     note: "4.5+ años · 7 puestos",
     summary:
       "Soy ingeniero de software con IA y desarrollador full stack con más de 4.5 años creando software empresarial, integraciones de IA y automatización de procesos, y hoy dirijo TI e ingeniería de software en Diprolam, donde el CRM, el inventario y las compras que construí están en producción mientras el ERP corporativo para más de 100 personas y una plataforma SaaS multi-tenant siguen en mis manos, después de dos años en Grupo Megamedia y su periódico Diario de Yucatán en integraciones con LLM, chatbots y búsqueda con OCR en el archivo, y un año por mi cuenta haciendo sitios y pequeñas automatizaciones para negocios locales.",
+    download: "Descargar CV en PDF",
     experienceLabel: "Experiencia",
     educationLabel: "Formación",
     courseworkLabel: "Materias relevantes",
