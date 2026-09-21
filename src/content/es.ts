@@ -27,7 +27,7 @@ export const es: Content = {
       tab: "Proyectos",
       seoTitle: "Proyectos públicos",
       seoDescription:
-        "Seis proyectos públicos con demo en vivo: ShopEdge, Chainlytics, MindTask AI, Weather App, Beat Pulse y El Taquito Gordo Feliz.",
+        "Proyectos públicos con su código: InventaPro, ShopEdge, Chainlytics, MindTask, Beat Pulse y El Taquito Gordo Feliz.",
     },
     {
       path: "/about",
@@ -325,8 +325,8 @@ export const es: Content = {
   },
 
   builds: {
-    title: "Proyectos públicos — demos en vivo",
-    note: (count) => `${count} unidades desplegadas`,
+    title: "Proyectos públicos",
+    note: (count) => `${count} proyectos`,
     demo: "Demo en vivo",
     text: {
       4: {
@@ -347,9 +347,10 @@ export const es: Content = {
         description: "Panel de criptomonedas con visualización de datos en tiempo real y reportes configurables.",
       },
       3: {
-        category: "Productividad",
-        summary: "App de gestión de tareas",
-        description: "App de gestión de tareas con funciones de colaboración y notificaciones.",
+        category: "IA local",
+        summary: "Tareas con IA que funciona sin internet",
+        description:
+          "Gestor de tareas que corre entero en tu máquina: la base de datos, el modelo y el dictado. El proveedor de IA es intercambiable, así que funciona con Ollama en local, con tu propia llave de OpenAI o Anthropic, o con cualquier servidor compatible; si no configuras ninguno, la app sigue trabajando sin sus funciones de IA en vez de tronar. Dictas una tarea y el texto se va escribiendo mientras hablas, con whisper.cpp también en local.",
       },
       6: {
         category: "Visualización",

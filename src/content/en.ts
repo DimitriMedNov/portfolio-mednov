@@ -27,7 +27,7 @@ export const en: Content = {
       tab: "Builds",
       seoTitle: "Public Projects",
       seoDescription:
-        "Six public projects with live demos: ShopEdge, Chainlytics, MindTask AI, Weather App, Beat Pulse and El Taquito Gordo Feliz.",
+        "Public projects with their source: InventaPro, ShopEdge, Chainlytics, MindTask, Beat Pulse and El Taquito Gordo Feliz.",
     },
     {
       path: "/about",
@@ -325,8 +325,8 @@ export const en: Content = {
   },
 
   builds: {
-    title: "Public builds — live demos",
-    note: (count) => `${count} units deployed`,
+    title: "Public builds",
+    note: (count) => `${count} projects`,
     demo: "Live demo",
     text: {
       4: {
@@ -347,9 +347,10 @@ export const en: Content = {
         description: "Cryptocurrency dashboard with real-time data visualization and customizable reports.",
       },
       3: {
-        category: "Productivity",
-        summary: "Task management app",
-        description: "Task management app with collaboration features and notifications.",
+        category: "Local AI",
+        summary: "An AI task manager that works offline",
+        description:
+          "A task manager that runs entirely on your own machine: the database, the model and the dictation. The AI provider is swappable — Ollama locally, your own OpenAI or Anthropic key, or any compatible server; with none configured the app keeps working without its AI features instead of crashing. Dictate a task and the text appears as you speak, with whisper.cpp running locally too.",
       },
       6: {
         category: "Visualization",
