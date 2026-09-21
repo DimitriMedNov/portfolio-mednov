@@ -30,7 +30,7 @@ export const projects: Project[] = [
     id: 3,
     code: "4.4",
     name: "MindTask",
-    tags: ["React", "TypeScript", "Supabase", "Ollama", "whisper.cpp", "Edge Functions"],
+    tags: ["React", "TypeScript", "PGlite", "Ollama", "whisper.cpp", "Tauri"],
     // Corre en la máquina de cada quien: no hay demo pública que enseñar.
     github: "https://github.com/DimitriMedNov/mindtask-ai",
   },
@@ -38,8 +38,9 @@ export const projects: Project[] = [
     id: 6,
     code: "4.5",
     name: "Beat Pulse",
-    tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui"],
+    tags: ["React", "TypeScript", "Canvas", "Vite", "Tailwind CSS", "Vitest"],
     demo: "https://beat-pulse-visualizer.vercel.app/",
+    github: "https://github.com/DimitriMedNov/beat-pulse-visualizer-plus",
   },
   {
     id: 7,

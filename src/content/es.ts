@@ -355,7 +355,7 @@ export const es: Content = {
         category: "Visualización",
         summary: "Simulador de ritmo cardíaco",
         description:
-          "Visualizador de ritmo cardíaco donde se elige un ritmo y el trazo, el latido y la respiración responden al instante, pensado para entender de un vistazo en qué se distingue uno de otro.",
+          "Simulador de electrocardiograma para quien está aprendiendo a distinguir ritmos, con siete de ellos y sus firmas reales, desde la fibrilación auricular que se queda sin ondas P hasta el bloqueo donde el intervalo PR se alarga latido a latido hasta que uno no conduce, dibujados sobre papel de electro con su cuadrícula de verdad. El complejo conserva sus tiempos clínicos a cualquier frecuencia, que es justo lo que separa un trazo fiel de una animación que estira la onda entera al acelerar, y el modo examen esconde el ritmo para que lo reconozcas tú, con la explicación apareciendo al responder.",
       },
       7: {
         category: "Reservas",

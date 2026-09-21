@@ -355,7 +355,7 @@ export const en: Content = {
         category: "Visualization",
         summary: "Heart rate simulator",
         description:
-          "Heart-rhythm visualizer where picking a rhythm makes the trace, the heartbeat and the breathing respond at once, built to show at a glance what tells one rhythm from another.",
+          "ECG simulator for anyone learning to tell rhythms apart, with seven of them and their real signatures, from atrial fibrillation losing its P waves to the block where the PR interval stretches beat after beat until one fails to conduct, drawn on proper ECG paper with its real grid. The complex keeps its clinical timings at any rate, which is exactly what separates a faithful trace from an animation that stretches the whole wave as it speeds up, and the exam mode hides the rhythm so you recognise it yourself, with the explanation showing up once you answer.",
       },
       7: {
         category: "Booking",
