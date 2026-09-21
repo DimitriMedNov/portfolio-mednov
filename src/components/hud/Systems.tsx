@@ -81,11 +81,11 @@ const Systems = () => {
 
       <section>
         <SectionTitle title={sites.title} note={sites.note} tone="teal" />
-        <div className="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5">
+        <div className="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-4">
           {sites.rows.map((site, i) => (
             <Reveal key={site.code} delay={i * 0.05}>
               <div className="flex h-full flex-col gap-1 border-t border-line/70 pt-4">
-                <span className={`text-title font-semibold ${site.base ? "text-teal" : "text-txt"}`}>
+                <span className="text-title font-semibold text-txt">
                   {site.name}
                 </span>
                 <span className="text-caption text-mut">

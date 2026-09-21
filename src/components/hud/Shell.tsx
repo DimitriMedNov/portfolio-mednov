@@ -92,7 +92,7 @@ const Shell = ({ path, children }: Props) => {
 
       <footer className="border-t border-line/60 bg-deep">
         <div className="mx-auto flex w-full max-w-[1600px] flex-wrap items-center justify-between gap-x-8 gap-y-2 px-6 py-8 text-caption text-mut lg:px-12">
-          <span>© 2026 Jesus D&apos;mitri Medina Novelo · Mérida, Yucatán</span>
+          <span>© 2026 Jesus D&apos;mitri Medina Novelo</span>
           <a href="mailto:mednov@outlook.es" className="text-arc no-underline hover:underline">
             mednov@outlook.es
           </a>

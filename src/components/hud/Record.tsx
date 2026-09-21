@@ -17,7 +17,6 @@ const Record = () => {
             <p className="mt-1 text-title text-mut">AI Software Engineer &amp; Full Stack Developer</p>
             <p className="mt-5 max-w-[72ch] text-body text-mut">{resume.summary}</p>
             <p className="mt-5 text-meta text-mut">
-              Mérida, Yucatán, MX ·{" "}
               <a href="mailto:mednov@outlook.es" className="text-arc no-underline hover:underline">
                 mednov@outlook.es
               </a>{" "}
@@ -46,7 +45,7 @@ const Record = () => {
                 <article className="grid grid-cols-1 gap-x-10 gap-y-3 border-t border-line/70 pt-6 lg:grid-cols-[200px_1fr]">
                   <div>
                     <div className="text-meta font-medium text-txt">{role.dates}</div>
-                    <div className="mt-1 text-caption text-mut">{role.location}</div>
+                    {role.location && <div className="mt-1 text-caption text-mut">{role.location}</div>}
                   </div>
 
                   <div>
@@ -113,7 +112,7 @@ const Record = () => {
           <div className="mt-6 grid grid-cols-1 gap-x-10 gap-y-3 border-t border-line/70 pt-6 lg:grid-cols-[200px_1fr]">
             <div>
               <div className="text-meta font-medium text-txt">{education.dates}</div>
-              <div className="mt-1 text-caption text-mut">{education.location}</div>
+              {education.location && <div className="mt-1 text-caption text-mut">{education.location}</div>}
             </div>
             <div>
               <h4 className="text-title font-semibold text-txt">{education.degree}</h4>

@@ -73,7 +73,7 @@ export type Content = {
   sites: {
     title: string;
     note: string;
-    rows: { code: string; name: string; lat: string; lon: string; fn: string; base: boolean }[];
+    rows: { code: string; name: string; lat: string; lon: string; fn: string }[];
   };
 
   builds: {
@@ -95,7 +95,8 @@ export type Content = {
       id: string;
       role: string;
       company: string;
-      location: string;
+      /** Opcional: la ciudad de la empresa, no la de quien escribe el portafolio. */
+      location?: string;
       dates: string;
       concurrent?: string;
       bullets: string[];
@@ -106,7 +107,7 @@ export type Content = {
     education: {
       degree: string;
       school: string;
-      location: string;
+      location?: string;
       dates: string;
       coursework: string[];
     };

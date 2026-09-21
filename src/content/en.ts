@@ -41,7 +41,7 @@ export const en: Content = {
       tab: "Contact",
       seoTitle: "Contact",
       seoDescription:
-        "Contact Jesus D'mitri Medina Novelo — mednov@outlook.es, +52 999 359 0366, Mérida, Yucatán, Mexico.",
+        "Contact Jesus D'mitri Medina Novelo — mednov@outlook.es, +52 999 359 0366.",
     },
   ],
 
@@ -77,7 +77,6 @@ export const en: Content = {
 
   idFields: [
     { k: "Name", v: "Dimitri MedNov" },
-    { k: "Based in", v: "Mérida, Yucatán, MX" },
     { k: "Coordinates", v: "20.9674 N · 89.5926 W" },
     { k: "Experience", v: "4.5+ years" },
     { k: "GitHub", v: "github/DimitriMedNov", href: "https://github.com/DimitriMedNov" },
@@ -292,7 +291,7 @@ export const en: Content = {
         status: "pass",
         access: { label: "Publicly accessible", public: true },
         title: "Sites and online stores for local businesses",
-        desc: "Websites and online stores built in React for small businesses around Mérida, each one with its own catalogue, its orders and the pages the owner actually needed, instead of a template that forces the business to fit whatever the theme allows.",
+        desc: "Websites and online stores built in React for small businesses, each one with its own catalogue, its orders and the pages the owner actually needed, instead of a template that forces the business to fit whatever the theme allows.",
         stack: ["React", "TypeScript", "Tailwind CSS"],
         reads: [],
       },
@@ -313,14 +312,13 @@ export const en: Content = {
   },
 
   sites: {
-    title: "Site index — MX",
-    note: "base + 4 operating sites",
+    title: "Diprolam sites running these systems",
+    note: "4 plants, one ERP",
     rows: [
-      { code: "MID", name: "Mérida", lat: "20.9674 N", lon: "89.5926 W", fn: "Base of operations", base: true },
-      { code: "MTY", name: "Monterrey", lat: "25.6866 N", lon: "100.3161 W", fn: "Diprolam · ERP, CRM, inventory and purchasing", base: false },
-      { code: "GTO", name: "Guanajuato", lat: "21.0190 N", lon: "101.2574 W", fn: "Diprolam · ERP, CRM, inventory and purchasing", base: false },
-      { code: "PUE", name: "Puebla", lat: "19.0414 N", lon: "98.2063 W", fn: "Diprolam · ERP, CRM, inventory and purchasing", base: false },
-      { code: "TIJ", name: "Tijuana", lat: "32.5149 N", lon: "117.0382 W", fn: "Diprolam · ERP, CRM, inventory and purchasing", base: false },
+      { code: "MTY", name: "Monterrey", lat: "25.6866 N", lon: "100.3161 W", fn: "ERP, CRM, inventory and purchasing" },
+      { code: "GTO", name: "Guanajuato", lat: "21.0190 N", lon: "101.2574 W", fn: "ERP, CRM, inventory and purchasing" },
+      { code: "PUE", name: "Puebla", lat: "19.0414 N", lon: "98.2063 W", fn: "ERP, CRM, inventory and purchasing" },
+      { code: "TIJ", name: "Tijuana", lat: "32.5149 N", lon: "117.0382 W", fn: "ERP, CRM, inventory and purchasing" },
     ],
   },
 
@@ -410,7 +408,6 @@ export const en: Content = {
         id: "megamedia",
         role: "AI Solutions Engineer & Project Lead",
         company: "Grupo Megamedia",
-        location: "Mérida, Mexico",
         dates: "Aug 2025 — Jan 2026",
         concurrent: "Group-level role, held alongside the Diario de Yucatán position below",
         bullets: [
@@ -425,7 +422,6 @@ export const en: Content = {
         id: "dy-ai",
         role: "AI & API Software Developer",
         company: "Diario de Yucatán (Grupo Megamedia)",
-        location: "Mérida, Mexico",
         dates: "Jan 2025 — Feb 2026",
         concurrent: "Ran in parallel with the group-level role above",
         bullets: [
@@ -450,7 +446,6 @@ export const en: Content = {
         id: "dy-web",
         role: "Web Developer",
         company: "Diario de Yucatán (Grupo Megamedia)",
-        location: "Mérida, Mexico",
         dates: "Jan 2024 — Dec 2024",
         bullets: [
           "Developed the chatbot on the public job board Empléate.app that automated user registration and job applications",
@@ -464,7 +459,6 @@ export const en: Content = {
         id: "anahuac-intern",
         role: "Software Engineering Intern",
         company: "Universidad Anáhuac Mayab",
-        location: "Mérida, Mexico",
         dates: "Sep 2023 — Jan 2024",
         bullets: [
           "Developed institutional web applications with React, TypeScript and Nuxt",
@@ -477,7 +471,6 @@ export const en: Content = {
         id: "anahuac-support",
         role: "Technical Support / Bot Developer",
         company: "Universidad Anáhuac Mayab",
-        location: "Mérida, Mexico",
         dates: "Feb 2023 — Sep 2023",
         bullets: [
           "Resolved user issues through a ticketing system and direct support",
@@ -489,7 +482,6 @@ export const en: Content = {
         id: "freelance",
         role: "Freelance Web Developer",
         company: "Self-employed",
-        location: "Mérida, Mexico",
         dates: "Mar 2022 — Jan 2023",
         bullets: [],
         tech: [],
@@ -525,7 +517,6 @@ export const en: Content = {
     education: {
       degree: "Bachelor's Degree in Information Technology and Digital Business",
       school: "Universidad Anáhuac Mayab",
-      location: "Mérida, Mexico",
       dates: "Aug 2020 — Dec 2024",
       coursework: [
         "Web Application Development",
@@ -627,7 +618,7 @@ export const en: Content = {
     headline: "Available for work on",
     headlineAccent: "AI systems",
     headlineTail: "and full-stack platforms.",
-    body: "I am based in Mérida, Yucatán, I work remotely without trouble and I am open to relocating, so write to me and you will usually have an answer the same day.",
+    body: "I work remotely without trouble and I am open to relocating, so write to me and you will usually have an answer the same day.",
     channels: [
       { label: "Email", value: "mednov@outlook.es", href: "mailto:mednov@outlook.es", copy: "mednov@outlook.es" },
       { label: "Phone", value: "+52 999 359 0366", href: "tel:+529993590366", copy: "+52 999 359 0366" },

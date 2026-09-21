@@ -41,7 +41,7 @@ export const es: Content = {
       tab: "Contacto",
       seoTitle: "Contacto",
       seoDescription:
-        "Contacta a Jesus D'mitri Medina Novelo — mednov@outlook.es, +52 999 359 0366, Mérida, Yucatán, México.",
+        "Contacta a Jesus D'mitri Medina Novelo — mednov@outlook.es, +52 999 359 0366.",
     },
   ],
 
@@ -77,7 +77,6 @@ export const es: Content = {
 
   idFields: [
     { k: "Nombre", v: "Dimitri MedNov" },
-    { k: "Con base en", v: "Mérida, Yucatán, MX" },
     { k: "Coordenadas", v: "20.9674 N · 89.5926 W" },
     { k: "Experiencia", v: "4.5+ años" },
     { k: "GitHub", v: "github/DimitriMedNov", href: "https://github.com/DimitriMedNov" },
@@ -292,7 +291,7 @@ export const es: Content = {
         status: "pass",
         access: { label: "Accesible al público", public: true },
         title: "Sitios y tiendas en línea para negocios locales",
-        desc: "Sitios y tiendas en línea hechos en React para negocios pequeños de Mérida, cada uno con su catálogo, sus pedidos y las páginas que el dueño de verdad necesitaba, en vez de una plantilla que obliga al negocio a acomodarse a lo que el tema permite.",
+        desc: "Sitios y tiendas en línea hechos en React para negocios pequeños, cada uno con su catálogo, sus pedidos y las páginas que el dueño de verdad necesitaba, en vez de una plantilla que obliga al negocio a acomodarse a lo que el tema permite.",
         stack: ["React", "TypeScript", "Tailwind CSS"],
         reads: [],
       },
@@ -313,14 +312,13 @@ export const es: Content = {
   },
 
   sites: {
-    title: "Índice de sedes — MX",
-    note: "base + 4 sedes operativas",
+    title: "Sedes de Diprolam que usan estos sistemas",
+    note: "4 plantas, un mismo ERP",
     rows: [
-      { code: "MID", name: "Mérida", lat: "20.9674 N", lon: "89.5926 W", fn: "Base de operaciones", base: true },
-      { code: "MTY", name: "Monterrey", lat: "25.6866 N", lon: "100.3161 W", fn: "Diprolam · ERP, CRM, inventario y compras", base: false },
-      { code: "GTO", name: "Guanajuato", lat: "21.0190 N", lon: "101.2574 W", fn: "Diprolam · ERP, CRM, inventario y compras", base: false },
-      { code: "PUE", name: "Puebla", lat: "19.0414 N", lon: "98.2063 W", fn: "Diprolam · ERP, CRM, inventario y compras", base: false },
-      { code: "TIJ", name: "Tijuana", lat: "32.5149 N", lon: "117.0382 W", fn: "Diprolam · ERP, CRM, inventario y compras", base: false },
+      { code: "MTY", name: "Monterrey", lat: "25.6866 N", lon: "100.3161 W", fn: "ERP, CRM, inventario y compras" },
+      { code: "GTO", name: "Guanajuato", lat: "21.0190 N", lon: "101.2574 W", fn: "ERP, CRM, inventario y compras" },
+      { code: "PUE", name: "Puebla", lat: "19.0414 N", lon: "98.2063 W", fn: "ERP, CRM, inventario y compras" },
+      { code: "TIJ", name: "Tijuana", lat: "32.5149 N", lon: "117.0382 W", fn: "ERP, CRM, inventario y compras" },
     ],
   },
 
@@ -410,7 +408,6 @@ export const es: Content = {
         id: "megamedia",
         role: "Ingeniero de Soluciones de IA y Líder de Proyecto",
         company: "Grupo Megamedia",
-        location: "Mérida, México",
         dates: "Ago 2025 — Ene 2026",
         concurrent: "Puesto a nivel grupo, en paralelo con el del Diario de Yucatán que aparece abajo",
         bullets: [
@@ -425,7 +422,6 @@ export const es: Content = {
         id: "dy-ai",
         role: "Desarrollador de Software de IA y APIs",
         company: "Diario de Yucatán (Grupo Megamedia)",
-        location: "Mérida, México",
         dates: "Ene 2025 — Feb 2026",
         concurrent: "En paralelo con el puesto a nivel grupo de arriba",
         bullets: [
@@ -450,7 +446,6 @@ export const es: Content = {
         id: "dy-web",
         role: "Desarrollador Web",
         company: "Diario de Yucatán (Grupo Megamedia)",
-        location: "Mérida, México",
         dates: "Ene 2024 — Dic 2024",
         bullets: [
           "Desarrollé el chatbot de la bolsa de trabajo pública Empléate.app, que automatizó el registro de usuarios y las postulaciones",
@@ -464,7 +459,6 @@ export const es: Content = {
         id: "anahuac-intern",
         role: "Practicante de Ingeniería de Software",
         company: "Universidad Anáhuac Mayab",
-        location: "Mérida, México",
         dates: "Sep 2023 — Ene 2024",
         bullets: [
           "Desarrollé aplicaciones web institucionales con React, TypeScript y Nuxt",
@@ -477,7 +471,6 @@ export const es: Content = {
         id: "anahuac-support",
         role: "Soporte Técnico / Desarrollador de Bots",
         company: "Universidad Anáhuac Mayab",
-        location: "Mérida, México",
         dates: "Feb 2023 — Sep 2023",
         bullets: [
           "Resolví incidencias de usuarios mediante un sistema de tickets y soporte directo",
@@ -489,7 +482,6 @@ export const es: Content = {
         id: "freelance",
         role: "Desarrollador Web Freelance",
         company: "Por mi cuenta",
-        location: "Mérida, México",
         dates: "Mar 2022 — Ene 2023",
         bullets: [],
         tech: [],
@@ -525,7 +517,6 @@ export const es: Content = {
     education: {
       degree: "Licenciatura en Tecnologías de Información y Negocios Digitales",
       school: "Universidad Anáhuac Mayab",
-      location: "Mérida, México",
       dates: "Ago 2020 — Dic 2024",
       coursework: [
         "Desarrollo de aplicaciones web",
@@ -627,7 +618,7 @@ export const es: Content = {
     headline: "Disponible para trabajar en",
     headlineAccent: "sistemas de IA",
     headlineTail: "y plataformas full-stack.",
-    body: "Vivo en Mérida, Yucatán, trabajo remoto sin problema y estoy abierto a reubicarme, así que escríbeme y normalmente tendrás respuesta el mismo día.",
+    body: "Trabajo remoto sin problema y estoy abierto a reubicarme, así que escríbeme y normalmente tendrás respuesta el mismo día.",
     channels: [
       { label: "Correo", value: "mednov@outlook.es", href: "mailto:mednov@outlook.es", copy: "mednov@outlook.es" },
       { label: "Teléfono", value: "+52 999 359 0366", href: "tel:+529993590366", copy: "+52 999 359 0366" },
