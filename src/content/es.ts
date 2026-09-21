@@ -581,7 +581,7 @@ export const es: Content = {
         items: ["FastAPI", "Flask", "Django", "Express", "REST APIs", "GraphQL", "Microservicios", "Zod"],
       },
       {
-        cat: "Ia y automatización",
+        cat: "IA y automatización",
         items: [
           "OpenAI API",
           "Anthropic Claude",
