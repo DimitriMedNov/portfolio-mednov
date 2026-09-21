@@ -59,6 +59,8 @@ export type Content = {
       access: { label: string; public: boolean };
       /** Live URL, only when the thing is actually reachable. */
       url?: string;
+      /** Public repositories, when the work has code anyone can read. */
+      repos?: { label: string; href: string }[];
       /** Logo de la organización, en /public/logos. */
       logo?: string;
       /** "wide" para marcas horizontales; por defecto cuadrada. */

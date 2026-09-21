@@ -52,6 +52,7 @@ export const projects: Project[] = [
     demoLabelKey: "openChat",
     github: "https://github.com/DimitriMedNov/whatsapp-sticker-bot-vercel",
   },
+  // El más viejo y el más sencillo de los públicos: va al final a propósito.
   {
     id: 7,
     code: "4.7",

@@ -62,6 +62,23 @@ const Systems = () => {
                     </a>
                   )}
 
+                  {item.repos && (
+                    <div className="flex flex-wrap gap-x-6 gap-y-1">
+                      {item.repos.map((repo) => (
+                        <a
+                          key={repo.href}
+                          href={repo.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="link-chevron"
+                        >
+                          {repo.label} ›
+                          <span className="sr-only"> — {item.title}</span>
+                        </a>
+                      ))}
+                    </div>
+                  )}
+
                   <div className="mt-auto pt-2">
                     <Label>{systems.stackLabel}</Label>
                     <div className="mt-2 flex flex-wrap gap-2">
