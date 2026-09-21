@@ -333,35 +333,37 @@ export const es: Content = {
         category: "Sistema interno",
         summary: "Inventario y requisiciones",
         description:
-          "Sistema de inventario y requisiciones para una empresa con varias sedes: el stock se calcula sumando cada entrada, salida y ajuste, nunca sobrescribiendo un número, así que todo movimiento queda auditable. Las requisiciones pasan por estados y se cargan al proyecto que corresponde, y los permisos se aplican en la base de datos, no escondiendo botones. La demo abre con datos de ejemplo: entra con el botón de invitado, sin registro.",
+          "Sistema de inventario y requisiciones para una empresa con varias sedes, donde el stock se calcula sumando cada entrada, salida y ajuste en vez de sobrescribir un número, de manera que cualquier movimiento se puede rastrear hasta su origen, y donde las requisiciones recorren sus estados cargándose al proyecto que corresponde mientras los permisos se aplican en la base de datos y no escondiendo botones. La demo abre con datos de ejemplo y se entra con el botón de invitado, sin registro.",
       },
       1: {
         category: "E-commerce",
         summary: "Tienda en línea",
         description:
-          "Tienda en línea completa con carrito, pago, comparador de productos, reseñas, wishlist y panel de administración, con autenticación de usuarios, gestión de órdenes y permisos por rol.",
+          "Tienda en línea completa donde el cliente arma su carrito, compara productos, deja reseñas y guarda su wishlist hasta llegar al pago, mientras del otro lado un panel de administración lleva el catálogo y las órdenes con permisos por rol.",
       },
       2: {
         category: "Analítica",
         summary: "Dashboard de criptomonedas",
-        description: "Panel de criptomonedas con visualización de datos en tiempo real y reportes configurables.",
+        description:
+          "Panel de criptomonedas que sigue los precios en tiempo real y deja armar un portafolio y una lista de seguimiento, con un analista de IA que lee el mercado del momento y lo resume en lenguaje llano.",
       },
       3: {
         category: "IA local",
         summary: "Tareas con IA que funciona sin internet",
         description:
-          "Gestor de tareas que corre entero en tu máquina: la base de datos, el modelo y el dictado. El proveedor de IA es intercambiable, así que funciona con Ollama en local, con tu propia llave de OpenAI o Anthropic, o con cualquier servidor compatible; si no configuras ninguno, la app sigue trabajando sin sus funciones de IA en vez de tronar. Dictas una tarea y el texto se va escribiendo mientras hablas, con whisper.cpp también en local.",
+          "Gestor de tareas que corre entero en tu máquina, con su base de datos, su modelo y su dictado, y donde el proveedor de IA es intercambiable, así que lo mismo funciona con Ollama en local que con tu propia llave de OpenAI o Anthropic o con cualquier servidor compatible, y si no configuras ninguno la app sigue trabajando sin sus funciones de IA en lugar de tronar. Dictas una tarea y el texto se va escribiendo mientras hablas, porque la transcripción también vive en tu computadora.",
       },
       6: {
         category: "Visualización",
         summary: "Simulador de ritmo cardíaco",
-        description: "Visualizador interactivo de ritmo cardíaco con animaciones en tiempo real y métricas configurables.",
+        description:
+          "Visualizador de ritmo cardíaco donde se elige un ritmo y el trazo, el latido y la respiración responden al instante, pensado para entender de un vistazo en qué se distingue uno de otro.",
       },
       7: {
         category: "Reservas",
         summary: "Sistema de reservas",
         description:
-          "App web de reservas y pedidos para la taquería El Taquito Gordo Feliz, donde los clientes agendan citas o hacen pedidos, reciben notificaciones automáticas y configuran recordatorios.",
+          "App web de reservas y pedidos para la taquería El Taquito Gordo Feliz, donde los clientes agendan o piden desde el celular y reciben sus recordatorios sin que nadie del negocio tenga que estar contestando mensajes.",
       },
     },
   },

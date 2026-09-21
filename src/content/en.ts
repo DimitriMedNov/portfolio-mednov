@@ -333,35 +333,37 @@ export const en: Content = {
         category: "Internal system",
         summary: "Inventory and requisitions",
         description:
-          "Inventory and requisition system for a company with several sites: stock is the sum of every entry, exit and adjustment rather than a number that gets overwritten, so the history stays auditable. Requisitions move through states and are charged to the project they belong to, and permissions are enforced in the database, not by hiding buttons. The demo runs on sample data — use the guest button, no sign-up.",
+          "Inventory and requisition system for a company with several sites, where stock is the sum of every entry, exit and adjustment rather than a number that gets overwritten, so any movement can be traced back to its origin, and where requisitions move through their states charged to the project they belong to while permissions are enforced in the database instead of by hiding buttons. The demo runs on sample data and opens with the guest button, no sign-up.",
       },
       1: {
         category: "E-commerce",
         summary: "E-commerce storefront",
         description:
-          "Full online store with shopping cart, checkout, product comparison, reviews, wishlist and an admin dashboard, including user authentication, order management and role-based permissions.",
+          "A full online store where customers fill a cart, compare products, leave reviews and keep a wishlist on the way to checkout, while on the other side an admin dashboard runs the catalog and the orders under role-based permissions.",
       },
       2: {
         category: "Analytics",
         summary: "Crypto analytics dashboard",
-        description: "Cryptocurrency dashboard with real-time data visualization and customizable reports.",
+        description:
+          "Cryptocurrency dashboard that follows prices in real time and lets you keep a portfolio and a watchlist, with an AI analyst that reads the current market and sums it up in plain language.",
       },
       3: {
         category: "Local AI",
         summary: "An AI task manager that works offline",
         description:
-          "A task manager that runs entirely on your own machine: the database, the model and the dictation. The AI provider is swappable — Ollama locally, your own OpenAI or Anthropic key, or any compatible server; with none configured the app keeps working without its AI features instead of crashing. Dictate a task and the text appears as you speak, with whisper.cpp running locally too.",
+          "A task manager that runs entirely on your own machine, with its database, its model and its dictation, and where the AI provider is swappable, so it works the same with Ollama locally as with your own OpenAI or Anthropic key or any compatible server, and with none configured the app keeps working without its AI features instead of crashing. Dictate a task and the text appears as you speak, because the transcription lives on your computer too.",
       },
       6: {
         category: "Visualization",
         summary: "Heart rate simulator",
-        description: "Interactive heart rate visualizer with real-time animations and configurable metrics.",
+        description:
+          "Heart-rhythm visualizer where picking a rhythm makes the trace, the heartbeat and the breathing respond at once, built to show at a glance what tells one rhythm from another.",
       },
       7: {
         category: "Booking",
         summary: "Booking system",
         description:
-          "Booking and ordering web app for the El Taquito Gordo Feliz taquería, where customers book appointments or place orders, receive automated notifications and set reminders.",
+          "Booking and ordering web app for the El Taquito Gordo Feliz taquería, where customers book or order from their phone and get their reminders without anyone at the shop having to answer messages.",
       },
     },
   },
