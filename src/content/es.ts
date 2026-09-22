@@ -121,6 +121,8 @@ export const es: Content = {
         access: { label: "Uso interno", public: false },
         title: "Plataforma SaaS multi-tenant",
         desc: "Plataforma que lleva el papeleo del negocio a software, con autenticación, almacenamiento de archivos, generación de documentos y control de acceso por roles, hecha multi-tenant para que cada parte de la empresa trabaje en su propio espacio sin pisar a las demás.",
+        caseHref: "/casos/saas",
+        caseLabel: "Leer el caso completo",
         stack: ["React 19", "TypeScript", "TanStack", "Supabase", "Zod", "Vercel"],
         reads: [],
       },
@@ -724,6 +726,69 @@ export const es: Content = {
           "La decisión de construirlo en lugar de comprarlo fue de la empresa: no fue una evaluación técnica mía y no la presento como tal.",
           "No hay comparación medida de antes y después: lo que había eran herramientas sueltas y hojas de cálculo por ciudad, sin registro de tiempos contra el cual comparar.",
           "Las cifras de compras y de inventario no se repiten aquí: están en sus propios casos, y sumarlas otra vez haría parecer que hay más volumen del que hay.",
+        ],
+      },
+      note:
+        "Este caso se publica sin el nombre de la empresa y sin datos de su operación, con autorización para contar el trabajo.",
+    },
+    saas: {
+      seoTitle: "Caso: multi-tenant para una sola empresa",
+      seoDescription:
+        "Multi-tenant es lo que se construye cuando los inquilinos son empresas distintas. Aquí son áreas de una misma empresa, y esa decisión es el caso completo.",
+      back: "Volver a sistemas",
+      eyebrow: "Caso de estudio · Proveedor industrial con cuatro plantas",
+      title: "Multi-tenant para una sola empresa",
+      lede:
+        "Una plataforma que lleva el papeleo del negocio a software, con autenticación, archivos, generación de documentos y control de acceso por roles. Lo que la hace distinta de los otros sistemas de esta página es que cada área trabaja en su propio espacio sellado, y eso es exactamente lo contrario de lo que persigue el ERP.",
+      figures: [
+        { v: "2026", l: "en desarrollo" },
+        { v: "0", l: "usuarios todavía" },
+      ],
+      sections: [
+        {
+          id: "que-es",
+          title: "Qué es",
+          body: [
+            "El papeleo de un negocio termina siendo archivos. Documentos que alguien redactó, que viven donde quien los hizo los dejó, y a los que se accede porque se sabe dónde están o porque alguien los manda. La plataforma convierte eso en software: autenticación, almacenamiento de archivos, generación de los documentos que la empresa produce y permisos por rol para decidir quién alcanza qué.",
+            "Los espacios separados no son clientes externos. Son áreas de la misma empresa, cada una con su propio ámbito dentro de la plataforma.",
+          ],
+        },
+        {
+          id: "multi-tenant",
+          title: "Por qué multi-tenant si es una sola empresa",
+          body: [
+            "Multi-tenant es lo que normalmente se construye cuando los inquilinos son empresas distintas que no deben verse entre sí. Usarlo para áreas de una misma empresa parece de más, y es la decisión que sostiene el resto.",
+            "La diferencia está entre que algo no se deba ver y que algo no se pueda ver. Separar por convención —carpetas, acuerdos sobre quién abre qué, permisos que alguien recuerda configurar— funciona hasta que alguien se equivoca, y en papeleo de empresa equivocarse significa que un documento acaba donde no debía. Separar por arquitectura significa que una consulta hecha desde un área no alcanza los datos de otra, aunque quien la haga se equivoque o quiera equivocarse.",
+            "Por eso los permisos viven en la base de datos y no en la pantalla: esconder un botón evita que alguien lo pulse, no que alguien pida el dato por otro camino.",
+          ],
+        },
+        {
+          id: "vs-erp",
+          title: "Por qué está separada del ERP",
+          body: [
+            "El ERP de esta misma empresa tiene su propio caso, y los dos resuelven problemas opuestos. Ahí está la razón de que sean dos productos y no uno.",
+            "El ERP existe para que un dato sea el mismo en todas partes. Su paso de compras que revisa existencias no le pide una copia a inventario: lee el mismo registro que inventario escribe, y esa es toda la gracia. Esta plataforma busca lo contrario, que lo de un área no se mezcle con lo de otra.",
+            "Meter las dos cosas en un solo sistema habría obligado a que cada consulta cargara con la pregunta de si en este caso toca compartir o aislar, que es la clase de condición que tarde o temprano alguien resuelve mal. Tampoco comparten despliegue: el ERP corre con Python, Docker y AWS, y esta plataforma se apoya en Supabase y Vercel sin backend propio.",
+          ],
+        },
+        {
+          id: "estado",
+          title: "Lo que todavía no puedo contar",
+          body: [
+            "Aquí termina lo que este caso puede afirmar. La plataforma está en desarrollo y no la usa nadie todavía.",
+            "Los otros casos de esta página tienen su parte de lo que salió mal, porque estuvieron delante de gente real: el seguimiento que se cayó cuatro veces, el lector de huella que falló hasta que aprendí a integrarlo, el OCR que no entendía el papel viejo, el consumo de las APIs que sigue abierto. Este no tiene esa sección, y no es un mérito. Es que un sistema que nadie ha usado tampoco ha sido puesto a prueba.",
+            "El aislamiento entre espacios está diseñado y no verificado contra uso real, que son dos cosas distintas. Prefiero decirlo ahora y volver a este caso cuando haya algo que contar, en lugar de escribir hoy un final que todavía no ocurrió.",
+          ],
+        },
+      ],
+      honesty: {
+        title: "Lo que este caso no demuestra",
+        items: [
+          "Nadie lo usa todavía: está en desarrollo y no ha estado frente a usuarios reales.",
+          "Que no haya fallado no dice nada a su favor: no ha fallado porque no ha sido usado, no porque esté probado.",
+          "El aislamiento entre espacios está diseñado, no verificado: que la arquitectura lo separe no es lo mismo que haberlo comprobado en operación.",
+          "No hay comparación de antes y después porque todavía no hay después.",
+          "No se describe qué papeleo maneja cada área: es operación interna de la empresa y no me toca publicarla.",
         ],
       },
       note:

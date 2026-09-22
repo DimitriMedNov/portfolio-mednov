@@ -121,6 +121,8 @@ export const en: Content = {
         access: { label: "Internal use", public: false },
         title: "Multi-tenant SaaS platform",
         desc: "Platform that takes the paperwork of the business into software, with authentication, file storage, document generation and role-based access control, built multi-tenant so each part of the company works in its own space without stepping on the others.",
+        caseHref: "/casos/saas",
+        caseLabel: "Read the full case",
         stack: ["React 19", "TypeScript", "TanStack", "Supabase", "Zod", "Vercel"],
         reads: [],
       },
@@ -724,6 +726,69 @@ export const en: Content = {
           "The decision to build rather than buy was the company's: it was not a technical evaluation of mine and I do not present it as one.",
           "There is no measured before-and-after: what existed were separate tools and spreadsheets per city, with no record of times to compare against.",
           "The purchasing and inventory figures are not repeated here: they are in their own cases, and adding them up again would make the volume look larger than it is.",
+        ],
+      },
+      note:
+        "This case is published without the company's name and without operational data, with permission to tell the work.",
+    },
+    saas: {
+      seoTitle: "Case: multi-tenant for a single company",
+      seoDescription:
+        "Multi-tenancy is what you build when the tenants are separate companies. Here they are areas of one company, and that decision is the whole case.",
+      back: "Back to systems",
+      eyebrow: "Case study · Industrial supplier with four plants",
+      title: "Multi-tenant for a single company",
+      lede:
+        "A platform that takes the paperwork of the business into software, with authentication, files, document generation and role-based access control. What sets it apart from the other systems on this site is that each area works in its own sealed space, which is the exact opposite of what the ERP is after.",
+      figures: [
+        { v: "2026", l: "in development" },
+        { v: "0", l: "users so far" },
+      ],
+      sections: [
+        {
+          id: "que-es",
+          title: "What it is",
+          body: [
+            "A business's paperwork ends up as files. Documents somebody wrote, living wherever whoever made them left them, reached because you know where they are or because somebody sends them to you. The platform turns that into software: authentication, file storage, generation of the documents the company produces, and role-based permissions deciding who reaches what.",
+            "The separate spaces are not external customers. They are areas of the same company, each with its own scope inside the platform.",
+          ],
+        },
+        {
+          id: "multi-tenant",
+          title: "Why multi-tenant for a single company",
+          body: [
+            "Multi-tenancy is normally what you build when the tenants are separate companies that must not see each other. Using it for areas of one company looks like overkill, and it is the decision everything else rests on.",
+            "The difference is between something that should not be seen and something that cannot be seen. Separating by convention — folders, agreements about who opens what, permissions somebody remembers to configure — works until somebody makes a mistake, and with company paperwork a mistake means a document ends up where it should not. Separating by architecture means a query made from one area does not reach another's data, whether the person making it errs or means to.",
+            "That is why permissions live in the database rather than on screen: hiding a button stops someone pressing it, not someone asking for the data another way.",
+          ],
+        },
+        {
+          id: "vs-erp",
+          title: "Why it is separate from the ERP",
+          body: [
+            "The ERP at this same company has its own case, and the two solve opposite problems. That is the reason they are two products and not one.",
+            "The ERP exists so that a piece of data is the same everywhere. Its purchasing step that checks stock does not ask inventory for a copy: it reads the same record inventory writes, and that is the whole point. This platform is after the opposite, that one area's material does not mix with another's.",
+            "Putting both in one system would have made every query carry the question of whether this case calls for sharing or isolating, which is the kind of condition somebody eventually gets wrong. They do not share a deployment either: the ERP runs on Python, Docker and AWS, while this platform leans on Supabase and Vercel with no backend of its own.",
+          ],
+        },
+        {
+          id: "estado",
+          title: "What I cannot tell you yet",
+          body: [
+            "This is where what the case can claim runs out. The platform is in development and nobody uses it yet.",
+            "The other cases on this site have their share of what went wrong, because they stood in front of real people: the follow-up dropped four times, the fingerprint reader that failed until I learned to integrate it, the OCR that could not read old paper, the API consumption still open. This one has no such section, and that is not to its credit. A system nobody has used has not been tested either.",
+            "The isolation between spaces is designed and not verified against real use, which are two different things. I would rather say so now and come back to this case when there is something to tell, than write today an ending that has not happened.",
+          ],
+        },
+      ],
+      honesty: {
+        title: "What this case does not prove",
+        items: [
+          "Nobody uses it yet: it is in development and has not been in front of real users.",
+          "That nothing has failed says nothing in its favour: nothing has failed because nothing has been used, not because it is proven.",
+          "The isolation between spaces is designed, not verified: architecture separating them is not the same as having checked it in operation.",
+          "There is no before-and-after comparison because there is no after yet.",
+          "What paperwork each area handles is not described: it is the company's internal operation and not mine to publish.",
         ],
       },
       note:
