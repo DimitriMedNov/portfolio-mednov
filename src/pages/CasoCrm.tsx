@@ -3,16 +3,16 @@ import CaseStudy from "@/components/hud/CaseStudy";
 import { useContent } from "@/content/state";
 
 /** Página de detalle: no es una pestaña, así que trae su propio título. */
-const CasoComprasPage = () => {
-  const caseStudy = useContent().caseStudies.compras;
+const CasoCrmPage = () => {
+  const caseStudy = useContent().caseStudies.crm;
   return (
     <Shell
-      path="/casos/compras"
+      path="/casos/crm"
       seo={{ title: caseStudy.seoTitle, description: caseStudy.seoDescription }}
     >
-      <CaseStudy slug="compras" />
+      <CaseStudy slug="crm" />
     </Shell>
   );
 };
 
-export default CasoComprasPage;
+export default CasoCrmPage;

@@ -133,6 +133,8 @@ export const es: Content = {
         access: { label: "Uso interno", public: false },
         title: "CRM empresarial",
         desc: "El CRM donde vive la parte comercial de la empresa en sus cuatro ciudades: los clientes, el embudo, cada oportunidad abierta y el seguimiento que necesita, para que el equipo de ventas deje de cargar todo eso en su cabeza y en sus propios archivos.",
+        caseHref: "/casos/crm",
+        caseLabel: "Leer el caso completo",
         stack: ["Python", "React", "TypeScript", "Supabase", "PostgreSQL", "Linux", "DigitalOcean"],
         reads: [{ v: "4", l: "ciudades" }],
       },
@@ -331,70 +333,136 @@ export const es: Content = {
     ],
   },
 
-  caseStudy: {
-    seoTitle: "Caso: compras de principio a fin",
-    seoDescription:
-      "Cómo un proceso de compras en papel, con firmas presenciales y un ciclo de hasta seis días, pasó a cerrarse el mismo día: el problema, las decisiones y cómo se mide el resultado.",
-    back: "Volver a sistemas",
-    eyebrow: "Caso de estudio · Proveedor industrial con cuatro plantas",
-    title: "Compras, de principio a fin",
-    lede:
-      "Comprar un tornillo podía tardar seis días, y ninguno de esos días era por el proveedor. Este es el recorrido de un proceso que vivía en papel, con firmas presenciales y la misma información recapturada en cada formato, hasta un flujo donde se captura una vez y se reutiliza en cada etapa.",
-    figures: [
-      { v: "+8,000", l: "órdenes de compra" },
-      { v: "9,456", l: "cuadros comparativos" },
-      { v: "+35,000", l: "entradas de almacén" },
-      { v: "+100", l: "usuarios" },
-    ],
-    sections: [
-      {
-        id: "problema",
-        title: "El problema no era el papel",
-        body: [
-          "Es fácil contar esto como una historia de digitalización, y sería quedarse corto. El papel era el síntoma: lo que costaba tiempo era que el proceso estaba repartido entre formatos, personas y áreas que no se hablaban entre sí.",
-          "Una necesidad de material se convertía en una solicitud física que había que imprimir y pasear para juntar firmas, luego alguien revisaba existencias, pedía al menos tres cotizaciones, armaba a mano un cuadro comparativo con condiciones, tiempos de entrega, descuentos, subtotales e impuestos, y de ahí salía la orden de compra que volvía a subir a firma. Cada salto era una recaptura de los mismos datos y una oportunidad nueva de equivocarse al transcribir.",
-          "Saber en qué iba una compra significaba mandar un correo o ir a preguntarle al responsable. No existía un lugar donde mirarlo.",
-        ],
-      },
-      {
-        id: "decisiones",
-        title: "La decisión que ordena todo lo demás",
-        body: [
-          "La pieza central no fue una pantalla sino una regla: la información se captura una vez y se reutiliza. El proveedor, las cantidades, las descripciones, el proyecto al que se carga y quién lo pidió se escriben en la solicitud y de ahí viajan solos al cuadro comparativo y a la orden de compra.",
-          "Eso elimina de golpe los puntos donde alguien volvía a teclear lo mismo, que eran justo donde aparecían los errores de transcripción. Los cálculos de subtotales, impuestos y totales dejan de hacerse a mano, y las autorizaciones y rechazos quedan registrados con quién, cuándo y por qué motivo.",
-          "Quince etapas del flujo viven dentro del sistema, de la solicitud hasta la recepción final, pasando por entradas a almacén, resguardos y traspasos. No es que el departamento entero esté automatizado, es que ese recorrido completo dejó de salirse a un formato suelto.",
-        ],
-      },
-      {
-        id: "medicion",
-        title: "Cómo se mide, y qué no se puede medir",
-        body: [
-          "Antes, la solicitud, el cuadro comparativo y la orden tomaban alrededor de dos días cada uno contando elaboración, revisiones, firmas y esperas, así que el tramo administrativo podía estirarse hasta unos seis días. Hoy ese mismo tramo se cierra el mismo día, normalmente en una o dos horas, para procesos que traen entre diez y quince artículos.",
-          "Ese antes es una estimación de quienes operaban el proceso, no un dato medido: el flujo en papel no dejaba marcas de tiempo, así que no hay con qué compararlo automáticamente. Los números de volumen sí salen del sistema, porque los registra él.",
-          "El tiempo del proveedor queda fuera a propósito. Si una entrega tarda quince días por fabricación o logística, eso no lo arregla ningún software y no tiene por qué apuntarse a su favor. La medición termina donde termina el trabajo administrativo: en la orden autorizada.",
-        ],
-      },
-      {
-        id: "resultado",
-        title: "Qué cambió en la práctica",
-        body: [
-          "Una solicitud ya no se persigue: se consulta. El estado, quién la tiene pendiente, qué se autorizó y qué se rechazó y por qué están en la misma pantalla, así que el seguimiento dejó de ser una cadena de correos.",
-          "La operación ordinaria es prácticamente sin papel, aunque alguna orden se imprime por excepción para ciertas auditorías, de modo que decir que el papel desapareció del todo sería falso.",
-          "Y hay una cosa que no estaba en el plan y resultó valiosa: como cada movimiento queda con responsable y fecha, el historial sirve para responder preguntas que antes nadie hacía porque no había forma de contestarlas.",
-        ],
-      },
-    ],
-    honesty: {
-      title: "Lo que este caso no demuestra",
-      items: [
-        "No hay reducción de costos medida: no existen los datos económicos para sostenerla.",
-        "No hay reducción de errores medida: se quitaron los puntos de recaptura, pero nunca se contaron los errores del proceso anterior, así que no hay contra qué comparar.",
-        "El tiempo ahorrado es de ciclo, no de horas trabajadas: los seis días anteriores incluían esperas y firmas, no eran seis días de alguien sentado frente al expediente.",
-        "Las cifras de volumen son de entidades distintas del mismo proceso y no deben sumarse entre sí: una solicitud, su cuadro comparativo y su orden son el mismo caso contado tres veces.",
+  caseStudies: {
+    compras: {
+      seoTitle: "Caso: compras de principio a fin",
+      seoDescription:
+        "Cómo un proceso de compras en papel, con firmas presenciales y un ciclo de hasta seis días, pasó a cerrarse el mismo día: el problema, las decisiones y cómo se mide el resultado.",
+      back: "Volver a sistemas",
+      eyebrow: "Caso de estudio · Proveedor industrial con cuatro plantas",
+      title: "Compras, de principio a fin",
+      lede:
+        "Comprar un tornillo podía tardar seis días, y ninguno de esos días era por el proveedor. Este es el recorrido de un proceso que vivía en papel, con firmas presenciales y la misma información recapturada en cada formato, hasta un flujo donde se captura una vez y se reutiliza en cada etapa.",
+      figures: [
+        { v: "+8,000", l: "órdenes de compra" },
+        { v: "9,456", l: "cuadros comparativos" },
+        { v: "+35,000", l: "entradas de almacén" },
+        { v: "+100", l: "usuarios" },
       ],
+      sections: [
+        {
+          id: "problema",
+          title: "El problema no era el papel",
+          body: [
+            "Es fácil contar esto como una historia de digitalización, y sería quedarse corto. El papel era el síntoma: lo que costaba tiempo era que el proceso estaba repartido entre formatos, personas y áreas que no se hablaban entre sí.",
+            "Una necesidad de material se convertía en una solicitud física que había que imprimir y pasear para juntar firmas, luego alguien revisaba existencias, pedía al menos tres cotizaciones, armaba a mano un cuadro comparativo con condiciones, tiempos de entrega, descuentos, subtotales e impuestos, y de ahí salía la orden de compra que volvía a subir a firma. Cada salto era una recaptura de los mismos datos y una oportunidad nueva de equivocarse al transcribir.",
+            "Saber en qué iba una compra significaba mandar un correo o ir a preguntarle al responsable. No existía un lugar donde mirarlo.",
+          ],
+        },
+        {
+          id: "decisiones",
+          title: "La decisión que ordena todo lo demás",
+          body: [
+            "La pieza central no fue una pantalla sino una regla: la información se captura una vez y se reutiliza. El proveedor, las cantidades, las descripciones, el proyecto al que se carga y quién lo pidió se escriben en la solicitud y de ahí viajan solos al cuadro comparativo y a la orden de compra.",
+            "Eso elimina de golpe los puntos donde alguien volvía a teclear lo mismo, que eran justo donde aparecían los errores de transcripción. Los cálculos de subtotales, impuestos y totales dejan de hacerse a mano, y las autorizaciones y rechazos quedan registrados con quién, cuándo y por qué motivo.",
+            "Quince etapas del flujo viven dentro del sistema, de la solicitud hasta la recepción final, pasando por entradas a almacén, resguardos y traspasos. No es que el departamento entero esté automatizado, es que ese recorrido completo dejó de salirse a un formato suelto.",
+          ],
+        },
+        {
+          id: "medicion",
+          title: "Cómo se mide, y qué no se puede medir",
+          body: [
+            "Antes, la solicitud, el cuadro comparativo y la orden tomaban alrededor de dos días cada uno contando elaboración, revisiones, firmas y esperas, así que el tramo administrativo podía estirarse hasta unos seis días. Hoy ese mismo tramo se cierra el mismo día, normalmente en una o dos horas, para procesos que traen entre diez y quince artículos.",
+            "Ese antes es una estimación de quienes operaban el proceso, no un dato medido: el flujo en papel no dejaba marcas de tiempo, así que no hay con qué compararlo automáticamente. Los números de volumen sí salen del sistema, porque los registra él.",
+            "El tiempo del proveedor queda fuera a propósito. Si una entrega tarda quince días por fabricación o logística, eso no lo arregla ningún software y no tiene por qué apuntarse a su favor. La medición termina donde termina el trabajo administrativo: en la orden autorizada.",
+          ],
+        },
+        {
+          id: "resultado",
+          title: "Qué cambió en la práctica",
+          body: [
+            "Una solicitud ya no se persigue: se consulta. El estado, quién la tiene pendiente, qué se autorizó y qué se rechazó y por qué están en la misma pantalla, así que el seguimiento dejó de ser una cadena de correos.",
+            "La operación ordinaria es prácticamente sin papel, aunque alguna orden se imprime por excepción para ciertas auditorías, de modo que decir que el papel desapareció del todo sería falso.",
+            "Y hay una cosa que no estaba en el plan y resultó valiosa: como cada movimiento queda con responsable y fecha, el historial sirve para responder preguntas que antes nadie hacía porque no había forma de contestarlas.",
+          ],
+        },
+      ],
+      honesty: {
+        title: "Lo que este caso no demuestra",
+        items: [
+          "No hay reducción de costos medida: no existen los datos económicos para sostenerla.",
+          "No hay reducción de errores medida: se quitaron los puntos de recaptura, pero nunca se contaron los errores del proceso anterior, así que no hay contra qué comparar.",
+          "El tiempo ahorrado es de ciclo, no de horas trabajadas: los seis días anteriores incluían esperas y firmas, no eran seis días de alguien sentado frente al expediente.",
+          "Las cifras de volumen son de entidades distintas del mismo proceso y no deben sumarse entre sí: una solicitud, su cuadro comparativo y su orden son el mismo caso contado tres veces.",
+        ],
+      },
+      note:
+        "Este caso se publica sin el nombre de la empresa, sin referencias a sus documentos internos y sin datos de su operación, con autorización para contar el trabajo.",
     },
-    note:
-      "Este caso se publica sin el nombre de la empresa, sin referencias a sus documentos internos y sin datos de su operación, con autorización para contar el trabajo.",
+    crm: {
+      seoTitle: "Caso: el CRM que sacó la cartera del Excel",
+      seoDescription:
+        "Toda la relación comercial de cuatro plantas vivía en una hoja de cálculo. El problema no era la hoja, era que nadie sabía cuál era la copia buena.",
+      back: "Volver a sistemas",
+      eyebrow: "Caso de estudio · Proveedor industrial con cuatro plantas",
+      title: "Un CRM para sacar la cartera del Excel",
+      lede:
+        "Toda la parte comercial de cuatro plantas —clientes, contactos, oportunidades y seguimientos— vivía dentro de una hoja de cálculo, y ahí mismo se trabajaba. El problema de fondo no era la hoja sino lo que una hoja no puede darte: un solo lugar donde la información sea la buena.",
+      figures: [
+        { v: "~60", l: "usuarios" },
+        { v: "4", l: "plantas" },
+        { v: "Jul 2026", l: "en operación" },
+      ],
+      sections: [
+        {
+          id: "problema",
+          title: "Una hoja de cálculo no tiene dueño",
+          body: [
+            "Un Excel compartido funciona hasta que dos personas lo necesitan al mismo tiempo. A partir de ahí aparecen copias, y con las copias aparece la pregunta que nadie puede contestar: cuál de todas es la vigente.",
+            "Lo que se veía en el día a día era información repetida —el mismo cliente capturado dos y tres veces, escrito distinto cada vez— y información que simplemente desaparecía, porque una hoja no registra quién cambió qué ni cuándo, así que un dato sobrescrito no deja rastro. Y cada consulta que debería tomar segundos tomaba minutos, porque había que ir a buscarla y luego confirmarla con alguien.",
+            "Nada de eso es culpa de quien lo usaba. Es lo que pasa cuando se le pide a una hoja de cálculo que haga de base de datos para una decena de cuentas corporativas de gran escala repartidas entre cuatro plantas.",
+          ],
+        },
+        {
+          id: "decision",
+          title: "Por qué no se compró uno hecho",
+          body: [
+            "Comprar un CRM de los que ya existen habría sido más rápido, y fue lo primero que se puso sobre la mesa. La razón para no hacerlo es que al mismo tiempo se estaban construyendo el ERP, el inventario y el proceso de compras sobre el mismo stack.",
+            "Un CRM comprado habría quedado aparte, con su propia lista de clientes, y alguien habría tenido que mantener sincronizadas las dos: el cliente del CRM y el mismo cliente del ERP, cada uno con su identificador y sus campos. Ese trabajo de sincronización no termina nunca y es donde vuelven a aparecer los datos duplicados, que era justo el problema que se quería resolver.",
+            "Al construirlo dentro del mismo sistema, el cliente es uno solo: el que compra es el mismo registro que el que aparece en un proyecto, y no hay dos verdades que conciliar.",
+          ],
+        },
+        {
+          id: "falla",
+          title: "Cuatro veces se cayó un seguimiento",
+          body: [
+            "El sistema dejó caer el seguimiento de ciertas cuentas. No una vez: cuatro. No se perdió ningún cliente, pero sí se perdió el hilo, que en una cuenta grande es caro de recuperar.",
+            "La primera vez parecía un descuido de alguien. La segunda también. A la cuarta ya era evidente que el patrón no estaba en las personas sino en el sistema, y se corrigió ahí.",
+            "Lo cuento porque es la parte que normalmente no se cuenta. Un sistema que pierde datos en silencio es peor que uno que se cae, porque el que se cae se nota. Lo que hay que enseñar de un proyecto en producción no es que nunca falló, sino cuánto tardó en notarse y qué se hizo cuando se notó.",
+          ],
+        },
+        {
+          id: "resultado",
+          title: "Qué cambió",
+          body: [
+            "Hoy hay un solo lugar donde está la cartera, y lo que dice ahí es lo que hay. Cada movimiento queda con responsable y con fecha, así que un dato sobrescrito ya no desaparece sin dejar rastro.",
+            "Alrededor de sesenta personas de las cuatro plantas trabajan sobre la misma información al mismo tiempo, sin copias y sin preguntarle a nadie cuál es la versión buena.",
+            "Opera desde julio de 2026.",
+          ],
+        },
+      ],
+      honesty: {
+        title: "Lo que este caso no demuestra",
+        items: [
+          "No hay comparación medida de antes y después: la hoja de cálculo no dejaba marcas de tiempo ni historial, así que no existe una línea base contra la cual comparar.",
+          "No hay ventas atribuidas al sistema: que la información esté ordenada no prueba que se venda más, y no hay datos que lo sostengan.",
+          "El número de cuentas se deja deliberadamente vago, igual que su industria, porque identificarlas sería hablar de la cartera de la empresa y eso no me toca publicar.",
+          "El embudo comercial no se describe aquí: cómo califica y avanza sus oportunidades es método propio de la empresa.",
+        ],
+      },
+      note:
+        "Este caso se publica sin el nombre de la empresa, sin identificar a sus clientes y sin describir su método comercial, con autorización para contar el trabajo.",
+    },
   },
 
   sites: {

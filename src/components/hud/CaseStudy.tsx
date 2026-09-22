@@ -9,8 +9,9 @@ import { Label, Panel, Reveal } from "@/components/hud/primitives";
  * medir. Esa última parte es la que sostiene a las demás, así que no es un
  * apéndice al final sino una sección con el mismo peso visual.
  */
-const CaseStudy = () => {
-  const { caseStudy } = useContent();
+const CaseStudy = ({ slug }: { slug: string }) => {
+  const { caseStudies } = useContent();
+  const caseStudy = caseStudies[slug];
 
   return (
     <article className="mx-auto w-full max-w-[64rem]">
@@ -24,7 +25,12 @@ const CaseStudy = () => {
         <p className="mt-6 max-w-[62ch] text-lead text-mut">{caseStudy.lede}</p>
       </header>
 
-      <div className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-[14px] border border-line/70 bg-line/70 sm:grid-cols-4">
+      {/* Las columnas siguen a cuántas cifras haya: con tres, cuatro dejaban
+          una celda vacía al final. */}
+      <div
+        className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-[14px] border border-line/70 bg-line/70"
+        style={{ gridTemplateColumns: `repeat(${Math.min(caseStudy.figures.length, 4)}, minmax(0, 1fr))` }}
+      >
         {caseStudy.figures.map((figure) => (
           <div key={figure.l} className="bg-panel px-5 py-6">
             <div className="text-headline font-semibold tabular-nums text-txt">{figure.v}</div>

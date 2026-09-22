@@ -133,6 +133,8 @@ export const en: Content = {
         access: { label: "Internal use", public: false },
         title: "Enterprise CRM",
         desc: "CRM where the sales side of the company lives across its four cities: customers, the pipeline, every open opportunity and the follow-up each one needs, so the commercial team stops keeping that in their own heads and their own files.",
+        caseHref: "/casos/crm",
+        caseLabel: "Read the full case",
         stack: ["Python", "React", "TypeScript", "Supabase", "PostgreSQL", "Linux", "DigitalOcean"],
         reads: [{ v: "4", l: "cities" }],
       },
@@ -331,70 +333,136 @@ export const en: Content = {
     ],
   },
 
-  caseStudy: {
-    seoTitle: "Case: purchasing, end to end",
-    seoDescription:
-      "How a paper-based purchasing process with in-person signatures and a cycle of up to six days came to close the same day: the problem, the decisions and how the result is measured.",
-    back: "Back to systems",
-    eyebrow: "Case study · Industrial supplier with four plants",
-    title: "Purchasing, end to end",
-    lede:
-      "Buying a bolt could take six days, and none of those days were the supplier's. This is the route of a process that lived on paper, with in-person signatures and the same information retyped into every form, to a flow where it is captured once and reused at every stage.",
-    figures: [
-      { v: "+8,000", l: "purchase orders" },
-      { v: "9,456", l: "comparison tables" },
-      { v: "+35,000", l: "warehouse entries" },
-      { v: "+100", l: "users" },
-    ],
-    sections: [
-      {
-        id: "problema",
-        title: "The problem was not the paper",
-        body: [
-          "It is easy to tell this as a digitization story, and that would sell it short. Paper was the symptom: what cost time was a process split across forms, people and departments that did not talk to each other.",
-          "A need for material turned into a physical request that had to be printed and walked around to collect signatures, then someone checked stock, asked for at least three quotes, hand-built a comparison table with terms, delivery times, discounts, subtotals and taxes, and out of that came the purchase order that went back up for signature. Every jump meant retyping the same data and one more chance to get it wrong.",
-          "Knowing where a purchase stood meant sending an email or walking over to ask. There was no place to look it up.",
-        ],
-      },
-      {
-        id: "decisiones",
-        title: "The decision everything else hangs on",
-        body: [
-          "The central piece was not a screen but a rule: information is captured once and reused. The supplier, the quantities, the descriptions, the project it is charged to and who asked for it are written in the request and travel from there into the comparison table and the purchase order.",
-          "That removes in one go the points where somebody retyped the same thing, which is exactly where transcription errors came from. Subtotals, taxes and totals stop being worked out by hand, and approvals and rejections are recorded with who, when and on what grounds.",
-          "Fifteen stages of the flow live inside the system, from the request to the final reception, through warehouse entries, custody records and transfers. It is not that the whole department is automated; it is that this full stretch stopped leaking out into a loose form.",
-        ],
-      },
-      {
-        id: "medicion",
-        title: "How it is measured, and what cannot be",
-        body: [
-          "The request, the comparison table and the order each used to take about two days counting drafting, reviews, signatures and waiting, so the administrative stretch could run to about six days. Today that same stretch closes the same day, usually in an hour or two, for processes carrying ten to fifteen items.",
-          "That before is an estimate from the people who ran the process, not a measurement: the paper flow left no timestamps, so there is nothing to compare against automatically. The volume figures do come from the system, because it records them.",
-          "Supplier time is deliberately left out. If a delivery takes fifteen days because of manufacturing or logistics, no software fixes that and it should not be counted in its favour. The measurement ends where the administrative work ends: at the approved order.",
-        ],
-      },
-      {
-        id: "resultado",
-        title: "What changed in practice",
-        body: [
-          "A request is no longer chased: it is looked up. Its status, who is holding it, what was approved and what was rejected and why all sit on the same screen, so follow-up stopped being a chain of emails.",
-          "Ordinary operation is practically paper-free, though the odd order still gets printed for certain audits, so saying paper disappeared entirely would be false.",
-          "And there is something that was not in the plan and turned out to be worth a lot: because every movement carries an owner and a date, the history answers questions nobody used to ask, because there was no way to answer them.",
-        ],
-      },
-    ],
-    honesty: {
-      title: "What this case does not prove",
-      items: [
-        "There is no measured cost reduction: the financial data to back one does not exist.",
-        "There is no measured error reduction: the retyping points were removed, but the errors of the old process were never counted, so there is nothing to compare against.",
-        "The time saved is cycle time, not hours worked: those six days included waiting and signatures, they were not six days of someone sitting over the file.",
-        "The volume figures belong to different entities of the same process and must not be added together: a request, its comparison table and its order are the same case counted three times.",
+  caseStudies: {
+    compras: {
+      seoTitle: "Case: purchasing, end to end",
+      seoDescription:
+        "How a paper-based purchasing process with in-person signatures and a cycle of up to six days came to close the same day: the problem, the decisions and how the result is measured.",
+      back: "Back to systems",
+      eyebrow: "Case study · Industrial supplier with four plants",
+      title: "Purchasing, end to end",
+      lede:
+        "Buying a bolt could take six days, and none of those days were the supplier's. This is the route of a process that lived on paper, with in-person signatures and the same information retyped into every form, to a flow where it is captured once and reused at every stage.",
+      figures: [
+        { v: "+8,000", l: "purchase orders" },
+        { v: "9,456", l: "comparison tables" },
+        { v: "+35,000", l: "warehouse entries" },
+        { v: "+100", l: "users" },
       ],
+      sections: [
+        {
+          id: "problema",
+          title: "The problem was not the paper",
+          body: [
+            "It is easy to tell this as a digitization story, and that would sell it short. Paper was the symptom: what cost time was a process split across forms, people and departments that did not talk to each other.",
+            "A need for material turned into a physical request that had to be printed and walked around to collect signatures, then someone checked stock, asked for at least three quotes, hand-built a comparison table with terms, delivery times, discounts, subtotals and taxes, and out of that came the purchase order that went back up for signature. Every jump meant retyping the same data and one more chance to get it wrong.",
+            "Knowing where a purchase stood meant sending an email or walking over to ask. There was no place to look it up.",
+          ],
+        },
+        {
+          id: "decisiones",
+          title: "The decision everything else hangs on",
+          body: [
+            "The central piece was not a screen but a rule: information is captured once and reused. The supplier, the quantities, the descriptions, the project it is charged to and who asked for it are written in the request and travel from there into the comparison table and the purchase order.",
+            "That removes in one go the points where somebody retyped the same thing, which is exactly where transcription errors came from. Subtotals, taxes and totals stop being worked out by hand, and approvals and rejections are recorded with who, when and on what grounds.",
+            "Fifteen stages of the flow live inside the system, from the request to the final reception, through warehouse entries, custody records and transfers. It is not that the whole department is automated; it is that this full stretch stopped leaking out into a loose form.",
+          ],
+        },
+        {
+          id: "medicion",
+          title: "How it is measured, and what cannot be",
+          body: [
+            "The request, the comparison table and the order each used to take about two days counting drafting, reviews, signatures and waiting, so the administrative stretch could run to about six days. Today that same stretch closes the same day, usually in an hour or two, for processes carrying ten to fifteen items.",
+            "That before is an estimate from the people who ran the process, not a measurement: the paper flow left no timestamps, so there is nothing to compare against automatically. The volume figures do come from the system, because it records them.",
+            "Supplier time is deliberately left out. If a delivery takes fifteen days because of manufacturing or logistics, no software fixes that and it should not be counted in its favour. The measurement ends where the administrative work ends: at the approved order.",
+          ],
+        },
+        {
+          id: "resultado",
+          title: "What changed in practice",
+          body: [
+            "A request is no longer chased: it is looked up. Its status, who is holding it, what was approved and what was rejected and why all sit on the same screen, so follow-up stopped being a chain of emails.",
+            "Ordinary operation is practically paper-free, though the odd order still gets printed for certain audits, so saying paper disappeared entirely would be false.",
+            "And there is something that was not in the plan and turned out to be worth a lot: because every movement carries an owner and a date, the history answers questions nobody used to ask, because there was no way to answer them.",
+          ],
+        },
+      ],
+      honesty: {
+        title: "What this case does not prove",
+        items: [
+          "There is no measured cost reduction: the financial data to back one does not exist.",
+          "There is no measured error reduction: the retyping points were removed, but the errors of the old process were never counted, so there is nothing to compare against.",
+          "The time saved is cycle time, not hours worked: those six days included waiting and signatures, they were not six days of someone sitting over the file.",
+          "The volume figures belong to different entities of the same process and must not be added together: a request, its comparison table and its order are the same case counted three times.",
+        ],
+      },
+      note:
+        "This case is published without the company's name, without references to its internal documents and without operational data, with permission to tell the work.",
     },
-    note:
-      "This case is published without the company's name, without references to its internal documents and without operational data, with permission to tell the work.",
+    crm: {
+      seoTitle: "Case: the CRM that got the book out of a spreadsheet",
+      seoDescription:
+        "The whole commercial side of four plants lived in a spreadsheet. The problem was not the spreadsheet, it was that nobody knew which copy was the good one.",
+      back: "Back to systems",
+      eyebrow: "Case study · Industrial supplier with four plants",
+      title: "A CRM to get the book out of a spreadsheet",
+      lede:
+        "The whole commercial side of four plants — customers, contacts, opportunities and follow-ups — lived inside a spreadsheet, and that is where the work happened too. The underlying problem was not the spreadsheet but what a spreadsheet cannot give you: one place where the information is the right one.",
+      figures: [
+        { v: "~60", l: "users" },
+        { v: "4", l: "plants" },
+        { v: "Jul 2026", l: "live since" },
+      ],
+      sections: [
+        {
+          id: "problema",
+          title: "A spreadsheet has no owner",
+          body: [
+            "A shared spreadsheet works until two people need it at the same time. From there copies appear, and with copies comes the question nobody can answer: which one of them is current.",
+            "What showed up day to day was repeated information — the same customer entered two and three times, spelled differently each time — and information that simply vanished, because a spreadsheet does not record who changed what or when, so an overwritten value leaves no trace. And every lookup that should take seconds took minutes, because you had to find it and then confirm it with somebody.",
+            "None of that is the fault of the people using it. It is what happens when a spreadsheet is asked to be the database for a dozen large corporate accounts spread across four plants.",
+          ],
+        },
+        {
+          id: "decision",
+          title: "Why an off-the-shelf CRM was not bought",
+          body: [
+            "Buying one of the CRMs that already exist would have been faster, and it was the first option on the table. The reason not to is that the ERP, the inventory system and the purchasing flow were being built on the same stack at the same time.",
+            "A bought CRM would have sat apart, with its own customer list, and someone would have had to keep the two in sync: the customer in the CRM and the same customer in the ERP, each with its own identifier and fields. That syncing work never ends, and it is exactly where duplicated data comes back — which was the problem being solved in the first place.",
+            "Building it inside the same system means the customer is one record: whoever buys is the same entry that shows up on a project, and there are no two truths to reconcile.",
+          ],
+        },
+        {
+          id: "falla",
+          title: "Four times a follow-up was dropped",
+          body: [
+            "The system dropped the follow-up on certain accounts. Not once: four times. No customer was lost, but the thread was, and on a large account that is expensive to pick back up.",
+            "The first time it looked like somebody's oversight. So did the second. By the fourth it was clear the pattern was not in the people but in the system, and that is where it was fixed.",
+            "I tell it because it is the part that usually goes untold. A system that loses data silently is worse than one that falls over, because the one that falls over gets noticed. What is worth showing about a project in production is not that it never failed, but how long it took to notice and what was done once it was noticed.",
+          ],
+        },
+        {
+          id: "resultado",
+          title: "What changed",
+          body: [
+            "There is now one place where the book lives, and what it says is what there is. Every change carries an owner and a date, so an overwritten value no longer disappears without a trace.",
+            "Around sixty people across the four plants work on the same information at the same time, with no copies and without asking anyone which version is the right one.",
+            "It has been live since July 2026.",
+          ],
+        },
+      ],
+      honesty: {
+        title: "What this case does not prove",
+        items: [
+          "There is no measured before-and-after: the spreadsheet left no timestamps and no history, so there is no baseline to compare against.",
+          "No sales are attributed to the system: having the information in order does not prove more gets sold, and there is no data to back that.",
+          "The number of accounts is deliberately left vague, as is their industry, because identifying them would mean talking about the company's book of business, and that is not mine to publish.",
+          "The sales pipeline is not described here: how the company qualifies and advances its opportunities is its own method.",
+        ],
+      },
+      note:
+        "This case is published without the company's name, without identifying its customers and without describing its commercial method, with permission to tell the work.",
+    },
   },
 
   sites: {

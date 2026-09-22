@@ -80,7 +80,7 @@ export type Content = {
    * documentos internos y sin detalles de operación como calendarios de
    * respaldo: el objetivo es explicar el trabajo, no exponer a nadie.
    */
-  caseStudy: {
+  caseStudies: Record<string, {
     seoTitle: string;
     seoDescription: string;
     back: string;
@@ -91,7 +91,7 @@ export type Content = {
     sections: { id: string; title: string; body: string[] }[];
     honesty: { title: string; items: string[] };
     note: string;
-  };
+  }>;
 
   sites: {
     title: string;
