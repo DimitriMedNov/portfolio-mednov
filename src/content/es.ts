@@ -149,6 +149,8 @@ export const es: Content = {
         access: { label: "Uso interno", public: false },
         title: "Manejo de inventario",
         desc: "Software que sigue cada herramienta y cada artículo en las cuatro sedes, de modo que todo movimiento queda registrado y con un nombre detrás, que es lo que acabó con la pérdida de herramientas y con el gasto que nadie podía explicar.",
+        caseHref: "/casos/inventario",
+        caseLabel: "Leer el caso completo",
         stack: ["Python", "React", "TypeScript", "Supabase", "PostgreSQL", "Docker"],
         reads: [{ v: "4", l: "ciudades" }],
       },
@@ -462,6 +464,71 @@ export const es: Content = {
       },
       note:
         "Este caso se publica sin el nombre de la empresa, sin identificar a sus clientes y sin describir su método comercial, con autorización para contar el trabajo.",
+    },
+    inventario: {
+      seoTitle: "Caso: inventario que se calcula, no se escribe",
+      seoDescription:
+        "Cuatro mil herramientas y artículos repartidos en cuatro sedes, controlados con un Excel y papeles sueltos. La decisión que lo cambió fue no guardar el stock como número.",
+      back: "Volver a sistemas",
+      eyebrow: "Caso de estudio · Proveedor industrial con cuatro plantas",
+      title: "Un inventario que se calcula, no se escribe",
+      lede:
+        "Más de cuatro mil herramientas y artículos repartidos en cuatro sedes, controlados con una hoja de cálculo y anotaciones en papel. No es que estuviera mal llevado: es que un conteo exacto era imposible a esa escala, y lo que no se puede contar tampoco se puede defender cuando alguien pregunta a dónde se fue el dinero.",
+      figures: [
+        { v: "+4,000", l: "artículos y herramientas" },
+        { v: "4", l: "sedes" },
+        { v: "60", l: "usuarios" },
+      ],
+      sections: [
+        {
+          id: "problema",
+          title: "Nadie podía contar todo",
+          body: [
+            "El control vivía entre un Excel y papeles sueltos. Alguien tomaba una herramienta, lo anotaba en una hoja, y esa hoja tenía que llegar después a la hoja de cálculo; cuando no llegaba, la herramienta seguía existiendo en el sistema aunque no estuviera en el estante.",
+            "A cuatro mil artículos repartidos en cuatro sedes, hacer un conteo absoluto deja de ser viable. No había control exacto, y sin control exacto aparecen las dos consecuencias que se veían en la práctica: herramientas que se perdían sin que nadie supiera cuándo ni con quién, y compras que nadie podía explicar, porque se volvía a comprar algo que quizá ya estaba en otra sede.",
+            "El problema de fondo no era la falta de disciplina. Era que el sistema dependía de que alguien se acordara de anotar.",
+          ],
+        },
+        {
+          id: "decision",
+          title: "El stock no se guarda, se calcula",
+          body: [
+            "La decisión que sostiene todo lo demás es no guardar la existencia como un número. La forma común de hacer un inventario es tener una columna con la cantidad y actualizarla en cada movimiento, pero ese número no tiene historia: cuando está mal, no hay manera de saber en qué momento se descompuso ni quién lo hizo.",
+            "Aquí lo que se guarda son los movimientos —cada entrada, cada salida y cada ajuste, con su responsable y su fecha— y la existencia se obtiene sumándolos. El número deja de ser un dato que alguien escribe y pasa a ser una consecuencia de lo que ocurrió.",
+            "Eso tiene un efecto que va más allá de la exactitud: cualquier cantidad se puede rastrear hasta su origen. Si hoy hay siete y deberían ser nueve, la respuesta no es una discusión sino una lista de movimientos con nombres y fechas. Y un ajuste, cuando hace falta, también queda como movimiento, así que corregir no significa borrar la evidencia de que algo estuvo mal.",
+            "Los permisos se aplican en la base de datos y no escondiendo botones en la pantalla, que es la diferencia entre no poder hacer algo y solo no ver el botón para hacerlo.",
+          ],
+        },
+        {
+          id: "falla",
+          title: "El lector de huella me costó varios intentos",
+          body: [
+            "Para que cada movimiento tuviera un nombre detrás sin depender de que alguien lo anotara, se integró un lector de huella digital: quien se lleva o devuelve una herramienta pone el dedo y el registro queda hecho solo.",
+            "Falló varias veces antes de quedar bien. No era un problema de diseño sino de conocimiento: nunca había integrado hardware de ese tipo y tuve que aprender cómo se conversa con un dispositivo así, que se parece poco a consumir una API.",
+            "Lo pongo porque es la parte honesta de este proyecto. No llegué sabiendo hacerlo; llegué a que funcionara. Y esa distinción importa más que la otra, porque en el trabajo real casi nunca sabes de antemano cómo se hace lo que te toca hacer.",
+          ],
+        },
+        {
+          id: "resultado",
+          title: "Qué cambió",
+          body: [
+            "Cada movimiento queda registrado con un responsable y una fecha, sin que nadie tenga que acordarse de anotarlo. Eso es lo que acabó con las herramientas que se perdían sin rastro y con el gasto que nadie podía explicar.",
+            "El inventario dejó de ser una cifra que alguien mantiene y pasó a ser el resultado de lo que de verdad pasó en las cuatro sedes.",
+            "Hay una versión pública y simplificada del mismo enfoque, con datos de ejemplo, en el proyecto InventaPro de esta página: ahí se puede abrir y ver funcionando cómo se calcula la existencia a partir de los movimientos.",
+          ],
+        },
+      ],
+      honesty: {
+        title: "Lo que este caso no demuestra",
+        items: [
+          "No hay comparación medida de antes y después: el control anterior estaba entre un Excel y papeles sueltos, así que no existe una línea base confiable contra la cual comparar.",
+          "No hay ahorro cuantificado: la pérdida de herramientas y las compras que no se podían explicar eran un problema reconocido, pero no estaban medidas en dinero antes de empezar.",
+          "Las cifras de movimientos de almacén no se repiten aquí: aparecen en el caso de compras, y sumarlas en dos lugares haría parecer que hay más volumen del que hay.",
+          "El lector de huella resuelve quién hizo un movimiento, no si lo hizo bien: sigue siendo posible registrar una salida y dejar la herramienta en otro lado.",
+        ],
+      },
+      note:
+        "Este caso se publica sin el nombre de la empresa y sin datos de su operación, con autorización para contar el trabajo.",
     },
   },
 

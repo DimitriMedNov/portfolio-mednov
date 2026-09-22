@@ -149,6 +149,8 @@ export const en: Content = {
         access: { label: "Internal use", public: false },
         title: "Inventory management",
         desc: "Software that follows every tool and every item across the four sites, so each movement carries a record and a name, which is what ended the tool loss and the spending nobody could account for.",
+        caseHref: "/casos/inventario",
+        caseLabel: "Read the full case",
         stack: ["Python", "React", "TypeScript", "Supabase", "PostgreSQL", "Docker"],
         reads: [{ v: "4", l: "cities" }],
       },
@@ -462,6 +464,71 @@ export const en: Content = {
       },
       note:
         "This case is published without the company's name, without identifying its customers and without describing its commercial method, with permission to tell the work.",
+    },
+    inventario: {
+      seoTitle: "Case: inventory that is computed, not written down",
+      seoDescription:
+        "Four thousand tools and items across four sites, tracked with a spreadsheet and loose paper notes. The decision that changed it was not storing stock as a number.",
+      back: "Back to systems",
+      eyebrow: "Case study · Industrial supplier with four plants",
+      title: "Inventory that is computed, not written down",
+      lede:
+        "More than four thousand tools and items across four sites, tracked with a spreadsheet and notes on paper. It was not badly kept: an exact count was simply impossible at that scale, and what cannot be counted cannot be defended either when somebody asks where the money went.",
+      figures: [
+        { v: "+4,000", l: "tools and items" },
+        { v: "4", l: "sites" },
+        { v: "60", l: "users" },
+      ],
+      sections: [
+        {
+          id: "problema",
+          title: "Nobody could count it all",
+          body: [
+            "Control lived between a spreadsheet and loose sheets of paper. Somebody took a tool, wrote it on a sheet, and that sheet had to reach the spreadsheet later; when it did not, the tool still existed in the system even though it was not on the shelf.",
+            "At four thousand items across four sites, an absolute count stops being viable. There was no exact control, and without exact control you get the two consequences that showed up in practice: tools that went missing with nobody knowing when or with whom, and purchases nobody could account for, because something was bought again that might already be sitting at another site.",
+            "The underlying problem was not a lack of discipline. It was that the system depended on somebody remembering to write things down.",
+          ],
+        },
+        {
+          id: "decision",
+          title: "Stock is not stored, it is computed",
+          body: [
+            "The decision everything else rests on is not storing the quantity on hand as a number. The common way to build an inventory is to keep a column with the amount and update it on every movement, but that number has no history: when it is wrong, there is no way to know when it broke or who broke it.",
+            "Here what gets stored are the movements — every entry, every exit and every adjustment, with its owner and its date — and the quantity is obtained by summing them. The number stops being something a person writes and becomes a consequence of what happened.",
+            "That has an effect beyond accuracy: any quantity can be traced back to its origin. If there are seven today and there should be nine, the answer is not an argument but a list of movements with names and dates. And an adjustment, when one is needed, is also stored as a movement, so correcting does not mean erasing the evidence that something was off.",
+            "Permissions are enforced in the database rather than by hiding buttons on screen, which is the difference between not being able to do something and merely not seeing the button for it.",
+          ],
+        },
+        {
+          id: "falla",
+          title: "The fingerprint reader took me several tries",
+          body: [
+            "So that every movement would carry a name without depending on somebody writing it down, a fingerprint reader was integrated: whoever takes or returns a tool puts a finger down and the record is made on its own.",
+            "It failed several times before it worked. It was not a design problem but a knowledge one: I had never integrated hardware like that and had to learn how you talk to such a device, which looks very little like consuming an API.",
+            "I put it here because it is the honest part of this project. I did not arrive knowing how to do it; I arrived at getting it to work. And that distinction matters more than the other one, because in real work you almost never know in advance how to do what you have been handed.",
+          ],
+        },
+        {
+          id: "resultado",
+          title: "What changed",
+          body: [
+            "Every movement is recorded with an owner and a date, without anyone having to remember to write it down. That is what ended the tools that went missing without a trace and the spending nobody could account for.",
+            "The inventory stopped being a figure somebody maintains and became the result of what actually happened across the four sites.",
+            "There is a public, simplified version of the same approach, with sample data, in the InventaPro project on this site: you can open it and watch stock being computed from movements.",
+          ],
+        },
+      ],
+      honesty: {
+        title: "What this case does not prove",
+        items: [
+          "There is no measured before-and-after: the previous control lived between a spreadsheet and loose paper, so there is no reliable baseline to compare against.",
+          "There is no quantified saving: tool loss and purchases that could not be accounted for were a recognised problem, but they were not measured in money before starting.",
+          "The warehouse movement figures are not repeated here: they appear in the purchasing case, and adding them up in two places would make the volume look larger than it is.",
+          "The fingerprint reader answers who made a movement, not whether they made it correctly: it is still possible to record an exit and leave the tool somewhere else.",
+        ],
+      },
+      note:
+        "This case is published without the company's name and without operational data, with permission to tell the work.",
     },
   },
 
