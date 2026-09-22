@@ -48,7 +48,12 @@ const Shell = ({ path, seo, children }: Props) => {
 
           <nav
             aria-label={content.ui.navLabel}
-            className="order-3 -mx-6 flex w-full items-center gap-1 overflow-x-auto px-6 pb-1 [scrollbar-width:none] lg:order-2 lg:mx-0 lg:w-auto lg:flex-1 lg:justify-center lg:overflow-visible lg:px-0 lg:pb-0"
+            /* En móvil la barra sale a sangre para recuperar los márgenes y las
+               cinco se reparten el ancho, así entra Contacto, que antes se
+               quedaba fuera de la tira desplazable. El reparto va por ancho
+               natural y no en columnas iguales: "CV" no necesita lo mismo que
+               "Identidad", y a 320 px esa diferencia es la que hace que quepan. */
+            className="order-3 -mx-6 flex w-[calc(100%+3rem)] items-stretch justify-between px-2 pb-1 lg:order-2 lg:mx-0 lg:w-auto lg:flex-1 lg:items-center lg:justify-center lg:gap-1 lg:px-0 lg:pb-0"
           >
             {content.sheets.map((item) => {
               // Una página de detalle no marca ninguna pestaña: no es ninguna.
@@ -58,7 +63,7 @@ const Shell = ({ path, seo, children }: Props) => {
                   key={item.path}
                   href={item.path}
                   aria-current={active ? "page" : undefined}
-                  className={`hit min-h-[56px] whitespace-nowrap px-4 text-meta no-underline transition-colors ${
+                  className={`hit flex min-h-[56px] items-center justify-center whitespace-nowrap px-1 text-caption no-underline transition-colors lg:px-4 lg:text-meta ${
                     active ? "font-semibold text-txt" : "text-mut hover:text-txt"
                   }`}
                 >
