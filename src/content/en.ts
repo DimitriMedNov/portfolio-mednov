@@ -260,7 +260,7 @@ export const en: Content = {
         desc: "Full-text search over the digitized archive of a century-old newspaper, built for the Hemeroteca portal the newsroom uses in house, so a single page can be pulled out of decades of scanned print, with OCR turning the scans into text the search can actually reach.",
         caseHref: "/casos/hemeroteca",
         caseLabel: "Read the full case",
-        stack: ["Nuxt", "Vue.js", "Vuetify", "MongoDB", "OCR", "Anthropic Claude"],
+        stack: ["Nuxt", "Vue.js", "Vuetify", "MongoDB", "AWS", "OCR"],
         reads: [],
       },
       {
@@ -746,7 +746,7 @@ export const en: Content = {
           "Led development of the Hemeroteca portal the newsroom uses in house, with OCR search over a century of digitized print",
           "Optimized performance and stability of web platforms, reducing errors and load times",
         ],
-        tech: ["Nuxt", "Vue.js", "Vuetify", "MongoDB", "OCR", "Anthropic Claude", "Chatbase", "WordPress"],
+        tech: ["Nuxt", "Vue.js", "Vuetify", "MongoDB", "AWS", "OCR", "Anthropic Claude", "Chatbase", "WordPress"],
       },
       {
         id: "anahuac-intern",

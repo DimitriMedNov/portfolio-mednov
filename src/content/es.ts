@@ -260,7 +260,7 @@ export const es: Content = {
         desc: "Búsqueda de texto completo sobre el archivo digitalizado de un periódico centenario, hecha para el portal Hemeroteca que la redacción usa de forma interna, de modo que se pueda sacar una página concreta de décadas de impresos escaneados, con OCR convirtiendo los escaneos en texto al que la búsqueda sí llega.",
         caseHref: "/casos/hemeroteca",
         caseLabel: "Leer el caso completo",
-        stack: ["Nuxt", "Vue.js", "Vuetify", "MongoDB", "OCR", "Anthropic Claude"],
+        stack: ["Nuxt", "Vue.js", "Vuetify", "MongoDB", "AWS", "OCR"],
         reads: [],
       },
       {
@@ -746,7 +746,7 @@ export const es: Content = {
           "Lideré el desarrollo del portal Hemeroteca que la redacción usa de forma interna, con búsqueda por OCR sobre un siglo de impresos digitalizados",
           "Optimicé el rendimiento y la estabilidad de las plataformas web, reduciendo errores y tiempos de carga",
         ],
-        tech: ["Nuxt", "Vue.js", "Vuetify", "MongoDB", "OCR", "Anthropic Claude", "Chatbase", "WordPress"],
+        tech: ["Nuxt", "Vue.js", "Vuetify", "MongoDB", "AWS", "OCR", "Anthropic Claude", "Chatbase", "WordPress"],
       },
       {
         id: "anahuac-intern",
