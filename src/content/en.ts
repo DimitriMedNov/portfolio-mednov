@@ -102,6 +102,8 @@ export const en: Content = {
         access: { label: "Internal use", public: false },
         title: "Corporate ERP",
         desc: "One ERP for more than 100 users across the four operating cities, pulling inventory, procurement, warehouse, suppliers and the administrative side into a single system instead of the handful of tools and spreadsheets each city had grown on its own.",
+        caseHref: "/casos/erp",
+        caseLabel: "Read the full case",
         stack: ["Python", "React 19", "TypeScript", "TanStack", "Supabase", "Docker", "AWS"],
         reads: [
           { v: "+100", l: "users" },
@@ -656,6 +658,76 @@ export const en: Content = {
       },
       note:
         "Empléate.app is a public product, which is why it is named here. The figures quoted are the ones the platform itself publishes.",
+    },
+    erp: {
+      seoTitle: "Case: one ERP, not four separate programs",
+      seoDescription:
+        "Inventory, purchasing and the CRM each have their own case, but they are not three systems: they are modules of the same ERP on the same database. This is the case of the container, still in development.",
+      back: "Back to systems",
+      eyebrow: "Case study · Industrial supplier with four plants",
+      title: "One ERP, not four separate programs",
+      lede:
+        "Inventory, purchasing and the CRM each have their own case on this site and can be read separately. This is the case of what holds them up: the ERP they are modules of, which is why solving each problem on its own would have rebuilt the original problem with better technology.",
+      figures: [
+        { v: "+100", l: "users" },
+        { v: "4", l: "cities" },
+        { v: "3", l: "modules in use" },
+      ],
+      sections: [
+        {
+          id: "problema",
+          title: "Four cities that had organised themselves",
+          body: [
+            "Each of the four cities had put together its own arrangement over the years: a handful of separate tools and spreadsheets that got the day done and that nobody had designed to talk to each other. It worked, in the sense that the company operated, but every city had its own version of the same things.",
+            "That is the same problem as in the earlier cases, only at company scale: the same supplier entered four times under four different names, the same item under four codes, and no way to tell which of the four is the right one. When a company's information lives in copies, the question nobody can answer is not how much there is but where the truth is.",
+          ],
+        },
+        {
+          id: "modulos",
+          title: "Why they are modules and not programs",
+          body: [
+            "Inventory, purchasing and the CRM are not three systems that resemble one another. They are modules of the same ERP working on the same database, and the difference is not organisational but a matter of what happens when one of them needs something from another.",
+            "The purchasing flow has a step that checks stock before going out for quotes. That step does not ask inventory for a copy of its data: it reads the same record inventory writes. There are no two lists of items for somebody to keep identical, because there are not two lists.",
+            "Building them separately would have been faster at the start and would have handed back the original problem with better technology: instead of four cities with their spreadsheets, four programs with their databases, and once again somebody reconciling by hand which of them tells the truth.",
+          ],
+        },
+        {
+          id: "decision",
+          title: "It was built because they wanted their own",
+          body: [
+            "The decision not to buy one of the ERPs that already exist was not mine and was not technical: the company wanted its own. I tell it that way because that is what happened, and because on a project this size the biggest decision is usually the one that depends least on whoever writes the code.",
+            "What did fall to me is what comes after that decision, which is where it is won or lost. That the modules genuinely share records rather than merely appearing to. That permissions are enforced in the database rather than by hiding buttons on screen, which is the difference between not being able to do something and merely not seeing the button for it. And that each module can go into production on its own without waiting for the whole ERP to be finished, which is exactly what lets people be using it already while the rest is being built.",
+          ],
+        },
+        {
+          id: "estado",
+          title: "What is in use and what is not",
+          body: [
+            "Inventory and purchasing are already in use, and the CRM has been running since July 2026. What each of them solved is told in its own case, so I do not repeat it here.",
+            "What is missing is the rest of what an ERP has to cover: warehouse, suppliers and the administrative side. The system is in development and I have no date to promise, so I say so rather than imply it is further along than it is.",
+          ],
+        },
+        {
+          id: "abierto",
+          title: "API consumption, which is still open",
+          body: [
+            "The problem we have today is API consumption. In a system split into modules that read from each other, every screen showing information from more than one module makes several calls, and that number grows with the users and with each new module that comes in.",
+            "I am not going to tell it as a resolved anecdote, because it is not: it is what is being worked on right now. I put it here because a half-built ERP has half-solved problems, and a case that only shows the finished parts says nothing about how the work goes when something does not work yet.",
+          ],
+        },
+      ],
+      honesty: {
+        title: "What this case does not prove",
+        items: [
+          "It is in development: there is no final result to show, and what is missing may change shape before it is finished.",
+          "API consumption is an open problem, not a lesson learned: it is still being worked on as this is published.",
+          "The decision to build rather than buy was the company's: it was not a technical evaluation of mine and I do not present it as one.",
+          "There is no measured before-and-after: what existed were separate tools and spreadsheets per city, with no record of times to compare against.",
+          "The purchasing and inventory figures are not repeated here: they are in their own cases, and adding them up again would make the volume look larger than it is.",
+        ],
+      },
+      note:
+        "This case is published without the company's name and without operational data, with permission to tell the work.",
     },
   },
 

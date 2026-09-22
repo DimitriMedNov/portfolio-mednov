@@ -102,6 +102,8 @@ export const es: Content = {
         access: { label: "Uso interno", public: false },
         title: "ERP corporativo",
         desc: "Un ERP para más de 100 usuarios en las cuatro ciudades, que junta inventario, compras, almacén, proveedores y la parte administrativa en un solo sistema, en lugar del puñado de herramientas y hojas de cálculo que cada ciudad había ido armando por su lado.",
+        caseHref: "/casos/erp",
+        caseLabel: "Leer el caso completo",
         stack: ["Python", "React 19", "TypeScript", "TanStack", "Supabase", "Docker", "AWS"],
         reads: [
           { v: "+100", l: "usuarios" },
@@ -656,6 +658,76 @@ export const es: Content = {
       },
       note:
         "Empléate.app es un producto público y por eso se nombra. Las cifras citadas son las que la propia plataforma publica.",
+    },
+    erp: {
+      seoTitle: "Caso: un ERP, no cuatro programas sueltos",
+      seoDescription:
+        "Inventario, compras y el CRM tienen su propio caso, pero no son tres sistemas: son módulos del mismo ERP sobre la misma base de datos. Este es el caso del contenedor, todavía en desarrollo.",
+      back: "Volver a sistemas",
+      eyebrow: "Caso de estudio · Proveedor industrial con cuatro plantas",
+      title: "Un ERP, no cuatro programas sueltos",
+      lede:
+        "Inventario, compras y el CRM tienen cada uno su caso en esta página y se pueden leer por separado. Este es el caso de lo que los sostiene: el ERP del que son módulos, que es la razón por la que resolver cada problema por su cuenta habría recreado el problema original con mejor tecnología.",
+      figures: [
+        { v: "+100", l: "usuarios" },
+        { v: "4", l: "ciudades" },
+        { v: "3", l: "módulos en uso" },
+      ],
+      sections: [
+        {
+          id: "problema",
+          title: "Cuatro ciudades que se habían organizado solas",
+          body: [
+            "Cada una de las cuatro ciudades había ido armando lo suyo con los años: un puñado de herramientas sueltas y hojas de cálculo que resolvían el día y que nadie había diseñado para hablar entre sí. Funcionaba, en el sentido de que la empresa operaba, pero cada ciudad tenía su propia versión de las mismas cosas.",
+            "Ahí está el mismo problema de los casos anteriores, sólo que a escala de empresa: el mismo proveedor dado de alta cuatro veces con cuatro nombres distintos, el mismo artículo con cuatro claves, y ninguna manera de saber cuál de las cuatro es la buena. Cuando la información de una empresa vive en copias, la pregunta que nadie puede contestar no es cuánto hay sino dónde está lo cierto.",
+          ],
+        },
+        {
+          id: "modulos",
+          title: "Por qué son módulos y no programas",
+          body: [
+            "Inventario, compras y el CRM no son tres sistemas que se parecen. Son módulos del mismo ERP y trabajan sobre la misma base de datos, y la diferencia no es de organización sino de qué pasa cuando uno necesita lo del otro.",
+            "En el proceso de compras hay un paso que revisa existencias antes de salir a cotizar. Ese paso no le pide a inventario una copia de sus datos: lee el mismo registro que inventario escribe. No hay dos listas de artículos que alguien tenga que mantener iguales, porque no hay dos listas.",
+            "Construirlos sueltos habría sido más rápido al principio y habría devuelto el problema original con mejor tecnología: en lugar de cuatro ciudades con sus hojas de cálculo, cuatro programas con sus bases de datos, y otra vez alguien conciliando a mano cuál de todas dice la verdad.",
+          ],
+        },
+        {
+          id: "decision",
+          title: "Se construyó porque lo querían suyo",
+          body: [
+            "La decisión de no comprar un ERP de los que ya existen no fue mía ni fue técnica: la empresa quería el suyo. Lo cuento así porque es lo que pasó, y porque en un proyecto de este tamaño la decisión más grande suele ser la que menos depende de quien escribe el código.",
+            "Lo que sí me tocó es lo que viene después de esa decisión, que es donde se gana o se pierde. Que los módulos compartan los registros de verdad y no sólo lo parezcan. Que los permisos se apliquen en la base de datos y no escondiendo botones en la pantalla, que es la diferencia entre no poder hacer algo y solamente no ver el botón. Y que cada módulo pueda entrar en producción por su cuenta sin esperar a que el ERP entero esté terminado, que es justo lo que permite que ya haya gente usándolo mientras el resto se construye.",
+          ],
+        },
+        {
+          id: "estado",
+          title: "Lo que está en uso y lo que no",
+          body: [
+            "Inventario y compras ya están en uso, y el CRM opera desde julio de 2026. Lo que cada uno resolvió está contado en su propio caso, así que no lo repito aquí.",
+            "Lo que falta es el resto de lo que un ERP tiene que cubrir: almacén, proveedores y la parte administrativa. El sistema está en desarrollo y no tengo una fecha que prometer, así que lo dejo dicho en lugar de insinuar que está más avanzado de lo que está.",
+          ],
+        },
+        {
+          id: "abierto",
+          title: "El consumo de las APIs, que sigue abierto",
+          body: [
+            "El problema que tenemos hoy es el consumo de las APIs. En un sistema partido en módulos que se leen entre sí, cada pantalla que muestra información de más de un módulo hace varias llamadas, y ese número crece con los usuarios y con cada módulo nuevo que entra.",
+            "No lo voy a contar como una anécdota resuelta, porque no lo está: es en lo que se está trabajando ahora mismo. Lo pongo porque un ERP a medio construir tiene problemas a medio resolver, y un caso que sólo enseña las partes terminadas no dice nada de cómo se trabaja cuando algo todavía no sirve.",
+          ],
+        },
+      ],
+      honesty: {
+        title: "Lo que este caso no demuestra",
+        items: [
+          "Está en desarrollo: no hay un resultado final que enseñar, y lo que falta puede cambiar de forma antes de quedar terminado.",
+          "El consumo de las APIs es un problema abierto y no una lección aprendida: se sigue trabajando en él mientras se publica esto.",
+          "La decisión de construirlo en lugar de comprarlo fue de la empresa: no fue una evaluación técnica mía y no la presento como tal.",
+          "No hay comparación medida de antes y después: lo que había eran herramientas sueltas y hojas de cálculo por ciudad, sin registro de tiempos contra el cual comparar.",
+          "Las cifras de compras y de inventario no se repiten aquí: están en sus propios casos, y sumarlas otra vez haría parecer que hay más volumen del que hay.",
+        ],
+      },
+      note:
+        "Este caso se publica sin el nombre de la empresa y sin datos de su operación, con autorización para contar el trabajo.",
     },
   },
 
