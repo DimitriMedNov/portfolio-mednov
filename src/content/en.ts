@@ -258,6 +258,8 @@ export const en: Content = {
         access: { label: "Internal use", public: false },
         title: "Hemeroteca — OCR search over a century of print",
         desc: "Full-text search over the digitized archive of a century-old newspaper, built for the Hemeroteca portal the newsroom uses in house, so a single page can be pulled out of decades of scanned print, with OCR turning the scans into text the search can actually reach.",
+        caseHref: "/casos/hemeroteca",
+        caseLabel: "Read the full case",
         stack: ["Nuxt", "Vue.js", "Vuetify", "MongoDB", "OCR", "Anthropic Claude"],
         reads: [],
       },
@@ -529,6 +531,67 @@ export const en: Content = {
       },
       note:
         "This case is published without the company's name and without operational data, with permission to tell the work.",
+    },
+    hemeroteca: {
+      seoTitle: "Case: searching inside a century of print",
+      seoDescription:
+        "The archive of a century-old newspaper was scanned but not searchable: finding something meant several people opening images and reading. This is the work of turning those scans into text.",
+      back: "Back to systems",
+      eyebrow: "Case study · Century-old newspaper",
+      title: "Searching inside a century of print",
+      lede:
+        "From the paper's founding to today, plus every other title in the group, everything was digitised as images. It existed, it could be looked at, and it could not be searched: finding an old piece meant several people opening scans and reading until they hit it.",
+      figures: [
+        { v: "1 century", l: "of print" },
+        { v: "2024", l: "live since" },
+      ],
+      sections: [
+        {
+          id: "problema",
+          title: "Scanned is not the same as searchable",
+          body: [
+            "The archive lived as a historical gallery of images. To a computer, a scanned page is not text but a photograph: it can show it, but it does not know what it says, so a search finds nothing inside it.",
+            "The practical consequence was that pulling the text out of an old edition was done by people, by hand, reading the image and typing it out. That works for one piece; it does not work for a century of archive, and it turns every newsroom query into several people's work.",
+          ],
+        },
+        {
+          id: "ocr",
+          title: "The OCR was the work, not a step",
+          body: [
+            "The part that sounds simple — run the images through a text recogniser — turned out to be the whole project. AWS's OCR service was used, wired into the system I built, and getting to something usable took several rounds of trial and error.",
+            "The reason is the material. A newspaper from decades ago looks nothing like a modern document: the paper yellows, the ink bleeds, the columns run into each other and the typefaces change from one era to the next. There are pages that simply cannot be read well, and no amount of configuration saves them.",
+            "It was also the first time I had worked with text recognition, so a good part of the time went into understanding what could be asked of the OCR and what could not, and where the point was at which pushing further stopped improving the result.",
+          ],
+        },
+        {
+          id: "calidad",
+          title: "The text was not only for searching",
+          body: [
+            "Here is what raised the bar on this project. If the extracted text were only for search, roughly right would be enough: even with errors, the search lands on the correct page and the person reads the image from there.",
+            "But that same text was passed into documents to be worked on, to pull notes and quotes from. For that, roughly right is not enough: a person has to be able to read it without guessing what it actually said.",
+            "Those are two very different bars for the same work, and the second one is considerably higher. It is the difference between OCR good enough to find something and OCR good enough to write on top of.",
+          ],
+        },
+        {
+          id: "resultado",
+          title: "What changed",
+          body: [
+            "Search reaches the content of the pages and not just their dates, so you can get to a specific edition from what it said, which is how an old piece is actually looked for.",
+            "What used to occupy several people opening images became a query, and the archive went from being stored to being available.",
+          ],
+        },
+      ],
+      honesty: {
+        title: "What this case does not prove",
+        items: [
+          "There is no measured OCR accuracy: that would have needed a hand-made transcription of the same pages to compare against, and none exists.",
+          "Not every page came out equally well: quality depends on the decade and the state of the paper, and some still read badly.",
+          "There is no measured before-and-after: the manual work that came before was never timed.",
+          "How the newsroom works internally is not described: it is an internal tool at a company I no longer work for, so this case stays on the technical problem.",
+        ],
+      },
+      note:
+        "This case tells the engineering problem, not the company's internal operation.",
     },
   },
 

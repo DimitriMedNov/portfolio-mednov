@@ -12,6 +12,7 @@ const Contact = lazy(() => import("./pages/Contact"));
 const CasoCompras = lazy(() => import("./pages/CasoCompras"));
 const CasoCrm = lazy(() => import("./pages/CasoCrm"));
 const CasoInventario = lazy(() => import("./pages/CasoInventario"));
+const CasoHemeroteca = lazy(() => import("./pages/CasoHemeroteca"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const routes: Record<string, ComponentType> = {
@@ -24,6 +25,7 @@ const routes: Record<string, ComponentType> = {
   "/casos/compras": CasoCompras,
   "/casos/crm": CasoCrm,
   "/casos/inventario": CasoInventario,
+  "/casos/hemeroteca": CasoHemeroteca,
 };
 
 const App = () => {

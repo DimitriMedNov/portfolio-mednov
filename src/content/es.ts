@@ -258,6 +258,8 @@ export const es: Content = {
         access: { label: "Uso interno", public: false },
         title: "Hemeroteca — búsqueda con OCR sobre un siglo de papel",
         desc: "Búsqueda de texto completo sobre el archivo digitalizado de un periódico centenario, hecha para el portal Hemeroteca que la redacción usa de forma interna, de modo que se pueda sacar una página concreta de décadas de impresos escaneados, con OCR convirtiendo los escaneos en texto al que la búsqueda sí llega.",
+        caseHref: "/casos/hemeroteca",
+        caseLabel: "Leer el caso completo",
         stack: ["Nuxt", "Vue.js", "Vuetify", "MongoDB", "OCR", "Anthropic Claude"],
         reads: [],
       },
@@ -529,6 +531,67 @@ export const es: Content = {
       },
       note:
         "Este caso se publica sin el nombre de la empresa y sin datos de su operación, con autorización para contar el trabajo.",
+    },
+    hemeroteca: {
+      seoTitle: "Caso: buscar dentro de un siglo de papel",
+      seoDescription:
+        "El archivo de un periódico centenario estaba escaneado pero no se podía buscar: encontrar algo era que varias personas abrieran imágenes y leyeran. Este es el trabajo de convertir esos escaneos en texto.",
+      back: "Volver a sistemas",
+      eyebrow: "Caso de estudio · Periódico centenario",
+      title: "Buscar dentro de un siglo de papel",
+      lede:
+        "Desde la fundación del periódico hasta hoy, más todos los demás títulos del grupo, todo estaba digitalizado en imágenes. Existía, se podía ver, y no se podía buscar: encontrar una nota vieja era que varias personas abrieran escaneos y fueran leyendo hasta dar con ella.",
+      figures: [
+        { v: "1 siglo", l: "de impresos" },
+        { v: "2024", l: "en producción" },
+      ],
+      sections: [
+        {
+          id: "problema",
+          title: "Estaba escaneado, que no es lo mismo que buscable",
+          body: [
+            "El archivo vivía como una galería histórica de imágenes. Para una computadora, una página escaneada no es texto sino una fotografía: puede mostrarla, pero no sabe qué dice, así que una búsqueda no encuentra nada dentro de ella.",
+            "La consecuencia práctica era que sacar el texto de una edición vieja lo hacían personas, a mano, leyendo la imagen y transcribiendo. Eso funciona para una nota; no funciona para un archivo de un siglo, y convierte cada consulta de la redacción en trabajo de varias personas.",
+          ],
+        },
+        {
+          id: "ocr",
+          title: "El OCR fue el trabajo, no un paso",
+          body: [
+            "La parte que suena sencilla —pasar imágenes por un reconocedor de texto— resultó ser el proyecto entero. Se usó la solución de OCR de AWS, conectada al sistema que construí, y llegar a algo aprovechable tomó varias rondas de prueba y error.",
+            "El motivo es el material. Un periódico de hace décadas no se parece a un documento moderno: el papel se amarillea, la tinta se corre, las columnas se pegan entre sí y las tipografías cambian de una época a otra. Hay páginas que sencillamente no se entienden bien, y ninguna cantidad de configuración las salva.",
+            "Era además la primera vez que trabajaba con reconocimiento de texto, así que buena parte del tiempo se fue en entender qué se podía exigirle al OCR y qué no, y dónde estaba el punto en que insistir dejaba de mejorar el resultado.",
+          ],
+        },
+        {
+          id: "calidad",
+          title: "El texto no era solo para buscar",
+          body: [
+            "Aquí está lo que cambió la exigencia del proyecto. Si el texto extraído fuera únicamente para buscar, bastaría con que estuviera aproximadamente bien: aunque tenga errores, la búsqueda da con la página correcta y de ahí la persona lee la imagen.",
+            "Pero ese mismo texto se pasaba a documentos para trabajar con él, sacar notas y citar. Para eso no alcanza con que sea aproximado: tiene que poder leerlo una persona sin estar adivinando qué decía en realidad.",
+            "Esas son dos varas muy distintas para el mismo trabajo, y la segunda es bastante más alta. Es la diferencia entre un OCR que sirve para encontrar y uno que sirve para escribir encima.",
+          ],
+        },
+        {
+          id: "resultado",
+          title: "Qué cambió",
+          body: [
+            "La búsqueda alcanza el contenido de las páginas y no solo sus fechas, así que se puede llegar a una edición concreta a partir de lo que decía, que es como en realidad se busca una nota vieja.",
+            "Lo que antes ocupaba a varias personas abriendo imágenes se volvió una consulta, y el archivo pasó de estar guardado a estar disponible.",
+          ],
+        },
+      ],
+      honesty: {
+        title: "Lo que este caso no demuestra",
+        items: [
+          "No hay exactitud medida del OCR: habría hecho falta una transcripción hecha a mano de las mismas páginas para comparar contra ella, y no existe.",
+          "No todas las páginas quedaron igual de bien: la calidad depende de la década y del estado del papel, y algunas siguen leyéndose mal.",
+          "No hay comparación medida de antes y después: el trabajo manual anterior no estaba cronometrado.",
+          "No se describe cómo trabaja la redacción por dentro: es una herramienta interna de una empresa donde ya no estoy, así que el caso se queda en el problema técnico.",
+        ],
+      },
+      note:
+        "Este caso cuenta el reto de ingeniería y no la operación interna de la empresa.",
     },
   },
 
