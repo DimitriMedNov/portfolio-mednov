@@ -272,9 +272,11 @@ export const es: Content = {
         statusLabel: "En producción",
         status: "pass",
         access: { label: "Accesible al público", public: true },
-        title: "Empléate.app — chatbot de contratación",
-        desc: "Chatbot conversacional en la bolsa de trabajo pública Empléate.app que lleva a los candidatos por el registro y sus postulaciones sin nadie del otro lado, junto con automatización con IA que detecta las vacantes promocionadas y las pone frente a los postulantes adecuados, en un sitio abierto a cualquiera aunque las cifras detrás no me toque publicarlas.",
+        title: "Empléate.app — chatbot y conmutador con IA",
+        desc: "Chatbot conversacional dentro de la bolsa de trabajo pública Empléate.app que lleva a los candidatos por el registro y sus postulaciones sin nadie del otro lado, con automatización con IA que detecta las vacantes promocionadas y las pone frente a los postulantes adecuados, y del lado del teléfono un conmutador con IA que contesta las llamadas para atender a más gente sin agregar personal a la misma proporción.",
         stack: ["Chatbase", "Anthropic Claude", "Nuxt", "Vue.js", "MongoDB", "REST APIs"],
+        caseHref: "/casos/empleate",
+        caseLabel: "Leer el caso completo",
         reads: [],
       },
       {
@@ -592,6 +594,66 @@ export const es: Content = {
       },
       note:
         "Este caso cuenta el reto de ingeniería y no la operación interna de la empresa.",
+    },
+    empleate: {
+      seoTitle: "Caso: atender a quien busca trabajo sin poner más gente",
+      seoDescription:
+        "En una bolsa de trabajo el cuello de botella no son las vacantes, es atender a quien pregunta por ellas. Un chatbot en el sitio y un conmutador con IA en el teléfono.",
+      back: "Volver a sistemas",
+      eyebrow: "Caso de estudio · Empléate.app, bolsa de trabajo pública",
+      title: "Atender a quien busca trabajo sin poner más gente",
+      lede:
+        "En una bolsa de trabajo el cuello de botella no suele ser publicar vacantes sino atender a quien pregunta por ellas. Cada persona que quiere postularse necesita entender cómo registrarse, encontrar lo que le queda y completar su postulación, y eso se resolvía persona a persona.",
+      figures: [
+        { v: "3", l: "estados cubiertos" },
+        { v: "2024", l: "en producción" },
+      ],
+      sections: [
+        {
+          id: "problema",
+          title: "El cuello de botella es la atención",
+          body: [
+            "Empléate.app es la bolsa de trabajo pública del grupo y cubre Yucatán, Campeche y Quintana Roo. La plataforma publica hoy más de cinco mil vacantes y más de diez mil candidatos registrados, cifras que están a la vista en su propia portada.",
+            "A esa escala, el trabajo no está en publicar sino en acompañar. Mucha gente que busca empleo no llega sabiendo cómo funciona el sitio: pregunta si hay algo de lo suyo, cómo se registra, si su postulación llegó. Cada una de esas preguntas la contestaba alguien, y la cantidad de personas que pueden contestar no crece al ritmo de la cantidad que pregunta.",
+          ],
+        },
+        {
+          id: "chatbot",
+          title: "El chatbot, dentro del sitio",
+          body: [
+            "Así me lo pidieron y así lo construí: un asistente que vive dentro de la página y lleva a la persona por el registro y por su postulación sin que haya nadie del otro lado.",
+            "Encima de eso hay una automatización que detecta cuáles vacantes están promocionadas y las pone delante de los postulantes a los que les quedan, en lugar de dejar que se pierdan en una lista. Eso sirve a los dos lados del mercado: la empresa que pagó por destacar su vacante la ve frente a gente pertinente, y quien busca trabajo ve primero algo que tiene sentido para él.",
+          ],
+        },
+        {
+          id: "conmutador",
+          title: "Y el teléfono, que nadie suele contar",
+          body: [
+            "Un chatbot resuelve a quien llega por el navegador. Pero una parte de la gente que busca trabajo marca por teléfono, y ahí el límite es cuántas llamadas puede tomar una persona al mismo tiempo.",
+            "Por eso se construyó también un conmutador con inteligencia artificial que contesta las llamadas, para poder atender a más gente que aplica a las distintas vacantes sin agregar personal a la misma proporción.",
+            "Esta parte la hice junto con la becaria que tenía a cargo, que es donde aprendí que explicar una decisión técnica a alguien que empieza obliga a entenderla mejor de lo que creías entenderla.",
+          ],
+        },
+        {
+          id: "despues",
+          title: "Qué pasó después",
+          body: [
+            "El chatbot que construí vivía dentro del sitio. Más adelante, ya sin mí ahí, lo movieron a WhatsApp conservando lo que hacía, de modo que hoy se puede hacer desde ahí lo mismo que se hacía en la página.",
+            "Esa versión no es mi trabajo y por eso la menciono en lugar de atribuírmela. La cuento porque dice algo que un caso de estudio normalmente no puede decir: lo que se construyó siguió sirviendo después de que su autor se fue, que es más de lo que se puede afirmar de la mayoría de los proyectos.",
+          ],
+        },
+      ],
+      honesty: {
+        title: "Lo que este caso no demuestra",
+        items: [
+          "Las cifras de la plataforma son las que publica hoy en su portada, no resultados de mi trabajo: estuve ahí en 2024 y la plataforma existía antes y siguió después.",
+          "La versión de WhatsApp no es mía: el chatbot que construí vivía dentro del sitio y la migración la hicieron después.",
+          "No hay comparación medida de antes y después: no se midió cuántas consultas atendía una persona antes ni cuántas dejó de atender.",
+          "No sé en qué estado está hoy lo que construí: ya no trabajo ahí y no tengo visibilidad de lo que se cambió desde entonces.",
+        ],
+      },
+      note:
+        "Empléate.app es un producto público y por eso se nombra. Las cifras citadas son las que la propia plataforma publica.",
     },
   },
 

@@ -272,9 +272,11 @@ export const en: Content = {
         statusLabel: "In production",
         status: "pass",
         access: { label: "Publicly accessible", public: true },
-        title: "Empléate.app — hiring chatbot",
-        desc: "Conversational chatbot on the public job board Empléate.app that walks candidates through registration and their applications without anyone on the other side, paired with AI automation that spots promoted vacancies and puts them in front of the right applicants, on a site open to anyone even if the numbers behind it are not mine to publish.",
+        title: "Empléate.app — chatbot and AI switchboard",
+        desc: "Conversational chatbot inside the public job board Empléate.app that walks candidates through registration and their applications without anyone on the other side, with AI automation that spots promoted vacancies and puts them in front of the right applicants, and on the phone side an AI switchboard that answers calls so more people can be served without adding staff in the same proportion.",
         stack: ["Chatbase", "Anthropic Claude", "Nuxt", "Vue.js", "MongoDB", "REST APIs"],
+        caseHref: "/casos/empleate",
+        caseLabel: "Read the full case",
         reads: [],
       },
       {
@@ -592,6 +594,66 @@ export const en: Content = {
       },
       note:
         "This case tells the engineering problem, not the company's internal operation.",
+    },
+    empleate: {
+      seoTitle: "Case: serving job seekers without adding staff",
+      seoDescription:
+        "In a job board the bottleneck is not the vacancies, it is answering the people asking about them. A chatbot on the site and an AI switchboard on the phone.",
+      back: "Back to systems",
+      eyebrow: "Case study · Empléate.app, public job board",
+      title: "Serving job seekers without adding staff",
+      lede:
+        "In a job board the bottleneck is rarely publishing vacancies but answering the people asking about them. Everyone who wants to apply needs to work out how to register, find what fits them and complete their application, and that was being handled one person at a time.",
+      figures: [
+        { v: "3", l: "states covered" },
+        { v: "2024", l: "live since" },
+      ],
+      sections: [
+        {
+          id: "problema",
+          title: "The bottleneck is the answering",
+          body: [
+            "Empléate.app is the group's public job board and covers Yucatán, Campeche and Quintana Roo. The platform currently lists more than five thousand vacancies and more than ten thousand registered candidates, figures it publishes on its own home page.",
+            "At that scale the work is not in publishing but in accompanying. Many people looking for work do not arrive knowing how the site works: they ask whether there is anything in their line, how to register, whether their application went through. Every one of those questions was answered by somebody, and the number of people who can answer does not grow at the rate of the number who ask.",
+          ],
+        },
+        {
+          id: "chatbot",
+          title: "The chatbot, inside the site",
+          body: [
+            "That is how I was asked to build it and how I built it: an assistant living inside the page that walks a person through registration and through their application with nobody on the other side.",
+            "On top of that sits automation that spots which vacancies are promoted and puts them in front of the applicants they suit, instead of letting them get lost in a list. That serves both sides of the market: the company that paid to feature its vacancy sees it in front of relevant people, and the person looking for work sees something that makes sense for them first.",
+          ],
+        },
+        {
+          id: "conmutador",
+          title: "And the phone, which nobody usually mentions",
+          body: [
+            "A chatbot handles whoever arrives through a browser. But a share of people looking for work pick up the phone, and there the limit is how many calls one person can take at once.",
+            "So an AI switchboard was built to answer those calls, so that more people applying to the different vacancies could be served without adding staff in the same proportion.",
+            "I built this part together with the intern I had under me, which is where I learned that explaining a technical decision to someone starting out forces you to understand it better than you thought you did.",
+          ],
+        },
+        {
+          id: "despues",
+          title: "What happened afterwards",
+          body: [
+            "The chatbot I built lived inside the site. Later, with me no longer there, it was moved to WhatsApp keeping what it did, so today the same things can be done from there that used to be done on the page.",
+            "That version is not my work, which is why I mention it rather than claim it. I tell it because it says something a case study usually cannot: what was built kept being useful after its author left, which is more than can be said of most projects.",
+          ],
+        },
+      ],
+      honesty: {
+        title: "What this case does not prove",
+        items: [
+          "The platform's figures are the ones it publishes on its home page today, not results of my work: I was there in 2024, and the platform existed before and carried on after.",
+          "The WhatsApp version is not mine: the chatbot I built lived inside the site and the migration happened later.",
+          "There is no measured before-and-after: nobody measured how many queries one person handled before, or how many they stopped handling.",
+          "I do not know the current state of what I built: I no longer work there and have no visibility of what has changed since.",
+        ],
+      },
+      note:
+        "Empléate.app is a public product, which is why it is named here. The figures quoted are the ones the platform itself publishes.",
     },
   },
 
