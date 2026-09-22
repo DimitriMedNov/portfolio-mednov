@@ -62,6 +62,12 @@ const Systems = () => {
                     </a>
                   )}
 
+                  {item.caseHref && (
+                    <a href={item.caseHref} className="link-chevron self-start font-medium text-arc">
+                      {item.caseLabel} ›<span className="sr-only"> — {item.title}</span>
+                    </a>
+                  )}
+
                   {item.repos && (
                     <div className="flex flex-wrap gap-x-6 gap-y-1">
                       {item.repos.map((repo) => (

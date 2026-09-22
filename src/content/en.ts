@@ -161,6 +161,8 @@ export const en: Content = {
         access: { label: "Internal use", public: false },
         title: "Purchasing, end to end",
         desc: "The whole purchasing process of the four cities in one place: the request, the stock check, the quotes, the comparison table, the approval, the purchase order and the reception of what arrives, so information is captured once and reused at every stage instead of being retyped into each form. The request, the comparison table and the order used to be done on paper with in-person signatures and the cycle could stretch to about six days; today that same stretch closes the same day, usually in an hour or two. It carries more than eight thousand requests and orders, 9,456 comparison tables and more than thirty-five thousand warehouse entries since it went live in June 2026.",
+        caseHref: "/casos/compras",
+        caseLabel: "Read the full case",
         stack: ["Python", "React", "TypeScript", "Supabase", "PostgreSQL", "REST APIs"],
         reads: [
           { v: "+8,000", l: "purchase orders" },
@@ -327,6 +329,72 @@ export const en: Content = {
         reads: [],
       },
     ],
+  },
+
+  caseStudy: {
+    seoTitle: "Case: purchasing, end to end",
+    seoDescription:
+      "How a paper-based purchasing process with in-person signatures and a cycle of up to six days came to close the same day: the problem, the decisions and how the result is measured.",
+    back: "Back to systems",
+    eyebrow: "Case study · Industrial supplier with four plants",
+    title: "Purchasing, end to end",
+    lede:
+      "Buying a bolt could take six days, and none of those days were the supplier's. This is the route of a process that lived on paper, with in-person signatures and the same information retyped into every form, to a flow where it is captured once and reused at every stage.",
+    figures: [
+      { v: "+8,000", l: "purchase orders" },
+      { v: "9,456", l: "comparison tables" },
+      { v: "+35,000", l: "warehouse entries" },
+      { v: "+100", l: "users" },
+    ],
+    sections: [
+      {
+        id: "problema",
+        title: "The problem was not the paper",
+        body: [
+          "It is easy to tell this as a digitization story, and that would sell it short. Paper was the symptom: what cost time was a process split across forms, people and departments that did not talk to each other.",
+          "A need for material turned into a physical request that had to be printed and walked around to collect signatures, then someone checked stock, asked for at least three quotes, hand-built a comparison table with terms, delivery times, discounts, subtotals and taxes, and out of that came the purchase order that went back up for signature. Every jump meant retyping the same data and one more chance to get it wrong.",
+          "Knowing where a purchase stood meant sending an email or walking over to ask. There was no place to look it up.",
+        ],
+      },
+      {
+        id: "decisiones",
+        title: "The decision everything else hangs on",
+        body: [
+          "The central piece was not a screen but a rule: information is captured once and reused. The supplier, the quantities, the descriptions, the project it is charged to and who asked for it are written in the request and travel from there into the comparison table and the purchase order.",
+          "That removes in one go the points where somebody retyped the same thing, which is exactly where transcription errors came from. Subtotals, taxes and totals stop being worked out by hand, and approvals and rejections are recorded with who, when and on what grounds.",
+          "Fifteen stages of the flow live inside the system, from the request to the final reception, through warehouse entries, custody records and transfers. It is not that the whole department is automated; it is that this full stretch stopped leaking out into a loose form.",
+        ],
+      },
+      {
+        id: "medicion",
+        title: "How it is measured, and what cannot be",
+        body: [
+          "The request, the comparison table and the order each used to take about two days counting drafting, reviews, signatures and waiting, so the administrative stretch could run to about six days. Today that same stretch closes the same day, usually in an hour or two, for processes carrying ten to fifteen items.",
+          "That before is an estimate from the people who ran the process, not a measurement: the paper flow left no timestamps, so there is nothing to compare against automatically. The volume figures do come from the system, because it records them.",
+          "Supplier time is deliberately left out. If a delivery takes fifteen days because of manufacturing or logistics, no software fixes that and it should not be counted in its favour. The measurement ends where the administrative work ends: at the approved order.",
+        ],
+      },
+      {
+        id: "resultado",
+        title: "What changed in practice",
+        body: [
+          "A request is no longer chased: it is looked up. Its status, who is holding it, what was approved and what was rejected and why all sit on the same screen, so follow-up stopped being a chain of emails.",
+          "Ordinary operation is practically paper-free, though the odd order still gets printed for certain audits, so saying paper disappeared entirely would be false.",
+          "And there is something that was not in the plan and turned out to be worth a lot: because every movement carries an owner and a date, the history answers questions nobody used to ask, because there was no way to answer them.",
+        ],
+      },
+    ],
+    honesty: {
+      title: "What this case does not prove",
+      items: [
+        "There is no measured cost reduction: the financial data to back one does not exist.",
+        "There is no measured error reduction: the retyping points were removed, but the errors of the old process were never counted, so there is nothing to compare against.",
+        "The time saved is cycle time, not hours worked: those six days included waiting and signatures, they were not six days of someone sitting over the file.",
+        "The volume figures belong to different entities of the same process and must not be added together: a request, its comparison table and its order are the same case counted three times.",
+      ],
+    },
+    note:
+      "This case is published without the company's name, without references to its internal documents and without operational data, with permission to tell the work.",
   },
 
   sites: {

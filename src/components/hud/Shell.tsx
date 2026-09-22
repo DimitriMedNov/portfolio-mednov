@@ -6,6 +6,11 @@ import Seo from "@/components/Seo";
 type Props = {
   /** Ruta de la vista actual; marca la pestaña activa. */
   path: string;
+  /**
+   * Para páginas que no son una pestaña, como un caso de estudio: llevan su
+   * propio título sin aparecer en la navegación ni marcar otra pestaña activa.
+   */
+  seo?: { title: string; description: string };
   children: React.ReactNode;
 };
 
@@ -13,13 +18,10 @@ type Props = {
  * Estructura de página: barra translúcida arriba, contenido centrado con
  * márgenes amplios, pie discreto. La barra es la única capa con cristal.
  */
-const Shell = ({ path, children }: Props) => {
+const Shell = ({ path, seo, children }: Props) => {
   const { content, theme, toggleTheme, toggleLang, lang } = useApp();
-  const index = Math.max(
-    content.sheets.findIndex((sheet) => sheet.path === path),
-    0,
-  );
-  const sheet = content.sheets[index];
+  const encontrada = content.sheets.find((sheet) => sheet.path === path);
+  const sheet = encontrada ?? content.sheets[0];
   const [scrolled, setScrolled] = useState(false);
 
   // La barra solo gana su línea cuando hay contenido detrás.
@@ -32,7 +34,11 @@ const Shell = ({ path, children }: Props) => {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <Seo title={sheet.seoTitle} description={sheet.seoDescription} path={sheet.path} />
+      <Seo
+        title={seo?.title ?? sheet.seoTitle}
+        description={seo?.description ?? sheet.seoDescription}
+        path={path}
+      />
 
       <header className="glass-bar sticky top-0 z-40" data-scrolled={scrolled}>
         <div className="mx-auto flex w-full max-w-[1600px] flex-wrap items-center gap-x-4 px-6 lg:flex-nowrap lg:gap-6 lg:px-12">
@@ -45,7 +51,8 @@ const Shell = ({ path, children }: Props) => {
             className="order-3 -mx-6 flex w-full items-center gap-1 overflow-x-auto px-6 pb-1 [scrollbar-width:none] lg:order-2 lg:mx-0 lg:w-auto lg:flex-1 lg:justify-center lg:overflow-visible lg:px-0 lg:pb-0"
           >
             {content.sheets.map((item) => {
-              const active = item.path === sheet.path;
+              // Una página de detalle no marca ninguna pestaña: no es ninguna.
+              const active = encontrada !== undefined && item.path === sheet.path;
               return (
                 <a
                   key={item.path}

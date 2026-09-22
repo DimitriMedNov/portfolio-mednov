@@ -9,6 +9,7 @@ const Systems = lazy(() => import("./pages/Systems"));
 const Projects = lazy(() => import("./pages/Projects"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
+const CasoCompras = lazy(() => import("./pages/CasoCompras"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const routes: Record<string, ComponentType> = {
@@ -17,6 +18,8 @@ const routes: Record<string, ComponentType> = {
   "/projects": Projects,
   "/about": About,
   "/contact": Contact,
+  // Páginas de detalle: viven fuera de la navegación principal.
+  "/casos/compras": CasoCompras,
 };
 
 const App = () => {

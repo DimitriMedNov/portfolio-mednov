@@ -61,6 +61,9 @@ export type Content = {
       url?: string;
       /** Public repositories, when the work has code anyone can read. */
       repos?: { label: string; href: string }[];
+      /** Link to the in-depth case study, when one is written. */
+      caseHref?: string;
+      caseLabel?: string;
       /** Logo de la organización, en /public/logos. */
       logo?: string;
       /** "wide" para marcas horizontales; por defecto cuadrada. */
@@ -70,6 +73,24 @@ export type Content = {
       stack: string[];
       reads: { v: string; l: string }[];
     }[];
+  };
+
+  /**
+   * Caso de estudio en profundidad. Va sin nombre de empresa, sin códigos de
+   * documentos internos y sin detalles de operación como calendarios de
+   * respaldo: el objetivo es explicar el trabajo, no exponer a nadie.
+   */
+  caseStudy: {
+    seoTitle: string;
+    seoDescription: string;
+    back: string;
+    eyebrow: string;
+    title: string;
+    lede: string;
+    figures: { v: string; l: string }[];
+    sections: { id: string; title: string; body: string[] }[];
+    honesty: { title: string; items: string[] };
+    note: string;
   };
 
   sites: {

@@ -161,6 +161,8 @@ export const es: Content = {
         access: { label: "Uso interno", public: false },
         title: "Compras, de principio a fin",
         desc: "Todo el proceso de compras de las cuatro ciudades en un solo lugar: la solicitud, la revisión de existencias, las cotizaciones, el cuadro comparativo, la autorización, la orden de compra y la recepción de lo que llega, de modo que la información se captura una vez y se reutiliza en cada etapa en lugar de recapturarse en cada formato. Antes la solicitud, el cuadro comparativo y la orden se hacían en papel con firmas presenciales y el ciclo podía estirarse hasta unos seis días; hoy ese mismo tramo se cierra el mismo día, normalmente en una o dos horas. Lleva más de ocho mil solicitudes y órdenes, 9,456 cuadros comparativos y más de treinta y cinco mil entradas de almacén desde que entró en operación en junio de 2026.",
+        caseHref: "/casos/compras",
+        caseLabel: "Leer el caso completo",
         stack: ["Python", "React", "TypeScript", "Supabase", "PostgreSQL", "REST APIs"],
         reads: [
           { v: "+8,000", l: "órdenes de compra" },
@@ -327,6 +329,72 @@ export const es: Content = {
         reads: [],
       },
     ],
+  },
+
+  caseStudy: {
+    seoTitle: "Caso: compras de principio a fin",
+    seoDescription:
+      "Cómo un proceso de compras en papel, con firmas presenciales y un ciclo de hasta seis días, pasó a cerrarse el mismo día: el problema, las decisiones y cómo se mide el resultado.",
+    back: "Volver a sistemas",
+    eyebrow: "Caso de estudio · Proveedor industrial con cuatro plantas",
+    title: "Compras, de principio a fin",
+    lede:
+      "Comprar un tornillo podía tardar seis días, y ninguno de esos días era por el proveedor. Este es el recorrido de un proceso que vivía en papel, con firmas presenciales y la misma información recapturada en cada formato, hasta un flujo donde se captura una vez y se reutiliza en cada etapa.",
+    figures: [
+      { v: "+8,000", l: "órdenes de compra" },
+      { v: "9,456", l: "cuadros comparativos" },
+      { v: "+35,000", l: "entradas de almacén" },
+      { v: "+100", l: "usuarios" },
+    ],
+    sections: [
+      {
+        id: "problema",
+        title: "El problema no era el papel",
+        body: [
+          "Es fácil contar esto como una historia de digitalización, y sería quedarse corto. El papel era el síntoma: lo que costaba tiempo era que el proceso estaba repartido entre formatos, personas y áreas que no se hablaban entre sí.",
+          "Una necesidad de material se convertía en una solicitud física que había que imprimir y pasear para juntar firmas, luego alguien revisaba existencias, pedía al menos tres cotizaciones, armaba a mano un cuadro comparativo con condiciones, tiempos de entrega, descuentos, subtotales e impuestos, y de ahí salía la orden de compra que volvía a subir a firma. Cada salto era una recaptura de los mismos datos y una oportunidad nueva de equivocarse al transcribir.",
+          "Saber en qué iba una compra significaba mandar un correo o ir a preguntarle al responsable. No existía un lugar donde mirarlo.",
+        ],
+      },
+      {
+        id: "decisiones",
+        title: "La decisión que ordena todo lo demás",
+        body: [
+          "La pieza central no fue una pantalla sino una regla: la información se captura una vez y se reutiliza. El proveedor, las cantidades, las descripciones, el proyecto al que se carga y quién lo pidió se escriben en la solicitud y de ahí viajan solos al cuadro comparativo y a la orden de compra.",
+          "Eso elimina de golpe los puntos donde alguien volvía a teclear lo mismo, que eran justo donde aparecían los errores de transcripción. Los cálculos de subtotales, impuestos y totales dejan de hacerse a mano, y las autorizaciones y rechazos quedan registrados con quién, cuándo y por qué motivo.",
+          "Quince etapas del flujo viven dentro del sistema, de la solicitud hasta la recepción final, pasando por entradas a almacén, resguardos y traspasos. No es que el departamento entero esté automatizado, es que ese recorrido completo dejó de salirse a un formato suelto.",
+        ],
+      },
+      {
+        id: "medicion",
+        title: "Cómo se mide, y qué no se puede medir",
+        body: [
+          "Antes, la solicitud, el cuadro comparativo y la orden tomaban alrededor de dos días cada uno contando elaboración, revisiones, firmas y esperas, así que el tramo administrativo podía estirarse hasta unos seis días. Hoy ese mismo tramo se cierra el mismo día, normalmente en una o dos horas, para procesos que traen entre diez y quince artículos.",
+          "Ese antes es una estimación de quienes operaban el proceso, no un dato medido: el flujo en papel no dejaba marcas de tiempo, así que no hay con qué compararlo automáticamente. Los números de volumen sí salen del sistema, porque los registra él.",
+          "El tiempo del proveedor queda fuera a propósito. Si una entrega tarda quince días por fabricación o logística, eso no lo arregla ningún software y no tiene por qué apuntarse a su favor. La medición termina donde termina el trabajo administrativo: en la orden autorizada.",
+        ],
+      },
+      {
+        id: "resultado",
+        title: "Qué cambió en la práctica",
+        body: [
+          "Una solicitud ya no se persigue: se consulta. El estado, quién la tiene pendiente, qué se autorizó y qué se rechazó y por qué están en la misma pantalla, así que el seguimiento dejó de ser una cadena de correos.",
+          "La operación ordinaria es prácticamente sin papel, aunque alguna orden se imprime por excepción para ciertas auditorías, de modo que decir que el papel desapareció del todo sería falso.",
+          "Y hay una cosa que no estaba en el plan y resultó valiosa: como cada movimiento queda con responsable y fecha, el historial sirve para responder preguntas que antes nadie hacía porque no había forma de contestarlas.",
+        ],
+      },
+    ],
+    honesty: {
+      title: "Lo que este caso no demuestra",
+      items: [
+        "No hay reducción de costos medida: no existen los datos económicos para sostenerla.",
+        "No hay reducción de errores medida: se quitaron los puntos de recaptura, pero nunca se contaron los errores del proceso anterior, así que no hay contra qué comparar.",
+        "El tiempo ahorrado es de ciclo, no de horas trabajadas: los seis días anteriores incluían esperas y firmas, no eran seis días de alguien sentado frente al expediente.",
+        "Las cifras de volumen son de entidades distintas del mismo proceso y no deben sumarse entre sí: una solicitud, su cuadro comparativo y su orden son el mismo caso contado tres veces.",
+      ],
+    },
+    note:
+      "Este caso se publica sin el nombre de la empresa, sin referencias a sus documentos internos y sin datos de su operación, con autorización para contar el trabajo.",
   },
 
   sites: {
