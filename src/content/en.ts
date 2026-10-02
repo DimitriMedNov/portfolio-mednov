@@ -70,14 +70,14 @@ export const en: Content = {
     name: "Jesus D'mitri",
     surname: "Medina Novelo",
     summary:
-      "I lead IT and software engineering at Diprolam, an industrial supplier with sites in Monterrey, Guanajuato, Puebla and Tijuana, where the CRM, the inventory system and the purchasing flow I built are already part of how the company works day to day while I put together the ERP that more than 100 people will work in and a multi-tenant SaaS platform beside it, after two years at Grupo Megamedia and its century-old newspaper putting AI where it saved real work: chatbots, automated financial summaries and OCR search across the archive.",
+      "From Mexico City I remotely lead IT and software engineering at Diprolam, an industrial supplier with sites in Monterrey, Guanajuato, Puebla and Tijuana, where the CRM, the inventory system and the purchasing flow I built are already part of how the company works day to day while I put together the ERP that more than 100 people will work in and a multi-tenant SaaS platform beside it, after two years at Grupo Megamedia and its century-old newspaper putting AI where it saved real work: chatbots, automated financial summaries and OCR search across the archive.",
     ctaSystems: "View systems",
     ctaContact: "Open channel",
   },
 
   idFields: [
     { k: "Name", v: "Dimitri MedNov" },
-    { k: "Coordinates", v: "20.9674 N · 89.5926 W" },
+    { k: "Location", v: "Mexico City" },
     { k: "Experience", v: "4.5+ years" },
     { k: "GitHub", v: "github/DimitriMedNov", href: "https://github.com/DimitriMedNov" },
     { k: "LinkedIn", v: "linkedin/dimitrimednoov", href: "https://www.linkedin.com/in/dimitrimednoov" },
@@ -873,7 +873,7 @@ export const en: Content = {
         id: "diprolam",
         role: "Head of IT & Software Engineering",
         company: "Diprolam",
-        location: "MTY · GTO · PUE · TIJ, Mexico",
+        location: "Mexico City · remote for MTY, GTO, PUE and TIJ",
         dates: "Feb 2026 — Present",
         bullets: [
           "Lead technology operations across the company's four cities, keeping critical systems, infrastructure and business services available",
@@ -1023,7 +1023,7 @@ export const en: Content = {
 
   skills: {
     title: "Skills, certifications & courses",
-    note: "8 groups · 5 certs · 12 courses",
+    note: "8 groups · 10 certs · 12 courses",
     certificationsLabel: "Certifications",
     coursesLabel: "Courses",
     groups: [
@@ -1084,11 +1084,31 @@ export const en: Content = {
       { cat: "Tools", items: ["Git", "GitHub", "FlutterFlow"] },
     ],
     certifications: [
-      { no: "01", name: "AWS Certified Cloud Practitioner (CLF-C02)", issuer: "Amazon Web Services", year: "2026" },
-      { no: "02", name: "CCNA", issuer: "Cisco", year: "2026" },
-      { no: "03", name: "Associate Cloud Engineer", issuer: "Google Cloud", year: "2026" },
-      { no: "04", name: "AI Engineer for Developers Associate", issuer: "", year: "2026" },
-      { no: "05", name: "SOC", issuer: "Cisco", year: "2026" },
+      { no: "01", name: "Foundation: Introduction to LangGraph - Python", issuer: "LangChain Academy", year: "2026" },
+      {
+        no: "02",
+        name: "The LLM Course: Fundamentals of LLMs & Fine-tuning Language Models",
+        issuer: "Hugging Face",
+        year: "2026",
+      },
+      {
+        no: "03",
+        name: "The MCP Course: Fundamentals of MCP & MCP for Production Automation",
+        issuer: "Hugging Face",
+        year: "2026",
+      },
+      { no: "04", name: "Introduction to Kubernetes (LFS158)", issuer: "The Linux Foundation", year: "2026" },
+      {
+        no: "05",
+        name: "Intro to Machine Learning · Intermediate Machine Learning · Feature Engineering · Time Series",
+        issuer: "Kaggle",
+        year: "2026",
+      },
+      { no: "06", name: "AWS Certified Cloud Practitioner (CLF-C02)", issuer: "Amazon Web Services", year: "2026" },
+      { no: "07", name: "CCNA", issuer: "Cisco", year: "2026" },
+      { no: "08", name: "Associate Cloud Engineer", issuer: "Google Cloud", year: "2026" },
+      { no: "09", name: "AI Engineer for Developers Associate", issuer: "", year: "2026" },
+      { no: "10", name: "SOC", issuer: "Cisco", year: "2026" },
     ],
     courses: [
       "Generative AI with LLMs — DeepLearning.AI",
@@ -1112,7 +1132,7 @@ export const en: Content = {
     headline: "Available for work on",
     headlineAccent: "AI systems",
     headlineTail: "and full-stack platforms.",
-    body: "I work remotely without trouble and I am open to relocating, so write to me and you will usually have an answer the same day.",
+    body: "I live in Mexico City, work remotely without trouble and am open to relocating, so write to me and you will usually have an answer the same day.",
     channels: [
       { label: "Email", value: "mednov@outlook.es", href: "mailto:mednov@outlook.es", copy: "mednov@outlook.es" },
       { label: "Phone", value: "+52 999 359 0366", href: "tel:+529993590366", copy: "+52 999 359 0366" },
