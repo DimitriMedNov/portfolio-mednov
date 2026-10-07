@@ -1,6 +1,7 @@
 import { useApp } from "@/content/state";
 import GraphOrb from "@/components/hud/GraphOrb";
 import { Reveal } from "@/components/hud/primitives";
+import { channelEvent, umamiClick } from "@/lib/analytics";
 
 const stack = ["Python", "React 19", "TypeScript", "FastAPI", "Supabase", "OpenAI API", "OCR", "AWS"];
 
@@ -48,10 +49,10 @@ const Hero = () => {
           </Reveal>
 
           <Reveal delay={0.24} className="mt-9 flex flex-wrap items-center justify-center gap-4">
-            <a href="/systems" className="btn-primary">
+            <a href="/systems" {...umamiClick("hero_systems_click")} className="btn-primary">
               {hero.ctaSystems}
             </a>
-            <a href="/contact" className="link-chevron">
+            <a href="/contact" {...umamiClick("hero_contact_click")} className="link-chevron">
               {hero.ctaContact} ›
             </a>
           </Reveal>
@@ -78,7 +79,11 @@ const Hero = () => {
               <dt className="hud-label">{field.k}</dt>
               <dd className="mt-1 text-meta text-txt [overflow-wrap:anywhere]">
                 {field.href ? (
-                  <a href={field.href} className="text-arc no-underline hover:underline">
+                  <a
+                    href={field.href}
+                    {...umamiClick(channelEvent(field.href), { section: "hero" })}
+                    className="text-arc no-underline hover:underline"
+                  >
                     {field.v}
                   </a>
                 ) : (

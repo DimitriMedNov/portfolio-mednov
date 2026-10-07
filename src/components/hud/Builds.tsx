@@ -1,6 +1,7 @@
 import { projects } from "@/data/projects";
 import { useContent } from "@/content/state";
 import { Panel, Reveal, SectionTitle } from "@/components/hud/primitives";
+import { umamiEvent } from "@/lib/analytics";
 
 /** Proyectos públicos, cada uno con su captura y su demo en vivo. */
 const Builds = () => {
@@ -52,6 +53,7 @@ const Builds = () => {
                           href={project.demo}
                           target="_blank"
                           rel="noopener noreferrer"
+                          {...umamiEvent("project_demo_click", { project: project.name })}
                           className="link-chevron"
                         >
                           {project.demoLabelKey ? builds[project.demoLabelKey] : builds.demo} ›
@@ -66,6 +68,7 @@ const Builds = () => {
                           href={project.github}
                           target="_blank"
                           rel="noopener noreferrer"
+                          {...umamiEvent("project_repo_click", { project: project.name })}
                           className="text-body text-mut no-underline hover:underline"
                         >
                           {ui.source} ›<span className="sr-only"> — {project.name}</span>

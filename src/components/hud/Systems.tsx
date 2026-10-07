@@ -1,5 +1,6 @@
 import { useContent } from "@/content/state";
 import { Chip, Label, Panel, Reveal, SectionTitle } from "@/components/hud/primitives";
+import { umamiClick, umamiEvent } from "@/lib/analytics";
 
 /** Sistemas privados y las sedes donde corren. */
 const Systems = () => {
@@ -55,6 +56,7 @@ const Systems = () => {
                       href={item.url}
                       target="_blank"
                       rel="noopener noreferrer"
+                      {...umamiEvent("system_demo_click", { system: item.id })}
                       className="link-chevron self-start"
                     >
                       {item.url.replace(/^https?:\/\//, "").replace(/\/$/, "")} ›
@@ -63,7 +65,11 @@ const Systems = () => {
                   )}
 
                   {item.caseHref && (
-                    <a href={item.caseHref} className="link-chevron self-start font-medium text-arc">
+                    <a
+                      href={item.caseHref}
+                      {...umamiClick("system_open", { system: item.id })}
+                      className="link-chevron self-start font-medium text-arc"
+                    >
                       {item.caseLabel} ›<span className="sr-only"> — {item.title}</span>
                     </a>
                   )}
@@ -76,6 +82,10 @@ const Systems = () => {
                           href={repo.href}
                           target="_blank"
                           rel="noopener noreferrer"
+                          {...umamiEvent("system_repo_click", {
+                            system: item.id,
+                            repo: repo.href.split("/").pop() ?? "",
+                          })}
                           className="link-chevron"
                         >
                           {repo.label} ›

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
 import { useApp } from "@/content/state";
 import Seo from "@/components/Seo";
+import { navEvents, umamiClick } from "@/lib/analytics";
 
 type Props = {
   /** Ruta de la vista actual; marca la pestaña activa. */
@@ -42,7 +43,7 @@ const Shell = ({ path, seo, children }: Props) => {
 
       <header className="glass-bar sticky top-0 z-40" data-scrolled={scrolled}>
         <div className="mx-auto flex w-full max-w-[1600px] flex-wrap items-center gap-x-4 px-6 lg:flex-nowrap lg:gap-6 lg:px-12">
-          <a href="/" className="hit order-1 min-h-[56px] shrink-0 text-lead font-semibold tracking-[-0.01em] text-txt no-underline hover:text-arc">
+          <a href="/" {...umamiClick("nav_home", { source: "brand" })} className="hit order-1 min-h-[56px] shrink-0 text-lead font-semibold tracking-[-0.01em] text-txt no-underline hover:text-arc">
             MedNov
           </a>
 
@@ -63,6 +64,7 @@ const Shell = ({ path, seo, children }: Props) => {
                   key={item.path}
                   href={item.path}
                   aria-current={active ? "page" : undefined}
+                  {...umamiClick(navEvents[item.path], { source: "tab" })}
                   className={`hit flex min-h-[56px] items-center justify-center whitespace-nowrap px-1 text-caption no-underline transition-colors lg:px-4 lg:text-meta ${
                     active ? "font-semibold text-txt" : "text-mut hover:text-txt"
                   }`}
@@ -105,7 +107,11 @@ const Shell = ({ path, seo, children }: Props) => {
       <footer className="border-t border-line/60 bg-deep">
         <div className="mx-auto flex w-full max-w-[1600px] flex-wrap items-center justify-between gap-x-8 gap-y-2 px-6 py-8 text-caption text-mut lg:px-12">
           <span>© 2026 Jesus D&apos;mitri Medina Novelo</span>
-          <a href="mailto:mednov@outlook.es" className="text-arc no-underline hover:underline">
+          <a
+            href="mailto:mednov@outlook.es"
+            {...umamiClick("email_click", { section: "footer" })}
+            className="text-arc no-underline hover:underline"
+          >
             mednov@outlook.es
           </a>
         </div>

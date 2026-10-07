@@ -1,6 +1,7 @@
 import { sileo } from "sileo";
 import { useApp } from "@/content/state";
 import { Label, Panel, Reveal, SectionTitle } from "@/components/hud/primitives";
+import { channelEvent, channelOf, umamiClick, umamiEvent } from "@/lib/analytics";
 
 /** Contacto: una frase, el correo grande y los canales con copia al portapapeles. */
 const Contact = () => {
@@ -27,7 +28,11 @@ const Contact = () => {
         </p>
         <p className="mx-auto mt-5 max-w-[56ch] text-body text-mut">{contact.body}</p>
 
-        <a href="mailto:mednov@outlook.es" className="btn-primary mt-8">
+        <a
+          href="mailto:mednov@outlook.es"
+          {...umamiClick("email_click", { section: "contact_primary" })}
+          className="btn-primary mt-8"
+        >
           mednov@outlook.es
         </a>
       </div>
@@ -42,6 +47,9 @@ const Contact = () => {
                   href={channel.href}
                   target={channel.href.startsWith("http") ? "_blank" : undefined}
                   rel={channel.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  {...(channel.href.startsWith("http") ? umamiEvent : umamiClick)(channelEvent(channel.href), {
+                    section: "contact_channels",
+                  })}
                   className="text-title text-txt no-underline [overflow-wrap:anywhere] hover:text-arc"
                 >
                   {channel.value}
@@ -50,6 +58,7 @@ const Contact = () => {
                   <button
                     type="button"
                     onClick={() => copy(channel.label, channel.copy as string)}
+                    {...umamiEvent("contact_copy", { channel: channelOf(channel.href) ?? "other" })}
                     className="hit mt-auto self-start rounded-full bg-panel2 px-5 text-caption font-medium text-txt transition-opacity hover:opacity-80"
                   >
                     {ui.copy}

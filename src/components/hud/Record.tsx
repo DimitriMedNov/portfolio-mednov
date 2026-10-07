@@ -1,5 +1,6 @@
 import { useContent } from "@/content/state";
 import { Label, Panel, Reveal, SectionTitle } from "@/components/hud/primitives";
+import { umamiClick, umamiEvent } from "@/lib/analytics";
 
 /** Currículum: resumen, experiencia con viñetas, formación y habilidades. */
 const Record = () => {
@@ -17,11 +18,19 @@ const Record = () => {
             <p className="mt-1 text-title text-mut">AI Software Engineer &amp; Full Stack Developer</p>
             <p className="mt-5 max-w-[72ch] text-body text-mut">{resume.summary}</p>
             <p className="mt-5 text-meta text-mut">
-              <a href="mailto:mednov@outlook.es" className="text-arc no-underline hover:underline">
+              <a
+                href="mailto:mednov@outlook.es"
+                {...umamiClick("email_click", { section: "about" })}
+                className="text-arc no-underline hover:underline"
+              >
                 mednov@outlook.es
               </a>{" "}
               ·{" "}
-              <a href="tel:+529993590366" className="text-arc no-underline hover:underline">
+              <a
+                href="tel:+529993590366"
+                {...umamiClick("phone_click", { section: "about" })}
+                className="text-arc no-underline hover:underline"
+              >
                 +52 999 359 0366
               </a>{" "}
               ·{" "}
@@ -29,6 +38,7 @@ const Record = () => {
                 href="https://www.linkedin.com/in/dimitrimednoov"
                 target="_blank"
                 rel="noopener noreferrer"
+                {...umamiEvent("linkedin_profile_click", { section: "about" })}
                 className="text-arc no-underline hover:underline"
               >
                 linkedin.com/in/dimitrimednoov
@@ -40,6 +50,7 @@ const Record = () => {
             <a
               href="/CV_Jesus_Medina_Novelo.pdf"
               download
+              {...umamiClick("cv_download", { section: "about" })}
               className="hit mt-7 inline-flex items-center gap-2 rounded-full border border-line bg-panel px-5 py-3 text-meta text-txt no-underline transition-colors hover:border-arc hover:text-arc"
             >
               {resume.download}
