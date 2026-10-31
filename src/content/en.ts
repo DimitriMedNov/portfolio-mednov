@@ -27,7 +27,7 @@ export const en: Content = {
       tab: "Builds",
       seoTitle: "Public Projects",
       seoDescription:
-        "Public projects with their source: InventaPro, ShopEdge, Chainlytics, MindTask, Beat Pulse and El Taquito Gordo Feliz.",
+        "Public projects with their source: InventaPro, Chainlytics, MindTask, Beat Pulse, Sticker Bot, Huella, Mi TV and El Taquito Gordo Feliz.",
     },
     {
       path: "/about",
@@ -819,12 +819,6 @@ export const en: Content = {
         summary: "Inventory and requisitions",
         description:
           "Inventory and requisition system for a company with several sites, where stock is the sum of every entry, exit and adjustment rather than a number that gets overwritten, so any movement can be traced back to its origin, and where requisitions move through their states charged to the project they belong to while permissions are enforced in the database instead of by hiding buttons. The demo runs on sample data and opens with the guest button, no sign-up.",
-      },
-      1: {
-        category: "E-commerce",
-        summary: "E-commerce storefront",
-        description:
-          "A full online store where customers fill a cart, compare products, leave reviews and keep a wishlist on the way to checkout, while on the other side an admin dashboard runs the catalog and the orders under role-based permissions.",
       },
       2: {
         category: "Analytics",

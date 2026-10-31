@@ -12,16 +12,8 @@ export const projects: Project[] = [
     github: "https://github.com/DimitriMedNov/Inventory-Management-System",
   },
   {
-    id: 1,
-    code: "4.2",
-    name: "ShopEdge",
-    tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Supabase", "React Query"],
-    codePrivate: true,
-    // El despliegue anterior ya no existe (404). Se vuelve a enlazar cuando esté publicado.
-  },
-  {
     id: 2,
-    code: "4.3",
+    code: "4.2",
     name: "Chainlytics",
     tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "React Hook Form", "Zod"],
     demo: "https://chainlytics82-3v7y.vercel.app/",
@@ -29,7 +21,7 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    code: "4.4",
+    code: "4.3",
     name: "MindTask",
     tags: ["React", "TypeScript", "PGlite", "Ollama", "whisper.cpp", "Tauri"],
     // Corre en la máquina de cada quien: no hay demo pública que enseñar.
@@ -37,7 +29,7 @@ export const projects: Project[] = [
   },
   {
     id: 6,
-    code: "4.5",
+    code: "4.4",
     name: "Beat Pulse",
     tags: ["React", "TypeScript", "Canvas", "Vite", "Tailwind CSS", "Vitest"],
     demo: "https://beat-pulse-visualizer.vercel.app/",
@@ -45,7 +37,7 @@ export const projects: Project[] = [
   },
   {
     id: 8,
-    code: "4.6",
+    code: "4.5",
     name: "Sticker Bot",
     tags: ["Node.js", "Vercel Functions", "WhatsApp Cloud API", "Supabase", "PostgreSQL", "Sharp"],
     // El "demo" de un bot de WhatsApp es abrir la conversación con él.
@@ -56,14 +48,14 @@ export const projects: Project[] = [
   // Huella y el launcher son apps nativas (escritorio Linux y tele): no hay demo web.
   {
     id: 9,
-    code: "4.7",
+    code: "4.6",
     name: "Huella",
     tags: ["Python", "GTK4", "libadwaita", "fprintd", "PAM", "polkit"],
     github: "https://github.com/DimitriMedNov/huella",
   },
   {
     id: 10,
-    code: "4.8",
+    code: "4.7",
     name: "Mi TV",
     tags: ["Kotlin", "Jetpack Compose for TV", "Android TV", "Open-Meteo"],
     github: "https://github.com/DimitriMedNov/launcher-tv",
@@ -71,7 +63,7 @@ export const projects: Project[] = [
   // El más viejo y el más sencillo de los públicos: va al final a propósito.
   {
     id: 7,
-    code: "4.9",
+    code: "4.8",
     name: "El Taquito Gordo Feliz",
     tags: ["HTML", "CSS", "JavaScript"],
     demo: "https://taquito.vercel.app/",

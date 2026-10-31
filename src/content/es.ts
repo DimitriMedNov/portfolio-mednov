@@ -27,7 +27,7 @@ export const es: Content = {
       tab: "Proyectos",
       seoTitle: "Proyectos públicos",
       seoDescription:
-        "Proyectos públicos con su código: InventaPro, ShopEdge, Chainlytics, MindTask, Beat Pulse y El Taquito Gordo Feliz.",
+        "Proyectos públicos con su código: InventaPro, Chainlytics, MindTask, Beat Pulse, Sticker Bot, Huella, Mi TV y El Taquito Gordo Feliz.",
     },
     {
       path: "/about",
@@ -819,12 +819,6 @@ export const es: Content = {
         summary: "Inventario y requisiciones",
         description:
           "Sistema de inventario y requisiciones para una empresa con varias sedes, donde el stock se calcula sumando cada entrada, salida y ajuste en vez de sobrescribir un número, de manera que cualquier movimiento se puede rastrear hasta su origen, y donde las requisiciones recorren sus estados cargándose al proyecto que corresponde mientras los permisos se aplican en la base de datos y no escondiendo botones. La demo abre con datos de ejemplo y se entra con el botón de invitado, sin registro.",
-      },
-      1: {
-        category: "E-commerce",
-        summary: "Tienda en línea",
-        description:
-          "Tienda en línea completa donde el cliente arma su carrito, compara productos, deja reseñas y guarda su wishlist hasta llegar al pago, mientras del otro lado un panel de administración lleva el catálogo y las órdenes con permisos por rol.",
       },
       2: {
         category: "Analítica",
