@@ -53,10 +53,25 @@ export const projects: Project[] = [
     demoLabelKey: "openChat",
     github: "https://github.com/DimitriMedNov/whatsapp-sticker-bot-vercel",
   },
+  // Huella y el launcher son apps nativas (escritorio Linux y tele): no hay demo web.
+  {
+    id: 9,
+    code: "4.7",
+    name: "Huella",
+    tags: ["Python", "GTK4", "libadwaita", "fprintd", "PAM", "polkit"],
+    github: "https://github.com/DimitriMedNov/huella",
+  },
+  {
+    id: 10,
+    code: "4.8",
+    name: "Mi TV",
+    tags: ["Kotlin", "Jetpack Compose for TV", "Android TV", "Open-Meteo"],
+    github: "https://github.com/DimitriMedNov/launcher-tv",
+  },
   // El más viejo y el más sencillo de los públicos: va al final a propósito.
   {
     id: 7,
-    code: "4.7",
+    code: "4.9",
     name: "El Taquito Gordo Feliz",
     tags: ["HTML", "CSS", "JavaScript"],
     demo: "https://taquito.vercel.app/",

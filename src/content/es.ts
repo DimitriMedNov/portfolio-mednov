@@ -850,6 +850,18 @@ export const es: Content = {
         description:
           "Bot de WhatsApp al que le mandas una imagen y te la regresa convertida en sticker, corriendo como función serverless sobre la Cloud API de Meta. Ninguna imagen se guarda en ningún lado: se descarga, se transforma y se envía, y lo único que queda registrado son el teléfono, los contadores y los datos técnicos del proceso. Los límites por usuario y la idempotencia viven en la base de datos con bloqueo por teléfono en vez de en la memoria del servidor, que es lo que lo mantiene en pie aunque cada mensaje caiga en una instancia distinta, y detrás hay un panel donde se ven el uso, los errores y las alertas. Está funcionando: escríbele al +52 986 102 6628 y mándale una foto.",
       },
+      9: {
+        category: "Escritorio Linux",
+        summary: "Gestor del lector de huella para GNOME",
+        description:
+          "App de escritorio para GNOME que cuida el lector de huella de una laptop con Linux: revisa que el lector, su driver y fprintd estén bien, registra, prueba y borra huellas, y deja elegir dónde se usa la huella, desde sudo en la terminal hasta las ventanas de contraseña de polkit, el desbloqueo de pantalla y el inicio de sesión. Nació para un lector que solo funciona con un driver de la comunidad que una actualización puede romper, así que revisa el lector al entrar a la sesión y cada seis horas, avisa con una notificación cuando algo falla y ofrece reinstalar el driver que falte. Los cambios que piden permisos pasan por un pequeño ayudante de polkit en vez de correr toda la app como root.",
+      },
+      10: {
+        category: "Android TV",
+        summary: "Pantalla de inicio propia para Android TV",
+        description:
+          "Pantalla de inicio propia para dos teles con Google TV, en Kotlin y Jetpack Compose for TV, que reemplazó a un launcher de terceros. Barra lateral, cuadrícula de apps donde la tarjeta enfocada crece, se inclina y gana un destello, entradas HDMI que muestran cuál tiene señal, clima en vivo y una franja de arriba que sigue lo que se está reproduciendo, con controles de Spotify que funcionan sin salir del inicio. El fondo rota fotos y videos propios en calidad original, usa unos 46 MB de RAM y es la pantalla de inicio diaria de la tele de la sala.",
+      },
       7: {
         category: "Reservas",
         summary: "Sistema de reservas",

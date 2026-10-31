@@ -850,6 +850,18 @@ export const en: Content = {
         description:
           "WhatsApp bot you send an image to and it sends it back as a sticker, running as a serverless function on top of Meta's Cloud API. No image is ever stored anywhere: it is downloaded, transformed and sent, and all that is kept are the phone number, the counters and the technical details of the run. Per-user limits and idempotency live in the database behind a per-phone lock rather than in server memory, which is what keeps it standing even though every message lands on a different instance, and behind it there is a dashboard showing usage, errors and alerts. It is live: message +52 986 102 6628 and send it a photo.",
       },
+      9: {
+        category: "Linux desktop",
+        summary: "Fingerprint reader manager for GNOME",
+        description:
+          "GNOME desktop app that looks after a Linux laptop's fingerprint reader: it checks that the reader, its driver and fprintd are healthy, enrolls, tests and deletes fingers, and lets you choose where the fingerprint is used, from sudo in the terminal to polkit password prompts, screen unlock and login. It was born for a reader that only works with a community driver an update can break, so it checks the reader at login and every six hours, sends a notification when something fails and offers to reinstall the missing driver. Privileged changes go through a small polkit helper instead of running the whole app as root.",
+      },
+      10: {
+        category: "Android TV",
+        summary: "Custom home screen for Android TV",
+        description:
+          "A home screen of my own for two Google TV sets, in Kotlin and Jetpack Compose for TV, that replaced a third-party launcher. A side bar, a grid of apps where the focused card grows, tilts and catches a glint, HDMI inputs that show which one has signal, live weather, and a top band that follows whatever is playing, with Spotify controls that work without leaving the home screen. The background rotates my own photos and videos at original quality, it runs on about 46 MB of RAM and it is the daily home screen of the living room TV.",
+      },
       7: {
         category: "Booking",
         summary: "Booking system",
