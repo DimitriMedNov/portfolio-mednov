@@ -45,7 +45,7 @@ export const projects: Project[] = [
     demoLabelKey: "openChat",
     github: "https://github.com/DimitriMedNov/whatsapp-sticker-bot-vercel",
   },
-  // Huella, el launcher y Buscador son apps nativas (escritorio Linux y tele): no hay demo web.
+  // Huella, el launcher y las extensiones de GNOME son apps nativas (escritorio Linux y tele): no hay demo web.
   {
     id: 9,
     code: "4.6",
@@ -67,10 +67,66 @@ export const projects: Project[] = [
     tags: ["JavaScript", "GNOME Shell", "GJS", "Ollama", "LocalSearch"],
     github: "https://github.com/DimitriMedNov/buscador",
   },
+  {
+    id: 12,
+    code: "4.9",
+    name: "Panel Claude",
+    tags: ["JavaScript", "GNOME Shell", "GJS", "Python", "Claude Code hooks"],
+    github: "https://github.com/DimitriMedNov/panel-claude",
+  },
+  {
+    id: 13,
+    code: "4.10",
+    name: "Captura a Claude",
+    tags: ["JavaScript", "GNOME Shell", "GJS", "Claude Code"],
+    github: "https://github.com/DimitriMedNov/captura-claude",
+  },
+  {
+    id: 14,
+    code: "4.11",
+    name: "Proyectos",
+    tags: ["JavaScript", "GNOME Shell", "GJS", "git"],
+    github: "https://github.com/DimitriMedNov/proyectos",
+  },
+  {
+    id: 15,
+    code: "4.12",
+    name: "Servidores dev",
+    tags: ["JavaScript", "GNOME Shell", "GJS", "iproute2"],
+    github: "https://github.com/DimitriMedNov/servidores-dev",
+  },
+  {
+    id: 16,
+    code: "4.13",
+    name: "Memoria",
+    tags: ["JavaScript", "GNOME Shell", "GJS", "Python"],
+    github: "https://github.com/DimitriMedNov/memoria",
+  },
+  {
+    id: 17,
+    code: "4.14",
+    name: "Clima",
+    tags: ["JavaScript", "GNOME Shell", "GJS", "Open-Meteo"],
+    github: "https://github.com/DimitriMedNov/clima",
+  },
+  {
+    id: 18,
+    code: "4.15",
+    name: "Reloj Flip",
+    tags: ["Python", "GTK4", "libadwaita", "Cairo"],
+    github: "https://github.com/DimitriMedNov/reloj-flip",
+  },
+  {
+    id: 19,
+    code: "4.16",
+    name: "Barra limpia",
+    tags: ["JavaScript", "GNOME Shell", "GJS"],
+    github: "https://github.com/DimitriMedNov/barra-limpia",
+  },
   // El más viejo y el más sencillo de los públicos: va al final a propósito.
   {
     id: 7,
-    code: "4.9",
+    code: "4.17",
     name: "El Taquito Gordo Feliz",
     tags: ["HTML", "CSS", "JavaScript"],
     demo: "https://taquito.vercel.app/",

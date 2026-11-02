@@ -27,7 +27,7 @@ export const en: Content = {
       tab: "Builds",
       seoTitle: "Public Projects",
       seoDescription:
-        "Public projects with their source: InventaPro, Chainlytics, MindTask, Beat Pulse, Sticker Bot, Huella, Mi TV, Buscador and El Taquito Gordo Feliz.",
+        "Public projects with their source: InventaPro, Chainlytics, MindTask, Beat Pulse, Sticker Bot, Huella, Mi TV, Buscador, Panel Claude, Captura a Claude, Proyectos, Servidores dev, Memoria, Clima, Reloj Flip, Barra limpia and El Taquito Gordo Feliz.",
     },
     {
       path: "/about",
@@ -861,6 +861,54 @@ export const en: Content = {
         summary: "Spotlight-style launcher for GNOME with local AI",
         description:
           "GNOME Shell extension that puts a search box in the middle of the screen on Super+Space, in the style of macOS Spotlight. It opens apps and files (on top of LocalSearch, the index GNOME already keeps), does math with its own parser instead of eval, triggers system actions and runs terminal commands showing their output in place, or opens them in a terminal. With \"?\" it asks a local Ollama model: the answer streams in as the model writes, the conversation is kept for follow-up questions and, if Ollama is down or the model is missing, it says how to fix it and offers a retry. Everything runs on the machine, with no internet or account.",
+      },
+      12: {
+        category: "Linux desktop",
+        summary: "Claude Code limits and sessions in the GNOME top bar",
+        description:
+          "GNOME extension that puts what is happening in Claude Code in the top bar: how much of the 5-hour session and the week I have used, with bars and reset times, and what each open session is doing (working, asking for permission, asking a question, done) with its project, model, context used and lines changed. It sends a notification when a session asks for permission, when it finishes after working for a while and when a limit crosses 80 and 95 %, and clicking a session jumps to its terminal window. Since Claude Code has no way to talk to GNOME, a small Python reporter hooks into its hooks and its status line and writes one file per session that the extension watches. Nothing leaves the machine.",
+      },
+      13: {
+        category: "Linux desktop",
+        summary: "Send part of the screen to Claude Code",
+        description:
+          "GNOME extension to send Claude Code whatever I am looking at without saving files by hand. With Super+Shift+C, or from its top bar icon, I select part of the screen; a window shows the preview, a field for the question and my six most recent projects, and on confirm it opens a new terminal with Claude Code in that project, already holding the question and the image. It can also copy the capture to paste into a session that is already open. Captures live in the cache and delete themselves after seven days.",
+      },
+      14: {
+        category: "Linux desktop",
+        summary: "My projects in the GNOME top bar, with a warning for unpushed work",
+        description:
+          "GNOME extension with my coding projects in the top bar, from most to least recent. Each one says whether it is in sync with GitHub or what it is missing (uncommitted changes, unpushed commits, never pushed or no git) and has buttons to open Claude Code in that folder, open it in the editor, start its dev server with the package manager its lockfile points to and open its GitHub repository. In the bar, a yellow number counts the projects with work that would be lost if the folder were deleted. It runs git status in the background so the desktop never stalls, and it uses neither the internet nor the GitHub API.",
+      },
+      15: {
+        category: "Linux desktop",
+        summary: "Running dev servers, in the GNOME top bar",
+        description:
+          "GNOME extension that flags in the top bar the dev servers still running (Vite, Next.js, Astro, python -m http.server…) so they don't sit for days eating memory. It lists each one with its project, port, tool, memory including child processes and how long it has been up, marks in yellow the ones running for more than three hours and keeps my projects apart from installed tools so I don't stop someone else's by mistake. It has buttons to open it in the browser or stop it, first asking it to close and forcing it if it stays alive. It finds them by reading the open ports with ss and filtering by kind of program.",
+      },
+      16: {
+        category: "Linux desktop",
+        summary: "RAM, swap and the hungriest programs, in the GNOME top bar",
+        description:
+          "GNOME extension with the RAM percentage in the top bar, yellow from 80 % and red from 90 %. A click shows RAM and swap and the eight programs using the most, with a button that asks for confirmation before closing one. It counts with PSS so a browser with dozens of processes doesn't count shared memory twice, groups each windowed app's processes and splits interpreters such as node or python by the folder they run in, so one project's server can be stopped without touching the rest. Closing an app is the same as choosing Quit, and desktop processes are listed without a button so the session can't be broken.",
+      },
+      17: {
+        category: "Linux desktop",
+        summary: "Weather in the GNOME top bar, in the style of Apple Weather",
+        description:
+          "GNOME extension with my city's weather in the top bar: a colour icon that turns into a moon at night, and the temperature. A click opens a window in the style of Apple Weather with an hourly forecast, an eight-day forecast with a colour bar for the temperature range, and details for feels-like, humidity, wind, UV index, rain and the next sunrise or sunset; the background changes colour with the sky. The icons are my own SVGs, the data comes from Open-Meteo with no account or key, the city is picked with a search box in the settings and, with no internet, it says so and offers a retry.",
+      },
+      18: {
+        category: "Linux desktop",
+        summary: "Full-screen flip clock and screensaver for GNOME",
+        description:
+          "Full-screen flip clock for GNOME, built because Fliqlo, the classic flip clock screensaver, doesn't exist for Linux. When the minute changes the top half falls like a real leaf, with a shadow halfway through the turn; it has 12 or 24 hours, size, dimming for the night and one or all screens. It works as a screensaver: it opens after a few idle minutes, but not during a video, a call or when an app asked to keep the screen on, nor with the session locked; it turns the screen off after a while and can ask for the password on the way back.",
+      },
+      19: {
+        category: "Linux desktop",
+        summary: "Hides icons from the GNOME top bar",
+        description:
+          "Small GNOME extension that hides the Bluetooth, volume and Do Not Disturb icons from the top bar and leaves Wi-Fi, power mode and battery in view. The controls stay in the system menu, and the microphone, camera and screen-sharing privacy indicators are left alone, because they only show up when something is recording and are worth seeing.",
       },
       7: {
         category: "Booking",

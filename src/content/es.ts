@@ -27,7 +27,7 @@ export const es: Content = {
       tab: "Proyectos",
       seoTitle: "Proyectos públicos",
       seoDescription:
-        "Proyectos públicos con su código: InventaPro, Chainlytics, MindTask, Beat Pulse, Sticker Bot, Huella, Mi TV, Buscador y El Taquito Gordo Feliz.",
+        "Proyectos públicos con su código: InventaPro, Chainlytics, MindTask, Beat Pulse, Sticker Bot, Huella, Mi TV, Buscador, Panel Claude, Captura a Claude, Proyectos, Servidores dev, Memoria, Clima, Reloj Flip, Barra limpia y El Taquito Gordo Feliz.",
     },
     {
       path: "/about",
@@ -861,6 +861,54 @@ export const es: Content = {
         summary: "Buscador tipo Spotlight para GNOME con IA local",
         description:
           "Extensión de GNOME Shell que pone un buscador al centro de la pantalla con Super+Espacio, al estilo de Spotlight de macOS. Abre apps y archivos (sobre LocalSearch, el índice que GNOME ya mantiene), hace cuentas con un analizador propio en vez de eval, lanza acciones del sistema y corre comandos de terminal mostrando lo que imprimen ahí mismo, o los abre en una terminal. Con «?» le pregunta a un modelo local de Ollama: la respuesta llega por streaming mientras el modelo escribe, recuerda la conversación para preguntas de seguimiento y, si Ollama está apagado o falta el modelo, dice cómo arreglarlo y ofrece reintentar. Todo corre en la máquina, sin internet ni cuenta.",
+      },
+      12: {
+        category: "Escritorio Linux",
+        summary: "Límites y sesiones de Claude Code en la barra de GNOME",
+        description:
+          "Extensión de GNOME que pone en la barra de arriba lo que pasa en Claude Code: cuánto llevo de la sesión de 5 horas y de la semana, con barras y hora de reinicio, y qué hace cada sesión abierta (trabajando, pide permiso, hizo una pregunta, terminó) con su proyecto, modelo, contexto usado y líneas cambiadas. Avisa con una notificación cuando una sesión pide permiso, cuando termina tras trabajar un rato y cuando un límite pasa del 80 y del 95 %, y un clic en la sesión lleva a la ventana de su terminal. Como Claude Code no tiene forma de hablarle a GNOME, un pequeño reportero en Python se engancha a sus hooks y a su barra de estado y deja un archivo por sesión que la extensión vigila. Nada sale de la computadora.",
+      },
+      13: {
+        category: "Escritorio Linux",
+        summary: "Manda una parte de la pantalla a Claude Code",
+        description:
+          "Extensión de GNOME para mandarle a Claude Code lo que estoy viendo sin guardar archivos a mano. Con Super+Shift+C, o desde su ícono en la barra, selecciono una parte de la pantalla; sale una ventana con la vista previa, un campo para la pregunta y mis seis proyectos más recientes, y al confirmar abre una terminal nueva con Claude Code en ese proyecto, ya con la pregunta y la imagen. También puede copiar la captura para pegarla en una sesión que ya esté abierta. Las capturas se guardan en caché y se borran solas a los siete días.",
+      },
+      14: {
+        category: "Escritorio Linux",
+        summary: "Mis proyectos en la barra de GNOME, con aviso de trabajo sin subir",
+        description:
+          "Extensión de GNOME con mis proyectos de programación en la barra de arriba, del más reciente al más viejo. Cada uno dice si está al día con GitHub o qué le falta (cambios sin commit, commits sin subir, nunca subido o sin git) y tiene botones para abrir Claude Code en esa carpeta, abrirla en el editor, prender su servidor de desarrollo con el gestor de paquetes que indica su lockfile y abrir su repositorio en GitHub. En la barra, un número amarillo cuenta los proyectos con trabajo que se perdería si se borra la carpeta. Corre git status en segundo plano para no frenar el escritorio y no usa internet ni la API de GitHub.",
+      },
+      15: {
+        category: "Escritorio Linux",
+        summary: "Los servidores de desarrollo prendidos, en la barra de GNOME",
+        description:
+          "Extensión de GNOME que avisa en la barra de los servidores de desarrollo que siguen prendidos (Vite, Next.js, Astro, python -m http.server…) para que no se queden días gastando memoria. Muestra cada uno con su proyecto, puerto, herramienta, memoria contando sus procesos hijos y desde cuándo está prendido, marca en amarillo los que llevan más de tres horas y separa mis proyectos de los programas instalados para no apagar algo ajeno por error. Tiene botones para abrirlo en el navegador o apagarlo, primero pidiéndole que cierre y forzándolo si sigue vivo. Los encuentra leyendo los puertos abiertos con ss y filtrando por el tipo de programa.",
+      },
+      16: {
+        category: "Escritorio Linux",
+        summary: "RAM, swap y los programas que más gastan, en la barra de GNOME",
+        description:
+          "Extensión de GNOME con el porcentaje de RAM en la barra, en amarillo desde el 80 % y en rojo desde el 90 %. Al hacer clic muestra la RAM y la swap y los ocho programas que más gastan, con un botón que pide confirmación antes de cerrar uno. Cuenta con PSS para que un navegador con decenas de procesos no sume dos veces la memoria que comparten, junta los procesos de cada app con ventana y separa los intérpretes como node o python por la carpeta donde corren, así se puede cerrar el servidor de un proyecto sin tocar los demás. Cerrar una app equivale a elegir Salir, y los procesos del escritorio salen sin botón para no romper la sesión.",
+      },
+      17: {
+        category: "Escritorio Linux",
+        summary: "El clima en la barra de GNOME, al estilo de Clima de Apple",
+        description:
+          "Extensión de GNOME con el clima de mi ciudad en la barra: un ícono de color que de noche cambia a luna y los grados. Al hacer clic abre una ventana al estilo de Clima de Apple con pronóstico por hora, de ocho días con una barra de color para el rango de temperaturas, y detalles de sensación térmica, humedad, viento, índice UV, lluvia y el siguiente amanecer o atardecer; el fondo cambia de color según el cielo. Los íconos son SVG propios, los datos vienen de Open-Meteo sin cuenta ni llave, la ciudad se elige con un buscador en los ajustes y, sin internet, lo dice y ofrece reintentar.",
+      },
+      18: {
+        category: "Escritorio Linux",
+        summary: "Reloj flip a pantalla completa y salvapantallas para GNOME",
+        description:
+          "Reloj de hojas que voltean a pantalla completa para GNOME, hecho porque Fliqlo, el salvapantallas clásico de reloj flip, no existe para Linux. Al cambiar el minuto la mitad de arriba cae como una hoja real, con sombra a media vuelta; tiene 12 o 24 horas, tamaño, atenuado para la noche y una o todas las pantallas. Funciona como salvapantallas: se abre tras unos minutos sin usar la computadora, pero no si hay un video, una llamada o una app que pidió no apagar la pantalla, ni con la sesión bloqueada; apaga la pantalla después de un rato y puede pedir la contraseña al volver.",
+      },
+      19: {
+        category: "Escritorio Linux",
+        summary: "Esconde íconos de la barra de GNOME",
+        description:
+          "Extensión pequeña de GNOME que esconde de la barra de arriba los íconos de Bluetooth, volumen y No molestar, y deja a la vista Wi-Fi, modo de energía y batería. Los controles siguen en el menú del sistema, y los avisos de privacidad de micrófono, cámara y pantalla compartida no se tocan, porque solo aparecen cuando algo está grabando y conviene verlos.",
       },
       7: {
         category: "Reservas",
