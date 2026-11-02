@@ -27,7 +27,7 @@ export const en: Content = {
       tab: "Builds",
       seoTitle: "Public Projects",
       seoDescription:
-        "Public projects with their source: InventaPro, Chainlytics, MindTask, Beat Pulse, Sticker Bot, Huella, Mi TV and El Taquito Gordo Feliz.",
+        "Public projects with their source: InventaPro, Chainlytics, MindTask, Beat Pulse, Sticker Bot, Huella, Mi TV, Buscador and El Taquito Gordo Feliz.",
     },
     {
       path: "/about",
@@ -855,6 +855,12 @@ export const en: Content = {
         summary: "Custom home screen for Android TV",
         description:
           "A home screen of my own for two Google TV sets, in Kotlin and Jetpack Compose for TV, that replaced a third-party launcher. A side bar, a grid of apps where the focused card grows, tilts and catches a glint, HDMI inputs that show which one has signal, live weather, and a top band that follows whatever is playing, with Spotify controls that work without leaving the home screen. The background rotates my own photos and videos at original quality, it runs on about 46 MB of RAM and it is the daily home screen of the living room TV.",
+      },
+      11: {
+        category: "Linux desktop",
+        summary: "Spotlight-style launcher for GNOME with local AI",
+        description:
+          "GNOME Shell extension that puts a search box in the middle of the screen on Super+Space, in the style of macOS Spotlight. It opens apps and files (on top of LocalSearch, the index GNOME already keeps), does math with its own parser instead of eval, triggers system actions and runs terminal commands showing their output in place, or opens them in a terminal. With \"?\" it asks a local Ollama model: the answer streams in as the model writes, the conversation is kept for follow-up questions and, if Ollama is down or the model is missing, it says how to fix it and offers a retry. Everything runs on the machine, with no internet or account.",
       },
       7: {
         category: "Booking",

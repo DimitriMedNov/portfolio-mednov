@@ -27,7 +27,7 @@ export const es: Content = {
       tab: "Proyectos",
       seoTitle: "Proyectos públicos",
       seoDescription:
-        "Proyectos públicos con su código: InventaPro, Chainlytics, MindTask, Beat Pulse, Sticker Bot, Huella, Mi TV y El Taquito Gordo Feliz.",
+        "Proyectos públicos con su código: InventaPro, Chainlytics, MindTask, Beat Pulse, Sticker Bot, Huella, Mi TV, Buscador y El Taquito Gordo Feliz.",
     },
     {
       path: "/about",
@@ -855,6 +855,12 @@ export const es: Content = {
         summary: "Pantalla de inicio propia para Android TV",
         description:
           "Pantalla de inicio propia para dos teles con Google TV, en Kotlin y Jetpack Compose for TV, que reemplazó a un launcher de terceros. Barra lateral, cuadrícula de apps donde la tarjeta enfocada crece, se inclina y gana un destello, entradas HDMI que muestran cuál tiene señal, clima en vivo y una franja de arriba que sigue lo que se está reproduciendo, con controles de Spotify que funcionan sin salir del inicio. El fondo rota fotos y videos propios en calidad original, usa unos 46 MB de RAM y es la pantalla de inicio diaria de la tele de la sala.",
+      },
+      11: {
+        category: "Escritorio Linux",
+        summary: "Buscador tipo Spotlight para GNOME con IA local",
+        description:
+          "Extensión de GNOME Shell que pone un buscador al centro de la pantalla con Super+Espacio, al estilo de Spotlight de macOS. Abre apps y archivos (sobre LocalSearch, el índice que GNOME ya mantiene), hace cuentas con un analizador propio en vez de eval, lanza acciones del sistema y corre comandos de terminal mostrando lo que imprimen ahí mismo, o los abre en una terminal. Con «?» le pregunta a un modelo local de Ollama: la respuesta llega por streaming mientras el modelo escribe, recuerda la conversación para preguntas de seguimiento y, si Ollama está apagado o falta el modelo, dice cómo arreglarlo y ofrece reintentar. Todo corre en la máquina, sin internet ni cuenta.",
       },
       7: {
         category: "Reservas",
